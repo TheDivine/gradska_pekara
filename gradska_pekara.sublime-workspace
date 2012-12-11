@@ -1,0 +1,477 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"bor",
+				"border"
+			],
+			[
+				"border",
+				"border-bottom"
+			],
+			[
+				"font",
+				"font"
+			],
+			[
+				"margin",
+				"margin-top"
+			],
+			[
+				"back",
+				"background-color"
+			],
+			[
+				"font-",
+				"font-variant"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"command_palette":
+	{
+		"height": 392.0,
+		"selected_items":
+		[
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"instl",
+				"Package Control: Install Package"
+			],
+			[
+				"settings",
+				"Preferences: Settings - User"
+			],
+			[
+				"set sy php",
+				"Set Syntax: PHP"
+			],
+			[
+				"",
+				"HTML: Wrap Selection With Tag"
+			]
+		],
+		"width": 602.0
+	},
+	"console":
+	{
+		"height": 153.0
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": true,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/home/marko/www/gradska_pekara/readme.md",
+		"/home/marko/www/gradska_pekara/application/views/welcome/categories.php",
+		"/home/marko/www/gradska_pekara/application/views/welcome/category.php",
+		"/home/marko/www/gradska_pekara/css/main.css",
+		"/home/marko/www/gradska_pekara/application/views/category/view.php",
+		"/home/marko/www/gradska_pekara/application/controllers/category.php",
+		"/home/marko/www/gradska_pekara/application/views/layouts/web.php",
+		"/home/marko/www/gradska_pekara/application/controllers/welcome.php",
+		"/home/marko/www/gradska_pekara/application/views/welcome/index.php",
+		"/home/marko/www/gradska_pekara/application/views/includes/_contact_mk.php",
+		"/home/marko/www/gradska_pekara/application/views/welcome/catering.php",
+		"/home/marko/www/gradska_pekara/application/views/welcome/caffe.php",
+		"/home/marko/www/gradska_pekara/application/views/includes/_navi_mk.php",
+		"/home/marko/www/gradska_pekara/application/views/static/index_mk.php",
+		"/home/marko/www/gradska_pekara/application/config/routes.php",
+		"/home/marko/www/gradska_pekara/application/controllers/attribute.php",
+		"/home/marko/www/gradska_pekara/application/views/welcome/contact.php",
+		"/home/marko/www/FortisPMS/application/views/welcome/category.php",
+		"/home/marko/www/gradska_pekara/application/views/includes/_footer.php",
+		"/home/marko/www/gradska_pekara/application/controllers/partner.php",
+		"/home/marko/www/gradska_pekara/application/views/welcome/partners.php",
+		"/home/marko/www/kumanovski_kori/application/views/welcome/index.php",
+		"/home/marko/www/gradska_pekara/application/views/includes/_lang.php",
+		"/home/marko/www/gradska_pekara/application/config/config.php",
+		"/home/marko/www/gradska_pekara/application/config/database.php",
+		"/home/marko/www/gradska_pekara/application/config/globals.php",
+		"/home/marko/www/gradska_pekara/application/config/autoload.php",
+		"/home/marko/www/gradska_pekara/css/style.css",
+		"/home/marko/www/gradska_pekara/application/views/includes/_header.php",
+		"/home/marko/www/gradska_pekara/application/views/includes/_navi.php",
+		"/home/marko/www/gradska_pekara/img/.gitignore",
+		"/home/marko/www/gradska_pekara/index.html",
+		"/home/marko/www/FortisPMS/application/views/static/index_mk.php",
+		"/home/marko/Desktop/Untitled Document 2",
+		"/home/marko/www/FortisPMS/application/views/layouts/web.php",
+		"/home/marko/www/FortisPMS/application/controllers/partner.php",
+		"/home/marko/www/FortisPMS/application/views/admin/index.php",
+		"/home/marko/www/FortisPMS/application/controllers/attribute.php",
+		"/home/marko/www/FortisPMS/application/controllers/admin.php",
+		"/home/marko/www/FortisPMS/css/admin.css",
+		"/home/marko/www/FortisPMS/css/main.css",
+		"/home/marko/www/FortisPMS/application/views/includes/_admin_header.php",
+		"/home/marko/www/FortisPMS/application/views/partner/index.php",
+		"/home/marko/www/FortisPMS/application/views/attribute/index.php",
+		"/home/marko/www/FortisPMS/application/controllers/welcome.php",
+		"/home/marko/www/FortisPMS/application/views/welcome/partners.php",
+		"/home/marko/www/FortisPMS/application/models/users_model.php",
+		"/home/marko/www/FortisPMS/application/views/includes/_footer.php",
+		"/home/marko/www/FortisPMS/application/views/includes/_contact_mk.php",
+		"/home/marko/www/FortisPMS/application/views/includes/_navi_mk.php",
+		"/home/marko/www/kumanovski_kori/css/style.css",
+		"/home/marko/www/kumanovski_kori/application/views/welcome/partners.php",
+		"/home/marko/Downloads/partners.sql",
+		"/home/marko/www/FortisPMS/application/views/partner/edit.php",
+		"/home/marko/www/FortisPMS/application/views/partner/create.php",
+		"/home/marko/www/FortisPMS/application/views/includes/_navi_sr.php",
+		"/home/marko/www/FortisPMS/application/views/includes/_navi_en.php",
+		"/home/marko/www/FortisPMS/application/models/category_model.php",
+		"/home/marko/www/FortisPMS/application/views/category/edit.php",
+		"/home/marko/www/FortisPMS/application/views/category/create.php",
+		"/home/marko/www/FortisPMS/application/models/partner_model.php",
+		"/home/marko/www/FortisPMS/application/controllers/category.php",
+		"/home/marko/www/FortisPMS/application/controllers/product.php",
+		"/home/marko/www/FortisPMS/application/models/newsletter_model.php",
+		"/home/marko/www/FortisPMS/application/models/partner_model.html",
+		"/home/marko/www/FortisPMS/application/views/category/view.php",
+		"/home/marko/www/FortisPMS/application/views/product/edit.php",
+		"/home/marko/www/FortisPMS/application/views/category/index.php",
+		"/home/marko/www/FortisPMS/application/config/database.php",
+		"/home/marko/www/FortisPMS/application/config/config.php",
+		"/home/marko/www/FortisPMS/application/cache/index.html",
+		"/home/marko/.ssh/id_rsa.pub",
+		"/home/marko/.ssh/id_rsa",
+		"/home/marko/www/FortisPMS/fortis-pms.sublime-workspace",
+		"/home/marko/www/FortisPMS/.gitignore",
+		"/home/marko/www/FortisPMS/humans.txt",
+		"/home/marko/www/FortisPMS/robots.txt",
+		"/home/marko/www/FortisPMS/application/models/attribute_model.php",
+		"/usr/share/applications/defaults.list",
+		"/usr/share/applications/sublime.desktop",
+		"/home/marko/.config/sublime-text-2/Packages/User/Preferences.sublime-settings",
+		"/home/marko/www/Highcharts-2.2.0/js/highcharts.js",
+		"/media/STORAGE/Ubuntu Marko/webapp/lavanda/application/controllers/login.php",
+		"/home/marko/www/Highcharts-2.2.0/js/highcharts.src.js",
+		"/home/marko/www/jobs/application/controllers/jobs.php",
+		"/home/marko/Documents/JavaScript Code/notBox.js",
+		"/home/marko/www/jobs_server_config/index.php",
+		"/home/marko/www/ci/.htaccess",
+		"/home/marko/Downloads/jobs_dev (1).sql",
+		"/home/marko/www/jobs/application/config/config.php",
+		"/home/marko/www/jobs/application/views/includes/_header.php",
+		"/home/marko/www/jobs/.htaccess",
+		"/home/marko/www/jobs/application/views/layouts/application.php",
+		"/home/marko/www/jobs/application/core/MY_Controller.php",
+		"/home/marko/www/jobs/application/core/MY_Loader.php",
+		"/home/marko/www/info.php",
+		"/home/marko/www/ci/index.php",
+		"/home/marko/www/ci/application/helpers/get_dropdown.php",
+		"/home/marko/www/ci/application/config/autoload.php",
+		"/home/marko/www/ci/system/helpers/form_helper.php",
+		"/home/marko/www/ci/application/third_party/tcpdf/tcpdf.php",
+		"/home/marko/www/jobs/application/views/jobs/create.php",
+		"/home/marko/www/jobs/application/views/includes/_create_job_form.php",
+		"/home/marko/www/jobs/application/libraries/Utilities.php",
+		"/home/marko/www/jobs/application/views/jobs/search.php",
+		"/home/marko/www/jobs/application/views/includes/sidebar.php",
+		"/home/marko/www/jobs/application/views/jobs/category.php",
+		"/home/marko/www/jobs/application/views/jobs/index.php",
+		"/home/marko/www/jobs/application/models/Type.php",
+		"/home/marko/www/jobs/application/views/includes/_search.php",
+		"/home/marko/www/jobs/application/views/includes/_flash.php",
+		"/home/marko/www/jobs/css/main.css",
+		"/home/marko/www/jobs/application/config/autoload.php",
+		"/home/marko/www/jobs/application/libraries/Timeword.php",
+		"/home/marko/www/jobs/application/controllers/auth.php",
+		"/home/marko/www/mods/ci/application/views/procurement/new_goods_receipt_view.php",
+		"/home/marko/www/mods/ci/application/controllers/inventory.php",
+		"/home/marko/www/mods/ci/application/controllers/partners.php",
+		"/home/marko/www/mods/ci/css/main.css",
+		"/home/marko/www/mods/ci/application/controllers/customers.php",
+		"/home/marko/www/ci/application/controllers/job_orders.php",
+		"/home/marko/www/ci/application/views/login_view.php",
+		"/home/marko/www/ci/application/controllers/customers.php",
+		"/home/marko/.config/sublime-text-2/Packages/User/Global.sublime-settings",
+		"/home/marko/.config/sublime-text-2/Packages/Default/Global.sublime-settings",
+		"/home/marko/www/ci/application/controllers/dashboard.php",
+		"/home/marko/www/ci/css/main.css",
+		"/home/marko/www/ci/js/buttons.js"
+	],
+	"find":
+	{
+		"height": 35.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"}\n",
+			"Кафе",
+			"indexPage",
+			"Кетеринг",
+			"brand",
+			"company",
+			"name_en",
+			"www",
+			"name_sr",
+			"name_mk",
+			"Name MK",
+			"permalink",
+			"Permalink",
+			"category",
+			"Category",
+			"category",
+			"Category",
+			"category",
+			"Category",
+			"category",
+			"Category",
+			"category",
+			"attribute",
+			"permalink",
+			"Permalink",
+			"val1",
+			"info",
+			"gedit.desktop",
+			"/>"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 0.0
+	},
+	"input":
+	{
+		"height": 29.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"replace":
+	{
+		"height": 0.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+			[
+				"main",
+				"css/main.css"
+			],
+			[
+				"viewwelcomecat",
+				"application/views/welcome/category.php"
+			],
+			[
+				"categoryview",
+				"application/views/category/view.php"
+			],
+			[
+				"categories",
+				"application/views/welcome/categories.php"
+			],
+			[
+				"categ",
+				"application/controllers/category.php"
+			],
+			[
+				"contac",
+				"application/views/includes/_contact_mk.php"
+			],
+			[
+				"navi",
+				"application/views/includes/_navi_mk.php"
+			],
+			[
+				"viewindex",
+				"application/views/welcome/index.php"
+			],
+			[
+				"welcom",
+				"application/controllers/welcome.php"
+			],
+			[
+				"catering",
+				"application/views/welcome/catering.php"
+			],
+			[
+				"index_mk",
+				"application/views/static/index_mk.php"
+			],
+			[
+				"rout",
+				"application/config/routes.php"
+			],
+			[
+				"we",
+				"application/controllers/welcome.php"
+			],
+			[
+				"web",
+				"application/views/layouts/web.php"
+			],
+			[
+				"cate",
+				"application/views/welcome/category.php"
+			],
+			[
+				"contat",
+				"application/views/welcome/contact.php"
+			],
+			[
+				"categor",
+				"application/views/welcome/category.php"
+			],
+			[
+				"attr",
+				"application/controllers/attribute.php"
+			],
+			[
+				"viwepart",
+				"application/views/welcome/partners.php"
+			],
+			[
+				"par",
+				"application/controllers/partner.php"
+			],
+			[
+				"lang",
+				"application/views/includes/_lang.php"
+			],
+			[
+				"conf",
+				"application/config/config.php"
+			],
+			[
+				"welco",
+				"application/controllers/welcome.php"
+			],
+			[
+				"css",
+				"css/style.css"
+			],
+			[
+				"admin",
+				"css/admin.css"
+			],
+			[
+				"ma",
+				"css/main.css"
+			],
+			[
+				"usersmod",
+				"application/models/users_model.php"
+			],
+			[
+				"ad",
+				"css/admin.css"
+			],
+			[
+				"attri",
+				"application/controllers/attribute.php"
+			],
+			[
+				"footer",
+				"application/views/includes/_footer.php"
+			],
+			[
+				"viewcat",
+				"application/views/welcome/category.php"
+			],
+			[
+				"welcome",
+				"application/controllers/welcome.php"
+			],
+			[
+				"viewadmin",
+				"application/views/admin/index.php"
+			],
+			[
+				"viewcategorycre",
+				"application/views/category/create.php"
+			],
+			[
+				"category",
+				"application/models/category_model.php"
+			],
+			[
+				"viewcategory",
+				"application/views/category/edit.php"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"show_minimap": true,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 209.0,
+	"status_bar_visible": true
+}
