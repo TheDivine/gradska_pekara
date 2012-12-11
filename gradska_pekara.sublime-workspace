@@ -76,6 +76,7 @@
 	},
 	"file_history":
 	[
+		"/home/marko/www/gradska_pekara/.gitignore",
 		"/home/marko/www/gradska_pekara/readme.md",
 		"/home/marko/www/gradska_pekara/application/views/welcome/categories.php",
 		"/home/marko/www/gradska_pekara/application/views/welcome/category.php",
@@ -202,8 +203,7 @@
 		"/home/marko/.config/sublime-text-2/Packages/User/Global.sublime-settings",
 		"/home/marko/.config/sublime-text-2/Packages/Default/Global.sublime-settings",
 		"/home/marko/www/ci/application/controllers/dashboard.php",
-		"/home/marko/www/ci/css/main.css",
-		"/home/marko/www/ci/js/buttons.js"
+		"/home/marko/www/ci/css/main.css"
 	],
 	"find":
 	{
@@ -221,6 +221,7 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"fortis",
 			"}\n",
 			"Кафе",
 			"indexPage",
