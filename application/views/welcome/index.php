@@ -34,7 +34,7 @@
 			„Фортис“ е тука за да Ви овозможи успешен и ефикасен тек во Вашиот нов или стар бизнис.
 		</p>
 		<div id="fb_find">
-			<div class="fb-like-box" data-href="http://www.facebook.com/pages/Кумановска-Градкса-Пекара/506626009371136" data-height="185" data-width="470" data-show-faces="true" data-border-color="white" data-stream="false" data-header="false"></div>
+			<div class="fb-like-box" data-href="http://www.facebook.com/pages/Кумановска-Градкса-Пекара/506626009371136" data-height="185" data-width="470" data-show-faces="true" data-border-color="ccc" data-stream="false" data-header="false"></div>
 		</div>	
 	</div>
 </div>

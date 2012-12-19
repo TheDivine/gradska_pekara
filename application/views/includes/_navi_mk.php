@@ -24,9 +24,9 @@
     <?php endif;?>
 
     <?php if($this->router->method == 'caffe'): ?>
-        <span class="active_link"><?php echo 'Lucaffe';?></span> |
+        <span class="active_link"><?php echo 'Lucaff&eacute;';?></span> |
     <?php else: ?>
-       <?php echo anchor('caffe','Lucaffe');?> |
+       <?php echo anchor('caffe','Lucaff&eacute;');?> |
     <?php endif;?>
 
     <?php if($this->router->method == 'contact'): ?>

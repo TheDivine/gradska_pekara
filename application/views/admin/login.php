@@ -1,5 +1,5 @@
 <div id="adminLogin">
-	<h4>Enter your credentials to access FortisPMS</h4>
+	<h4><?php echo $G_login;?></h4>
 	<hr/>
 	<?php echo form_open('admin/login'); ?>
 		<p><?php echo form_label('Username','username');?></p>

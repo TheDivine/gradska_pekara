@@ -3,19 +3,21 @@
 	<div id="divInfoR">
 		<img src="img/lucaffe.jpg" style="padding:2px; border:1px solid #ccc;">
 	</div>
-
-	<div id="divInfoL">
-		<h3>Кумановска Градска Пекара и Lucaffe<small>&reg;</small></h3>
+	<div id="divInfoL" style="text-aling: justify">
+		<h3>Кумановска Градска Пекара и Lucaff&eacute;<small>&reg;</small></h3>
 		<hr/>
 		<p>
-			„Фортис“ е име на високо квалитетна професионална опрема наменета за пекарски и месарски бизнис како и помошна опрема за сите гранки на прехрамбената индустрија.
+			Пиењето кафе е ритуал во Нашата култура. Кумановска Градска Пекара Ви нуди најквалитетно, свежо кафе за носење - во
+			секое време. <?php echo anchor_popup('http://www.lu.mk','Lucaff&eacute;');?> еден од најексклузивните и најквалитетни италијански еспресо брендови. Секое
+			зрно кафе е внимантелно изберено, мешано во перфектна пропроција - и најквалитетно испжрено
+			според стари тајни италијански рецепти.
 		</p>
+		<p><strong>Во секое време Ви нудиме:</strong></p>
 		<ul>
 			<li>Еспресо</li>
-			<li>Филтер</li>
+			<li>Француско (Филтер)</li>
 			<li>Американо</li>
+			<li>Кафе Лате</li>
 		</ul>
-		<a href="http://www.lu.mk" target="_blank"><img src="img/lukafe_logo.jpg"></a>
-		<!-- <div class="fb-like-box" data-href="http://www.facebook.com/lucaffemacedonia" data-width="470" data-height="135" data-show-faces="false" data-stream="false" data-header="false"></div> -->
 	</div>
 </div>

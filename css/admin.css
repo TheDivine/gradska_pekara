@@ -96,7 +96,7 @@ header {
 	background-color: white;
 	position: relative;
 	padding: 5px;
-	height: 17px;
+	height: 22px;
 }
 
 #content {
@@ -159,6 +159,7 @@ header {
 .headerActions {
 	position: absolute;
 	right: 10px;
+	top: 7px;
 	font-size: 10pt;
 }
 

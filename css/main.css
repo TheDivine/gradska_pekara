@@ -272,6 +272,11 @@ sidebar li a:visited {
     float: left;
     width: 48%;
     padding: 7px;
+    text-align: justify;
+}
+
+#divInfoL p {
+    text-indent: 10px;
 }
 
 #divInfoR .fb-like {
