@@ -1,6 +1,6 @@
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
-class Welcome extends MY_Controller {
+class Home extends MY_Controller {
     
     protected $lng;
     
@@ -43,7 +43,7 @@ class Welcome extends MY_Controller {
 		$this->view_data['category'] = $this->category->get_by('permalink',$permalink);
         
         if(!$this->view_data['category'] OR $permalink == false)
-        	redirect('products');
+        	show_404();
         
         $title = 'name_'.$this->lng;
         $this->view_data['subt'] = $this->view_data['category']->$title;
@@ -66,12 +66,12 @@ class Welcome extends MY_Controller {
 
 	public function catering()
 	{
-            $this->view_data['subt'] = 'Нарачки';
+		$this->view_data['subt'] = 'Нарачки';
 	}
 
 	public function caffe()
 	{
-            $this->view_data['subt'] = 'Кафе';
+		$this->view_data['subt'] = 'Кафе';
 	}
 	
 	public function contact()
@@ -121,7 +121,7 @@ class Welcome extends MY_Controller {
 				$this->load->library('email');
 
 				$this->email->from($_POST['email'], $_POST['name']);
-				$this->email->to('info@fortis.mk');
+				$this->email->to('info@gradskapekara.mk');
 					
 				$this->email->subject("Информации за {$_POST['name']} - Fortis");
 				$this->email->message($_POST['message']);
@@ -152,7 +152,7 @@ class Welcome extends MY_Controller {
 						 * If user's browser has disabled JS,
 						 * redirect to main page
 						 */
-						redirect('welcome/index');
+						redirect('home/index');
 				}
 				else
 				{
@@ -170,7 +170,7 @@ class Welcome extends MY_Controller {
 						 * If user's browser has disabled JS,
 						 * redirect to contact page again
 						 */
-						redirect('welcome/contact');
+						redirect('home/contact');
 				}
 			}
 			else
@@ -181,7 +181,7 @@ class Welcome extends MY_Controller {
 				if($ajax)
 					exit;
 				else 
-					redirect('welcome/contact');
+					redirect('home/contact');
 			}
 		}
 	}

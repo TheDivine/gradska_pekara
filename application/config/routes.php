@@ -38,7 +38,7 @@
 |
 */
 
-$route['default_controller'] = "welcome";
+$route['default_controller'] = "home";
 $route['404_override'] = '';
 
 /*
@@ -47,30 +47,16 @@ $route['404_override'] = '';
  */
 
 /*
- * Language selection routes
- */
-//$route['lang/(:any)'] = 'welcome/lang/$1';
-
-
-/*
  * Static pages routes
  */
-$route['about_us'] = 'welcome/index';
-$route['products'] = 'welcome/categories';
-//$route['partners'] = 'welcome/partners';
-$route['catering'] = 'welcome/catering';
-$route['caffe'] = 'welcome/caffe';
-$route['contact'] = 'welcome/contact';
+$route['about_us'] = 'home/index';
+$route['products'] = 'home/categories';
+//$route['partners'] = 'home/partners';
+$route['catering'] = 'home/catering';
+$route['caffe'] = 'home/caffe';
+$route['contact'] = 'home/contact';
 
-/*
- * Categories selection routes
- */
-$route['product/post_create'] = 'product/post_create';
-$route['product/edit/(:num)'] = 'product/edit/$1';
-$route['product/post_update'] = 'product/post_update';
-$route['product/post_delete/(:num)'] = 'product/post_delete/$1';
-
-$route['product/(:any)'] = 'welcome/category/$1';
+$route['prod/(:any)'] = 'home/category/$1';
 
 
 /*

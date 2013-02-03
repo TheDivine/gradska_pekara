@@ -1,5 +1,6 @@
-<br/>
 <div id="contact">
+	<h3>контакт инфомации</h3>
+	<hr />
 	<dl>
 		<dt>
 			<strong>Куамновска Градска Пекара</strong>
@@ -10,10 +11,10 @@
 		<dt>Моб.:&nbsp;+389(0)70 718 952</dt>
 		<dd>И-меил: <?php echo safe_mailto('info@gradskapekara.mk'); ?> </dd>
 	</dl>
-	<h3>Контакт форма</h3>
+	<h3>контакт форма</h3>
 	<hr />
 	<table id="table_cf">
-		<?php echo form_open('welcome/post_contact_form',"id='contact_form'");?>
+		<?php echo form_open('home/post_contact_form',"id='contact_form'");?>
 		<tr>
 			<td><?php echo form_label('Име:','name');?></td>
 			<td><?php echo form_input('name',set_value('name'),"id='name'"); ?>
@@ -88,7 +89,7 @@
 	       	submit_button.hide();
 	       	loader.show();
 
-	    	$.post("<?php echo site_url('welcome/post_contact_form');?>",$(this).serialize()+"&ajax=1",
+	    	$.post("<?php echo site_url('home/post_contact_form');?>",$(this).serialize()+"&ajax=1",
 	    	    	function(data) {
 		    			if(data){
 			    			$("#table_cf").hide();

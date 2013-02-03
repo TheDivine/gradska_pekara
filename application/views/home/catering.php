@@ -1,7 +1,7 @@
 <div id="staticPage">
 <h1>Нарачки за Сите Видови на Случувања!</h1>
 	<div id="divInfoR">
-		<img src="img/catering.jpg" style="padding:2px; border:1px solid #ccc;">
+		<img src="<?php echo base_url('img/catering.jpg'); ?>" style="padding:2px; border:1px solid #ccc;">
 	</div>
 
 	<div id="divInfoL">

@@ -15,7 +15,7 @@ class Admin extends MY_Controller {
 		 * to access authenticated area, if so, redirects
 		 * to login page.
 		 */
-		if(($this->session->userdata('logged_in') == false) AND 
+		if((!$this->session->userdata('logged_in')) AND 
 			(!in_array($this->router->method,$this->open_methods)))
 			redirect('login');
 		
@@ -72,6 +72,7 @@ class Admin extends MY_Controller {
 			$this->session->set_userdata('logged_in',true);
 			$this->session->set_userdata('user_id',$user->id);
 			$this->session->set_userdata('username',$user->username);
+			$this->session->set_userdata('is_admin',$user->admin);
 			
 			return true;
 		}

@@ -12,7 +12,7 @@ class Attribute extends MY_Controller {
 		 * Checks if user is not logged in, 
 		 * then redirects to login page.
 		 */
-		if(($this->session->userdata('logged_in') == false))
+		if(!$this->session->userdata('logged_in'))
 			redirect('login');
 		
 		/*

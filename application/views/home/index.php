@@ -1,7 +1,7 @@
 <div id="staticPage">
 <h1>Првата и Најдобра Артисан Пекара во Македонија!</h1>
 	<div id="divInfoL">
-		<img src="img/bakery.jpg" style="padding:2px; border:1px solid #ccc;">
+		<img src="<?php echo base_url('img/bakery.jpg'); ?>" style="padding:2px; border:1px solid #ccc;">
 		<!-- NEWSLETTERS -->
 			<!-- <div class="newsletters">
 			<p id="ml_nw">Внесете го Вашиот и-меил, за први да добивате информации, новости и промотивни понуди во врска со нашите производи</p>
@@ -64,7 +64,7 @@
 
 	       var data = $("#nl_form").serialize();
 			
-	       	$.post("<?php echo site_url('welcome/post_newsletter_email');?>",data+"&ajax=1",
+	       	$.post("<?php echo site_url('home/post_newsletter_email');?>",data+"&ajax=1",
 	    	    	function(data) {
 		    			if(data){
 			    			alert(data);

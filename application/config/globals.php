@@ -6,4 +6,4 @@ $config['G_description'] = '';
 
 // Administration
 
-$config['G_login'] = 'Administration - GradskaPekara.mk';
+$config['G_login'] = 'Administration - gradskapekara.mk';

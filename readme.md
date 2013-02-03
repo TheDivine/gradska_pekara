@@ -1,7 +1,5 @@
 # [Kumanovska Gradska Pekara](http://gradskapekara.mk)
 
-ALFA - UNREALEASED!
-
 ### Major components:
 
 * CodeIgniter: Copyright (c) 2008 - 2011, EllisLab, Inc.

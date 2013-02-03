@@ -1,3 +1,8 @@
 # robotstxt.org/
 
+Disallow: /admin/
+Disallow: /login/
+
 User-agent: *
+
+Sitemap: http://gradskapekara.mk/sitemap.xml

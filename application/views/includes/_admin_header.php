@@ -5,9 +5,12 @@
 <?php endif;?>
 
 <div class="headerActions">
-	<?php echo anchor('/','Front Page'); ?> |
+	<strong><?php echo anchor('/','Front Page'); ?></strong> |
 	<?php echo anchor('dashboard','Dashboard'); ?> |
 	<?php echo anchor('partner','Partners'); ?> |
 	<?php echo anchor('attribute','Attributes'); ?> |
+	<?php if($this->session->userdata('is_admin')): ?>
+		<?php echo anchor('user','Users'); ?> |	
+	<?php endif ?>
 	<?php echo anchor('logout','Logout'); ?>
 </div>

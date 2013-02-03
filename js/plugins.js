@@ -19,7 +19,7 @@ if (!(window.console && console.log)) {
 $(window).load(function() {
     $('#slider').nivoSlider({
     	controlNav: false,
-    	pauseTime: 2000,
+    	pauseTime: 3000,
     	pauseOnHover: true
     });
 });

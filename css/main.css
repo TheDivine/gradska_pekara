@@ -210,6 +210,12 @@ sidebar li a:visited {
     border: 1px solid #ccc;
 }
 
+#social {
+    position: absolute;
+    right: 10px;
+    top: 18px;
+}
+
 .cat_link {
     margin-top: 1px;
     font-size: 12px;
@@ -518,7 +524,7 @@ sidebar li a:visited {
 /* FOOTER */
 
 footer {
-    //background-color: #003366;
+    position: relative;
     height: 40px;
     padding: 10px;
     font-size: 7pt;
@@ -530,6 +536,23 @@ footer #navi a {
     color: #333;
     font-weight: bold;
     font-size: 7pt;
+}
+footer #footer_contact {
+    position: absolute;
+    top: 5px;
+    left: 10px;
+}
+
+footer #footer_contact #text {
+    font-weight: bold;
+    font-style: italic;
+}
+
+footer #footer_contact #number {
+    font-size: 2em;
+    font-weight: bold;
+    font-style: italic;
+    color: #c61e2b;
 }
 
 /* HELPING STYLE */
