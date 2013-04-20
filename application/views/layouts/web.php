@@ -13,17 +13,10 @@
 
         <link rel="icon" type="image/png" href="<?php echo base_url('img/favicon.ico');?>">
 
-        <link rel="stylesheet" href="<?php echo base_url('css/themes/default/default.css');?>">
-        <link rel="stylesheet" href="<?php echo base_url('css/nivo-slider.css');?>">
         <link rel="stylesheet" href="<?php echo base_url('css/bootstrap.min.css'); ?>">
         <link rel="stylesheet" href="<?php echo base_url('css/font-awesome.min.css'); ?>">
         <link rel="stylesheet" href="<?php echo base_url('css/main.css'); ?>">
-        
-        <script src="<?php echo base_url('js/vendor/modernizr-2.6.1.min.js'); ?>"></script>
-        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-        <script>window.jQuery || document.write('<script src="js/jquery.js"><\/script>')</script>
-        <script src="<?php echo base_url('js/vendor/jquery.nivo.slider.pack.js'); ?>" type="text/javascript"></script>   
-        <script src="<?php echo base_url('js/bootstrap.min.js'); ?>" type="text/javascript"></script>   
+          
     </head>
     <body>
     	<div id="fb-root"></div>
@@ -40,27 +33,37 @@
         <div class="container">
 		<header class="row-fluid">
             <ul class="nav nav-pills pull-right cd-navi">
-              <li class="active"><?php echo anchor('about_us','За Нас');?></li>
-              <li><?php echo anchor('categories','Производи');?></li>
-              <li><?php echo anchor('caffe','Lucaff&eacute');?></li>
-              <li><?php echo anchor('catering','Кетеринг');?></li>
-              <li><?php echo anchor('contact','Контакт');?></li>
+              <li <?=($this->router->method == 'index')?'class="active"':'';?>>
+                <?php echo anchor('about_us','За Нас');?></li>
+              <li <?=(($this->router->method == 'categories') OR ($this->router->method=='category'))?'class="active"':'';?>>
+                <?php echo anchor('categories','Производи');?></li>
+              <li <?=($this->router->method == 'caffe')?'class="active"':'';?>>
+                <?php echo anchor('caffe','Lucaff&eacute');?></li>
+              <li <?=($this->router->method == 'catering')?'class="active"':'';?>>
+                <?php echo anchor('catering','Кетеринг');?></li>
+              <li <?=($this->router->method == 'contact')?'class="active"':'';?>>
+                <?php echo anchor('contact','Контакт');?></li>
             </ul>
 		</header>
 		<div role="main">
 			<?php echo $content; ?>
 		</div>
 		<footer class="row-fluid">
-                <div class="span12 text-right">
-                    <hr>
-                    © 2012 Кумановска Градска Пекара. Сите права задржани.<br/>
-                    Published by <?php echo anchor('http://www.carniadesign.com','Carnia Design'); ?>
-                    <span id="number">031 550 580</span>
-                </div>
+            <div class="span6">
+                   <p class="lead"><i class="icon-phone"></i> <strong>031 550 580</strong></p>     
+            </div>
+            <div class="span6 text-right">
+                © 2012 Кумановска Градска Пекара. Сите права задржани.<br/>
+                Published by <?php echo anchor('http://www.carniadesign.com','Carnia Design'); ?>
+            </div>
 		</footer>
         </div>
-        <script src="js/plugins.js"></script>
-        <script src="js/main.js"></script>
+        <script src="<?php echo base_url('js/modernizr.min.js'); ?>"></script>
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+        <script>window.jQuery || document.write('<script src="js/jquery.js"><\/script>')</script>
+        <script src="<?php echo base_url('js/bootstrap.min.js'); ?>" type="text/javascript"></script> 
+        <script src="<?php echo base_url('js/plugins.js'); ?>"></script>
+        <script src="<?php echo base_url('js/main.js'); ?>"></script>
         <script> var _gaq=[['_setAccount','XXXXX'],['_trackPageview']];
             (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
             g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';

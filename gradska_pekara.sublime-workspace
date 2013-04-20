@@ -4,28 +4,44 @@
 		"selected_items":
 		[
 			[
+				"text",
+				"text-decoration"
+			],
+			[
 				"margin",
 				"margin-bottom"
+			],
+			[
+				"mar",
+				"margin-bottom"
+			],
+			[
+				"marg",
+				"margin-top"
+			],
+			[
+				"bord",
+				"border-top"
+			],
+			[
+				"padd",
+				"padding"
+			],
+			[
+				"back",
+				"background-clip"
+			],
+			[
+				"font",
+				"font-family"
 			],
 			[
 				"bac",
 				"background-position"
 			],
 			[
-				"padd",
-				"padding-left"
-			],
-			[
-				"mar",
-				"margin-left"
-			],
-			[
 				"add",
 				"padding-top"
-			],
-			[
-				"back",
-				"background-repeat"
 			],
 			[
 				"padding",
@@ -48,10 +64,6 @@
 				"border-bottom"
 			],
 			[
-				"font",
-				"font"
-			],
-			[
 				"font-",
 				"font-variant"
 			]
@@ -63,7 +75,7 @@
 			"file": "application/views/layouts/web.php",
 			"settings":
 			{
-				"buffer_size": 4304,
+				"buffer_size": 4520,
 				"line_ending": "Windows"
 			}
 		},
@@ -71,7 +83,7 @@
 			"file": "css/main.css",
 			"settings":
 			{
-				"buffer_size": 376,
+				"buffer_size": 316,
 				"line_ending": "Windows"
 			}
 		},
@@ -79,7 +91,7 @@
 			"file": "application/views/home/index.php",
 			"settings":
 			{
-				"buffer_size": 2695,
+				"buffer_size": 2700,
 				"line_ending": "Windows"
 			}
 		},
@@ -90,12 +102,44 @@
 				"buffer_size": 1943,
 				"line_ending": "Windows"
 			}
+		},
+		{
+			"file": "application/views/admin/index.php",
+			"settings":
+			{
+				"buffer_size": 1004,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "css/admin.css",
+			"settings":
+			{
+				"buffer_size": 173,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "application/views/attribute/index.php",
+			"settings":
+			{
+				"buffer_size": 692,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "application/views/user/index.php",
+			"settings":
+			{
+				"buffer_size": 664,
+				"line_ending": "Windows"
+			}
 		}
 	],
 	"build_system": "",
 	"command_palette":
 	{
-		"height": 219.0,
+		"height": 104.0,
 		"selected_items":
 		[
 			[
@@ -140,12 +184,19 @@
 	},
 	"file_history":
 	[
+		"/C/wamp/www/gradska_pekara/application/config/routes.php",
+		"/C/wamp/www/gradska_pekara/application/views/includes/_admin_header.php",
+		"/C/wamp/www/gradska_pekara/application/views/home/categories.php",
+		"/C/wamp/www/gradska_pekara/application/helpers/UIF_helper.php",
+		"/C/wamp/www/gradska_pekara/application/views/layouts/admin.php",
+		"/C/wamp/www/gradska_pekara/css/admin.css",
+		"/C/wamp/www/gradska_pekara/application/controllers/admin.php",
+		"/C/wamp/www/gradska_pekara/application/config/autoload.php",
+		"/C/wamp/www/gradska_pekara/js/modernizr.js",
 		"/C/wamp/www/gradska_pekara/application/views/home/caffe.php",
 		"/C/wamp/www/gradska_pekara/application/views/home/catering.php",
 		"/C/wamp/www/gradska_pekara/application/views/home/contact.php",
 		"/C/wamp/www/gradska_pekara/application/views/includes/_contact_mk.php",
-		"/C/wamp/www/gradska_pekara/application/config/routes.php",
-		"/C/wamp/www/gradska_pekara/application/views/home/categories.php",
 		"/C/wamp/www/kumanovski_kori/application/views/home/categories.php",
 		"/C/wamp/www/gradska_pekara/application/views/includes/_navi_mk.php",
 		"/C/wamp/www/gradska_pekara/application/views/includes/_header.php",
@@ -260,14 +311,7 @@
 		"/home/marko/www/Highcharts-2.2.0/js/highcharts.js",
 		"/media/STORAGE/Ubuntu Marko/webapp/lavanda/application/controllers/login.php",
 		"/home/marko/www/Highcharts-2.2.0/js/highcharts.src.js",
-		"/home/marko/www/jobs/application/controllers/jobs.php",
-		"/home/marko/Documents/JavaScript Code/notBox.js",
-		"/home/marko/www/jobs_server_config/index.php",
-		"/home/marko/www/ci/.htaccess",
-		"/home/marko/Downloads/jobs_dev (1).sql",
-		"/home/marko/www/jobs/application/config/config.php",
-		"/home/marko/www/jobs/application/views/includes/_header.php",
-		"/home/marko/www/jobs/.htaccess"
+		"/home/marko/www/jobs/application/controllers/jobs.php"
 	],
 	"find":
 	{
@@ -285,6 +329,9 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"deavtivate",
+			"update",
+			"h2",
 			"phone",
 			"email",
 			"name",
@@ -348,6 +395,7 @@
 	"groups":
 	[
 		{
+			"selected": 7,
 			"sheets":
 			[
 				{
@@ -355,15 +403,15 @@
 					"file": "application/views/layouts/web.php",
 					"settings":
 					{
-						"buffer_size": 4304,
+						"buffer_size": 4520,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								2818,
-								2818
+								2793,
+								2810
 							]
 						],
 						"settings":
@@ -373,7 +421,7 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 545.0,
+						"translation.y": 400.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -383,15 +431,15 @@
 					"file": "css/main.css",
 					"settings":
 					{
-						"buffer_size": 376,
+						"buffer_size": 316,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								107,
-								107
+								175,
+								175
 							]
 						],
 						"settings":
@@ -411,15 +459,15 @@
 					"file": "application/views/home/index.php",
 					"settings":
 					{
-						"buffer_size": 2695,
+						"buffer_size": 2700,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1079,
-								1079
+								1775,
+								1771
 							]
 						],
 						"settings":
@@ -428,7 +476,7 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 540.0,
+						"translation.y": 682.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -453,6 +501,116 @@
 						{
 							"syntax": "Packages/PHP/PHP.tmLanguage",
 							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "application/views/admin/index.php",
+					"settings":
+					{
+						"buffer_size": 1004,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								110,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "css/admin.css",
+					"settings":
+					{
+						"buffer_size": 173,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								171,
+								171
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/CSS/CSS.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "application/views/attribute/index.php",
+					"settings":
+					{
+						"buffer_size": 692,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								488,
+								488
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"file": "application/views/user/index.php",
+					"settings":
+					{
+						"buffer_size": 664,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								250,
+								250
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
@@ -505,12 +663,48 @@
 		"selected_items":
 		[
 			[
-				"categorie",
+				"attribute",
+				"application/views/attribute/index.php"
+			],
+			[
+				"heade",
+				"application/views/includes/_admin_header.php"
+			],
+			[
+				"categories",
 				"application/views/home/categories.php"
 			],
 			[
 				"rout",
 				"application/config/routes.php"
+			],
+			[
+				"admin",
+				"css/admin.css"
+			],
+			[
+				"uif",
+				"application/helpers/UIF_helper.php"
+			],
+			[
+				"layou",
+				"application/views/layouts/admin.php"
+			],
+			[
+				"admin.",
+				"application/controllers/admin.php"
+			],
+			[
+				"auto",
+				"application/config/autoload.php"
+			],
+			[
+				"cafe",
+				"application/views/home/caffe.php"
+			],
+			[
+				"categorie",
+				"application/views/home/categories.php"
 			],
 			[
 				"_contac",
@@ -523,10 +717,6 @@
 			[
 				"catering",
 				"application/views/home/catering.php"
-			],
-			[
-				"categories",
-				"application/views/home/categories.php"
 			],
 			[
 				"navi",
@@ -599,10 +789,6 @@
 			[
 				"categ",
 				"application/views/welcome/category.php"
-			],
-			[
-				"admin",
-				"application/controllers/admin.php"
 			],
 			[
 				"adminlogin",

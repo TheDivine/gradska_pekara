@@ -1,13 +1,14 @@
-<h2>Attributes</h2>
-<div class="actions"><?php echo anchor('attribute/create','Add'); ?></div>
-<hr/>
-<table class="tablesorter" id="attributes">
+<div class="page-header">
+  <h4>Attributes</h4>
+</div>
+<?php echo uif::linkInsertButton('attribute/create'); ?>
+<hr>
+<table class="table table-hover table-bordered">
 <thead>
   <tr>
     <th>NameMK</th>
     <th>NameSR</th>
     <th>NameEN</th>
-    <th>&nbsp;</th>
     <th>&nbsp;</th>
   </tr>
 </thead>
@@ -17,8 +18,7 @@
 	    <td><?php echo $row->name_mk;?></td>
 	    <td><?php echo $row->name_sr;?></td>
 	    <td><?php echo $row->name_en;?></td>
-	    <td><?php echo anchor("attribute/edit/{$row->id}",'Edit'); ?></td>
-	    <td><?php echo anchor("attribute/delete/{$row->id}",'Delete'); ?></td>
+      <td><?php echo uif::actionGroup('attribute',$row->id); ?></td>
 	  </tr>
   <?php endforeach; ?>
 </tbody>

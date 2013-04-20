@@ -2,15 +2,12 @@ header {
     background: url('../img/head_logo.png') 10px;
     background-repeat: no-repeat;
     height: 75px;
-    border-bottom: 1px solid #ccc;
-    margin-bottom: 5px;
 }
 .cd-navi {
     margin-top: 25px;
 }
 footer {}
 div[role=main] {}
-
 #jumbo {
     background-image: url('../img/jumbo.png');
     background-repeat: no-repeat;
