@@ -1,9 +1,9 @@
 <ul class="thumbnails">
 <?php foreach($categories as $row): ?>
     <li class="span4">
-        <a href=<?php echo base_url("prod/{$row->permalink}")?>>
+        <a href=<?php echo base_url("category/{$row->permalink}")?>>
         <div class="thumbnail">
-            <img src="<?php echo base_url().$row->image;?>" alt="<?php echo $row->permalink;?>"/>
+            <img src=<?php echo base_url($row->image);?> alt="<?php echo $row->permalink;?>"/>
             <div class="caption">
                 <h5><?php echo $row->name_mk; ?></h5>
                 <p>Lorem ipsum dolor sit amet, quod architectre laboriosam consequuntur laudantium!</p>

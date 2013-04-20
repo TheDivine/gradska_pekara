@@ -1,4 +1,4 @@
-<div id="contact">
+
 	<h3>контакт инфомации</h3>
 	<hr />
 	<dl>
@@ -45,9 +45,7 @@
 		<?php echo form_close();?>
 	</table>
 	<?php echo validation_errors(); ?>
-	<div id="div_cf">
-	</div>
-</div>
+	<div id="div_cf"></div>
 
 <script type="text/javascript">
 

@@ -4,6 +4,42 @@
 		"selected_items":
 		[
 			[
+				"margin",
+				"margin-bottom"
+			],
+			[
+				"bac",
+				"background-position"
+			],
+			[
+				"padd",
+				"padding-left"
+			],
+			[
+				"mar",
+				"margin-left"
+			],
+			[
+				"add",
+				"padding-top"
+			],
+			[
+				"back",
+				"background-repeat"
+			],
+			[
+				"padding",
+				"padding-top"
+			],
+			[
+				"paddin",
+				"padding-top"
+			],
+			[
+				"wid",
+				"width"
+			],
+			[
 				"bor",
 				"border"
 			],
@@ -16,14 +52,6 @@
 				"font"
 			],
 			[
-				"margin",
-				"margin-top"
-			],
-			[
-				"back",
-				"background-color"
-			],
-			[
 				"font-",
 				"font-variant"
 			]
@@ -31,13 +59,49 @@
 	},
 	"buffers":
 	[
+		{
+			"file": "application/views/layouts/web.php",
+			"settings":
+			{
+				"buffer_size": 4304,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "css/main.css",
+			"settings":
+			{
+				"buffer_size": 376,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "application/views/home/index.php",
+			"settings":
+			{
+				"buffer_size": 2695,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "application/views/home/category.php",
+			"settings":
+			{
+				"buffer_size": 1943,
+				"line_ending": "Windows"
+			}
+		}
 	],
 	"build_system": "",
 	"command_palette":
 	{
-		"height": 392.0,
+		"height": 219.0,
 		"selected_items":
 		[
+			[
+				"feth",
+				"Fetch: File"
+			],
 			[
 				"install",
 				"Package Control: Install Package"
@@ -59,7 +123,7 @@
 				"HTML: Wrap Selection With Tag"
 			]
 		],
-		"width": 602.0
+		"width": 528.0
 	},
 	"console":
 	{
@@ -76,6 +140,22 @@
 	},
 	"file_history":
 	[
+		"/C/wamp/www/gradska_pekara/application/views/home/caffe.php",
+		"/C/wamp/www/gradska_pekara/application/views/home/catering.php",
+		"/C/wamp/www/gradska_pekara/application/views/home/contact.php",
+		"/C/wamp/www/gradska_pekara/application/views/includes/_contact_mk.php",
+		"/C/wamp/www/gradska_pekara/application/config/routes.php",
+		"/C/wamp/www/gradska_pekara/application/views/home/categories.php",
+		"/C/wamp/www/kumanovski_kori/application/views/home/categories.php",
+		"/C/wamp/www/gradska_pekara/application/views/includes/_navi_mk.php",
+		"/C/wamp/www/gradska_pekara/application/views/includes/_header.php",
+		"/C/wamp/www/gradska_pekara/application/views/includes/_footer.php",
+		"/C/wamp/www/kumanovski_kori/application/views/includes/_navi_mk.php",
+		"/C/wamp/www/gradska_pekara/js/jquery.min.js",
+		"/C/wamp/www/gradska_pekara/js/vendor/jquery-1.8.0.min.js",
+		"/C/Users/marko/AppData/Roaming/Sublime Text 2/Packages/User/Fetch.sublime-settings",
+		"/C/wamp/www/gradska_pekara/.htaccess",
+		"/C/wamp/www/gradska_pekara/application/config/database.php",
 		"/C/wamp/www/gradska_pekara/.gitignore",
 		"/home/marko/www/gradska_pekara/system/core/Exceptions.php",
 		"/home/marko/www/gradska_pekara/application/errors/error_404.php",
@@ -187,23 +267,7 @@
 		"/home/marko/Downloads/jobs_dev (1).sql",
 		"/home/marko/www/jobs/application/config/config.php",
 		"/home/marko/www/jobs/application/views/includes/_header.php",
-		"/home/marko/www/jobs/.htaccess",
-		"/home/marko/www/jobs/application/views/layouts/application.php",
-		"/home/marko/www/jobs/application/core/MY_Controller.php",
-		"/home/marko/www/jobs/application/core/MY_Loader.php",
-		"/home/marko/www/info.php",
-		"/home/marko/www/ci/index.php",
-		"/home/marko/www/ci/application/helpers/get_dropdown.php",
-		"/home/marko/www/ci/application/config/autoload.php",
-		"/home/marko/www/ci/system/helpers/form_helper.php",
-		"/home/marko/www/ci/application/third_party/tcpdf/tcpdf.php",
-		"/home/marko/www/jobs/application/views/jobs/create.php",
-		"/home/marko/www/jobs/application/views/includes/_create_job_form.php",
-		"/home/marko/www/jobs/application/libraries/Utilities.php",
-		"/home/marko/www/jobs/application/views/jobs/search.php",
-		"/home/marko/www/jobs/application/views/includes/sidebar.php",
-		"/home/marko/www/jobs/application/views/jobs/category.php",
-		"/home/marko/www/jobs/application/views/jobs/index.php"
+		"/home/marko/www/jobs/.htaccess"
 	],
 	"find":
 	{
@@ -221,6 +285,16 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"phone",
+			"email",
+			"name",
+			"h3",
+			"slide-0",
+			"examples/",
+			"assets/",
+			"h4",
+			"h3",
+			"h1",
 			"proizvodi",
 			"name",
 			"->$name",
@@ -274,8 +348,119 @@
 	"groups":
 	[
 		{
+			"selected": 3,
 			"sheets":
 			[
+				{
+					"buffer": 0,
+					"file": "application/views/layouts/web.php",
+					"settings":
+					{
+						"buffer_size": 4304,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2818,
+								2818
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 545.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "css/main.css",
+					"settings":
+					{
+						"buffer_size": 376,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								107,
+								107
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/CSS/CSS.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "application/views/home/index.php",
+					"settings":
+					{
+						"buffer_size": 2695,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1079,
+								1079
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 540.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "application/views/home/category.php",
+					"settings":
+					{
+						"buffer_size": 1943,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								164,
+								164
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				}
 			]
 		}
 	],
@@ -312,7 +497,7 @@
 	"menu_visible": true,
 	"replace":
 	{
-		"height": 0.0
+		"height": 66.0
 	},
 	"save_all_on_build": true,
 	"select_file":
@@ -321,12 +506,60 @@
 		"selected_items":
 		[
 			[
-				"404",
-				"application/errors/error_404.php"
+				"categorie",
+				"application/views/home/categories.php"
+			],
+			[
+				"rout",
+				"application/config/routes.php"
+			],
+			[
+				"_contac",
+				"application/views/includes/_contact_mk.php"
+			],
+			[
+				"contact",
+				"application/views/home/contact.php"
+			],
+			[
+				"catering",
+				"application/views/home/catering.php"
+			],
+			[
+				"categories",
+				"application/views/home/categories.php"
 			],
 			[
 				"navi",
 				"application/views/includes/_navi_mk.php"
+			],
+			[
+				"head",
+				"application/views/includes/_header.php"
+			],
+			[
+				"foo",
+				"application/views/includes/_footer.php"
+			],
+			[
+				"_navi",
+				"application/views/includes/_navi_mk.php"
+			],
+			[
+				"viewsinde",
+				"application/views/home/index.php"
+			],
+			[
+				"main",
+				"css/main.css"
+			],
+			[
+				"data",
+				"application/config/database.php"
+			],
+			[
+				"404",
+				"application/errors/error_404.php"
 			],
 			[
 				"naiv",
@@ -335,22 +568,6 @@
 			[
 				"viewscateg",
 				"application/views/home/categories.php"
-			],
-			[
-				"rout",
-				"application/config/routes.php"
-			],
-			[
-				"main",
-				"css/main.css"
-			],
-			[
-				"foo",
-				"application/views/includes/_footer.php"
-			],
-			[
-				"head",
-				"application/views/includes/_header.php"
 			],
 			[
 				"nav",
@@ -413,20 +630,12 @@
 				"application/views/category/view.php"
 			],
 			[
-				"categories",
-				"application/views/welcome/categories.php"
-			],
-			[
 				"contac",
 				"application/views/includes/_contact_mk.php"
 			],
 			[
 				"welcom",
 				"application/controllers/welcome.php"
-			],
-			[
-				"catering",
-				"application/views/welcome/catering.php"
 			],
 			[
 				"index_mk",

@@ -41,7 +41,7 @@
 		<header class="row-fluid">
             <ul class="nav nav-pills pull-right cd-navi">
               <li class="active"><?php echo anchor('about_us','За Нас');?></li>
-              <li><?php echo anchor('products','Производи');?></li>
+              <li><?php echo anchor('categories','Производи');?></li>
               <li><?php echo anchor('caffe','Lucaff&eacute');?></li>
               <li><?php echo anchor('catering','Кетеринг');?></li>
               <li><?php echo anchor('contact','Контакт');?></li>
