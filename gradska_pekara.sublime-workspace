@@ -76,6 +76,7 @@
 	},
 	"file_history":
 	[
+		"/C/wamp/www/gradska_pekara/.gitignore",
 		"/home/marko/www/gradska_pekara/system/core/Exceptions.php",
 		"/home/marko/www/gradska_pekara/application/errors/error_404.php",
 		"/home/marko/www/gradska_pekara/robots.txt",
@@ -202,8 +203,7 @@
 		"/home/marko/www/jobs/application/views/jobs/search.php",
 		"/home/marko/www/jobs/application/views/includes/sidebar.php",
 		"/home/marko/www/jobs/application/views/jobs/category.php",
-		"/home/marko/www/jobs/application/views/jobs/index.php",
-		"/home/marko/www/jobs/application/models/Type.php"
+		"/home/marko/www/jobs/application/views/jobs/index.php"
 	],
 	"find":
 	{
