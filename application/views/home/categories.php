@@ -1,14 +1,15 @@
-<div id="categories">
-    <?php foreach($categories as $row): ?>
-        <div class="category">
-                <div class="cat_thumb">
-                    <a href="<?php echo base_url('prod/'.$row->permalink); ?>">
-                        <img src="<?php echo base_url($row->img_thumb); ?>" alt="<?php echo $row->permalink; ?>"/>
-                    </a>
-                </div>
-                <div class="cat_link">
-                    <?php echo anchor('prod/'.$row->permalink,$row->name_mk); ?>
-                </div>
+<ul class="thumbnails">
+<?php foreach($categories as $row): ?>
+    <li class="span4">
+        <a href=<?php echo base_url("prod/{$row->permalink}")?>>
+        <div class="thumbnail">
+            <img src="<?php echo base_url().$row->image;?>" alt="<?php echo $row->permalink;?>"/>
+            <div class="caption">
+                <h5><?php echo $row->name_mk; ?></h5>
+                <p>Lorem ipsum dolor sit amet, quod architectre laboriosam consequuntur laudantium!</p>
+            </div>
         </div>
-    <?php endforeach; ?>
-</div>
+        </a>
+    </li>
+<?php endforeach; ?>
+</ul>

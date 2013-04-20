@@ -1,46 +1,64 @@
-<div id="staticPage">
-<h1>Првата и Најдобра Артисан Пекара во Македонија!</h1>
-	<div id="divInfoL">
-		<img src="<?php echo base_url('img/bakery.jpg'); ?>" style="padding:2px; border:1px solid #ccc;">
-		<!-- NEWSLETTERS -->
-			<!-- <div class="newsletters">
-			<p id="ml_nw">Внесете го Вашиот и-меил, за први да добивате информации, новости и промотивни понуди во врска со нашите производи</p>
-				<?php echo form_open('welcome/post_newsletter_email',"id='nl_form'");?>
-					<?php echo form_input('email');?><br/>
-					<?php echo form_input('yolo','',"id='yolo'");?>
-					<?php echo form_submit('','Запиши се!',"id='submit_button'");?>	
-				<?php echo form_close();?>
-				<p id="ml_privacy">Вашата приватност е наш приоритет. Вашите и-меил адреси не ги продаваме или споделуваме со надворешни трети лица</p>
-			</div> -->
-		<!-- END OF NEWSLETTERS -->
-	</div>
-	<div id="divInfoR">
-		<h3>За Нас</h3>
-		<hr/>
-		<p>
-			„Фортис“ е име на високо квалитетна професионална опрема наменета за пекарски и месарски бизнис како и помошна опрема за сите гранки на прехрамбената индустрија.
-		</p>
-		
-		<p>
-			Водени од сопственото искуство во пекарското производство, го создадовме брендот „Фортис“ кој директно ги рефлектира потребите на мали и средни производствени погони од квалитетна опрема која е по пристапни цени, задоволувајќи ги најсовремените светски стандарди за квалитет и хигиена.
-		</p>
-		<div class="missvis">
-			<h4>Нашата Мисија</h4>
-			<hr>
-			<p>Да понудиме најквалитетна и најсовремена професионална опрема за прехрамбената индустрија, по најпристапни цени во регионот!</p>
-		</div>
-		<p>
-			<br/>
-			„Фортис“ е тука за да Ви овозможи успешен и ефикасен тек во Вашиот нов или стар бизнис.
-		</p>
-		<div id="fb_find">
-			<div class="fb-like-box" data-href="http://www.facebook.com/pages/Кумановска-Градкса-Пекара/506626009371136" data-height="185" data-width="470" data-show-faces="true" data-border-color="ccc" data-stream="false" data-header="false"></div>
+<div class="row-fluid">
+	<div class="span12">
+		<div class="page-header">
+			<h1>Нешто Посебно во Куманово!</h1>
 		</div>	
 	</div>
 </div>
-
-<script type="text/javascript">
+<div id="myCarousel" class="carousel slide">
+  <ol class="carousel-indicators">
+    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+    <li data-target="#myCarousel" data-slide-to="1"></li>
+    <li data-target="#myCarousel" data-slide-to="2"></li>
+  </ol>
+  <!-- Carousel items -->
+  <div class="carousel-inner">
+    <div class="active item">
+    	<img src="img/jumbo1.jpg" alt="">
+    	<div class="carousel-caption">
+        	<p>Caption text here</p>
+      	</div>
+    </div>
+    <div class="item">
+    	<img src="img/jumbo2.jpg" alt="">
+    	<div class="carousel-caption">
+        	<p>Caption text here</p>
+      	</div>
+    </div>
+    <div class="item">
+    	<img src="img/jumbo3.jpg" alt="">
+    	<div class="carousel-caption">
+        	<p>Caption text here</p>
+      	</div>
+    </div>
+  </div>
+</div>
+<hr>
+<div class="row-fluid">
+	<div class="span4">
+		<h4>За Нас</h4>
+			<strong>Кумановска Градска Пекара</strong> е име на високо квалитетна професионална опрема наменета за пекарски и 
+			месарски бизнис како и помошна опрема за сите гранки на прехрамбената индустрија.
+	</div>
+	<div class="span4">
+		<div class="alert alert-success">
+			<h4>Нашата Мисија</h4>
+		<i class="icon-info-sign"></i> Да понудиме најквалитетна и најсовремена 
+		професионална опрема за прехрамбената индустрија, по најпристапни цени во регионот!
+		</div>
+	</div>
+	<div class="span4">
+		<div class="alert alert-info">
+			<h4>Нашата Визија</h4>
+		<i class="icon-info-sign"></i> Да понудиме најквалитетна и најсовремена 
+		професионална опрема за прехрамбената индустрија, по најпристапни цени во регионот!
+		</div>
+	</div>
+</div>
+<script>
 	$(function(){
+
+		 $('.carousel').carousel();
 
 		var submit_button = $("#submit_button");
 		
