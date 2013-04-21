@@ -48,15 +48,22 @@
 		<div role="main">
 			<?php echo $content; ?>
 		</div>
-		<footer class="row-fluid">
+    <footer class="row-fluid">
+        <div class="row-fluid">
+            <div class="span12">
+                <hr>
+            </div>
+        </div>
+        <div class="row-fluid">
             <div class="span6">
-                   <p class="lead"><i class="icon-phone"></i> <strong>031 550 580</strong></p>     
+                <p class="lead"><i class="icon-phone"></i> <strong>031 550 580</strong></p>     
             </div>
             <div class="span6 text-right">
                 © 2012 Кумановска Градска Пекара. Сите права задржани.<br/>
                 Published by <?php echo anchor('http://www.carniadesign.com','Carnia Design'); ?>
             </div>
-		</footer>
+        </div>
+    </footer>
         </div>
         <script src="<?php echo base_url('js/modernizr.min.js'); ?>"></script>
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>

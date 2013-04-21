@@ -4,32 +4,36 @@
 		"selected_items":
 		[
 			[
+				"margin",
+				"margin"
+			],
+			[
+				"mar",
+				"margin-top"
+			],
+			[
+				"padd",
+				"padding-right"
+			],
+			[
+				"border",
+				"border-top"
+			],
+			[
+				"marg",
+				"margin-bottom"
+			],
+			[
+				"back",
+				"background-color"
+			],
+			[
 				"text",
 				"text-decoration"
 			],
 			[
-				"margin",
-				"margin-bottom"
-			],
-			[
-				"mar",
-				"margin-bottom"
-			],
-			[
-				"marg",
-				"margin-top"
-			],
-			[
 				"bord",
 				"border-top"
-			],
-			[
-				"padd",
-				"padding"
-			],
-			[
-				"back",
-				"background-clip"
 			],
 			[
 				"font",
@@ -60,10 +64,6 @@
 				"border"
 			],
 			[
-				"border",
-				"border-bottom"
-			],
-			[
 				"font-",
 				"font-variant"
 			]
@@ -72,26 +72,10 @@
 	"buffers":
 	[
 		{
-			"file": "application/views/layouts/web.php",
-			"settings":
-			{
-				"buffer_size": 4520,
-				"line_ending": "Windows"
-			}
-		},
-		{
 			"file": "css/main.css",
 			"settings":
 			{
-				"buffer_size": 316,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "application/views/home/index.php",
-			"settings":
-			{
-				"buffer_size": 2700,
+				"buffer_size": 341,
 				"line_ending": "Windows"
 			}
 		},
@@ -99,39 +83,23 @@
 			"file": "application/views/home/category.php",
 			"settings":
 			{
-				"buffer_size": 1943,
+				"buffer_size": 1872,
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "application/views/admin/index.php",
+			"file": "application/views/home/categories.php",
 			"settings":
 			{
-				"buffer_size": 1004,
+				"buffer_size": 559,
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "css/admin.css",
+			"file": "application/views/layouts/web.php",
 			"settings":
 			{
-				"buffer_size": 173,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "application/views/attribute/index.php",
-			"settings":
-			{
-				"buffer_size": 692,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "application/views/user/index.php",
-			"settings":
-			{
-				"buffer_size": 664,
+				"buffer_size": 4688,
 				"line_ending": "Windows"
 			}
 		}
@@ -184,13 +152,24 @@
 	},
 	"file_history":
 	[
+		"/C/wamp/www/gradska_pekara/application/views/home/index.php",
+		"/C/wamp/www/gradska_pekara/application/views/includes/_footer.php",
+		"/C/wamp/www/gradska_pekara/application/views/layouts/web.php",
+		"/C/wamp/www/gradska_pekara/css/main.css",
+		"/C/wamp/www/gradska_pekara/application/helpers/UIF_helper.php",
+		"/C/wamp/www/gradska_pekara/application/views/category/view.php",
+		"/C/wamp/www/gradska_pekara/application/views/layouts/admin.php",
+		"/C/wamp/www/gradska_pekara/application/views/admin/login.php",
+		"/C/wamp/www/gradska_pekara/application/views/category/index.php",
+		"/C/wamp/www/gradska_pekara/css/admin.css",
+		"/C/wamp/www/gradska_pekara/application/views/home/category.php",
+		"/C/wamp/www/gradska_pekara/application/views/admin/index.php",
+		"/C/wamp/www/gradska_pekara/application/views/attribute/index.php",
+		"/C/wamp/www/gradska_pekara/application/views/user/index.php",
+		"/C/wamp/www/gradska_pekara/application/controllers/admin.php",
 		"/C/wamp/www/gradska_pekara/application/config/routes.php",
 		"/C/wamp/www/gradska_pekara/application/views/includes/_admin_header.php",
 		"/C/wamp/www/gradska_pekara/application/views/home/categories.php",
-		"/C/wamp/www/gradska_pekara/application/helpers/UIF_helper.php",
-		"/C/wamp/www/gradska_pekara/application/views/layouts/admin.php",
-		"/C/wamp/www/gradska_pekara/css/admin.css",
-		"/C/wamp/www/gradska_pekara/application/controllers/admin.php",
 		"/C/wamp/www/gradska_pekara/application/config/autoload.php",
 		"/C/wamp/www/gradska_pekara/js/modernizr.js",
 		"/C/wamp/www/gradska_pekara/application/views/home/caffe.php",
@@ -200,7 +179,6 @@
 		"/C/wamp/www/kumanovski_kori/application/views/home/categories.php",
 		"/C/wamp/www/gradska_pekara/application/views/includes/_navi_mk.php",
 		"/C/wamp/www/gradska_pekara/application/views/includes/_header.php",
-		"/C/wamp/www/gradska_pekara/application/views/includes/_footer.php",
 		"/C/wamp/www/kumanovski_kori/application/views/includes/_navi_mk.php",
 		"/C/wamp/www/gradska_pekara/js/jquery.min.js",
 		"/C/wamp/www/gradska_pekara/js/vendor/jquery-1.8.0.min.js",
@@ -301,17 +279,7 @@
 		"/home/marko/.ssh/id_rsa.pub",
 		"/home/marko/.ssh/id_rsa",
 		"/home/marko/www/FortisPMS/fortis-pms.sublime-workspace",
-		"/home/marko/www/FortisPMS/.gitignore",
-		"/home/marko/www/FortisPMS/humans.txt",
-		"/home/marko/www/FortisPMS/robots.txt",
-		"/home/marko/www/FortisPMS/application/models/attribute_model.php",
-		"/usr/share/applications/defaults.list",
-		"/usr/share/applications/sublime.desktop",
-		"/home/marko/.config/sublime-text-2/Packages/User/Preferences.sublime-settings",
-		"/home/marko/www/Highcharts-2.2.0/js/highcharts.js",
-		"/media/STORAGE/Ubuntu Marko/webapp/lavanda/application/controllers/login.php",
-		"/home/marko/www/Highcharts-2.2.0/js/highcharts.src.js",
-		"/home/marko/www/jobs/application/controllers/jobs.php"
+		"/home/marko/www/FortisPMS/.gitignore"
 	],
 	"find":
 	{
@@ -329,6 +297,9 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"p",
+			"inputPassword",
+			"inputEmail",
 			"deavtivate",
 			"update",
 			"h2",
@@ -395,161 +366,23 @@
 	"groups":
 	[
 		{
-			"selected": 7,
+			"selected": 3,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "application/views/layouts/web.php",
-					"settings":
-					{
-						"buffer_size": 4520,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								2793,
-								2810
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/PHP/PHP.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 400.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 1,
 					"file": "css/main.css",
 					"settings":
 					{
-						"buffer_size": 316,
+						"buffer_size": 341,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								175,
-								175
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/CSS/CSS.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "application/views/home/index.php",
-					"settings":
-					{
-						"buffer_size": 2700,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1775,
-								1771
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/PHP/PHP.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 682.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 3,
-					"file": "application/views/home/category.php",
-					"settings":
-					{
-						"buffer_size": 1943,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								164,
-								164
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/PHP/PHP.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 4,
-					"file": "application/views/admin/index.php",
-					"settings":
-					{
-						"buffer_size": 1004,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								110,
-								0
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/PHP/PHP.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 5,
-					"file": "css/admin.css",
-					"settings":
-					{
-						"buffer_size": 173,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								171,
-								171
+								195,
+								195
 							]
 						],
 						"settings":
@@ -563,25 +396,52 @@
 					"type": "text"
 				},
 				{
-					"buffer": 6,
-					"file": "application/views/attribute/index.php",
+					"buffer": 1,
+					"file": "application/views/home/category.php",
 					"settings":
 					{
-						"buffer_size": 692,
+						"buffer_size": 1872,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								488,
-								488
+								1872,
+								1872
 							]
 						],
 						"settings":
 						{
 							"syntax": "Packages/PHP/PHP.tmLanguage",
-							"tab_size": 2,
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 495.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "application/views/home/categories.php",
+					"settings":
+					{
+						"buffer_size": 559,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								20,
+								20
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"tab_size": 4,
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
@@ -591,29 +451,29 @@
 					"type": "text"
 				},
 				{
-					"buffer": 7,
-					"file": "application/views/user/index.php",
+					"buffer": 3,
+					"file": "application/views/layouts/web.php",
 					"settings":
 					{
-						"buffer_size": 664,
+						"buffer_size": 4688,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								250,
-								250
+								2866,
+								2866
 							]
 						],
 						"settings":
 						{
 							"syntax": "Packages/PHP/PHP.tmLanguage",
-							"tab_size": 2,
+							"tab_size": 4,
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 767.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -663,6 +523,62 @@
 		"selected_items":
 		[
 			[
+				"main.css",
+				"css/main.css"
+			],
+			[
+				"viewshome",
+				"application/views/home/index.php"
+			],
+			[
+				"main",
+				"css/main.css"
+			],
+			[
+				"web",
+				"application/views/layouts/web.php"
+			],
+			[
+				"foo",
+				"application/views/includes/_footer.php"
+			],
+			[
+				"viewshomecategr",
+				"application/views/home/categories.php"
+			],
+			[
+				"viewshomeca",
+				"application/views/home/category.php"
+			],
+			[
+				"ma",
+				"css/main.css"
+			],
+			[
+				"categoryindex",
+				"application/views/category/index.php"
+			],
+			[
+				"uif",
+				"application/helpers/UIF_helper.php"
+			],
+			[
+				"categoryview",
+				"application/views/category/view.php"
+			],
+			[
+				"admin.",
+				"application/views/layouts/admin.php"
+			],
+			[
+				"admin.css",
+				"css/admin.css"
+			],
+			[
+				"login",
+				"application/views/admin/login.php"
+			],
+			[
 				"attribute",
 				"application/views/attribute/index.php"
 			],
@@ -683,16 +599,8 @@
 				"css/admin.css"
 			],
 			[
-				"uif",
-				"application/helpers/UIF_helper.php"
-			],
-			[
 				"layou",
 				"application/views/layouts/admin.php"
-			],
-			[
-				"admin.",
-				"application/controllers/admin.php"
 			],
 			[
 				"auto",
@@ -727,20 +635,12 @@
 				"application/views/includes/_header.php"
 			],
 			[
-				"foo",
-				"application/views/includes/_footer.php"
-			],
-			[
 				"_navi",
 				"application/views/includes/_navi_mk.php"
 			],
 			[
 				"viewsinde",
 				"application/views/home/index.php"
-			],
-			[
-				"main",
-				"css/main.css"
 			],
 			[
 				"data",
@@ -761,10 +661,6 @@
 			[
 				"nav",
 				"application/views/includes/_navi_mk.php"
-			],
-			[
-				"web",
-				"application/views/layouts/web.php"
 			],
 			[
 				"categry",
@@ -795,10 +691,6 @@
 				"application/views/admin/login.php"
 			],
 			[
-				"login",
-				"application/views/admin/login.php"
-			],
-			[
 				"caff",
 				"application/views/welcome/caffe.php"
 			],
@@ -809,10 +701,6 @@
 			[
 				"viewwelcomecat",
 				"application/views/welcome/category.php"
-			],
-			[
-				"categoryview",
-				"application/views/category/view.php"
 			],
 			[
 				"contac",
@@ -869,10 +757,6 @@
 			[
 				"css",
 				"css/style.css"
-			],
-			[
-				"ma",
-				"css/main.css"
 			],
 			[
 				"usersmod",

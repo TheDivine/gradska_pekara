@@ -48,8 +48,3 @@
 	<?php endif ?>
 		</div>
 </div>
-<div class="row-fluid">
-	<div class="span8 offset3">
-		
-	</div>
-</div>
