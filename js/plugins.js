@@ -10,17 +10,3 @@ if (!(window.console && console.log)) {
         }
     }());
 }
-
-// Place any jQuery/helper plugins in here.
-
-/*
- * Nivo Slider
- */
-$(window).load(function() {
-    $('#slider').nivoSlider({
-    	controlNav: false,
-    	pauseTime: 3000,
-    	pauseOnHover: true
-    });
-});
-

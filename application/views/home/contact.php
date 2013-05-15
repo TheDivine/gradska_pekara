@@ -1,31 +1,66 @@
-<!-- <div id="google_map">
-   <iframe width="500" height="500" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps/ms?msa=0&amp;msid=202185547303679614355.0004d092eb8cac48d6f80&amp;ie=UTF8&amp;t=m&amp;ll=42.138523,21.720314&amp;spn=0.015911,0.021415&amp;z=15&amp;output=embed"></iframe>
-</div> -->
-<!-- <div id="google_map">
-	
+<div class="page-header">
+	<h1>Контакт</h1>
 </div>
-<div id="contact">
-	<?php //$this->load->view('includes/_contact_'.$this->session->userdata('lng')); ?>
-</div> -->
 <div class="row-fluid">
 	<div class="span6">
-		<form>
-			<fieldset>
-				<legend>Контакт Форма</legend>
-					<label>Име и Презиме</label>
-					<?php echo form_input('name',set_value('name')); ?>
-					<label>И-меил</label>
-					<?php echo form_input('email',set_value('email')); ?>
-					<label>Телефон</label>
-					<?php echo form_input('phone',set_value('phone')); ?>
-					<label>Порака</label>
-					<?php echo form_textarea('message',set_value('message')); ?>
-					<span clsas="help-block"></span>
-				<button type="submit" class="btn">Submit</button>
-			</fieldset>
-		</form>
+		<address>
+			<strong>Кумановска Градска Пекара</strong><br>
+			Октомвриска Револуција 32 - Пораншен Ресторант Табакана<br>
+			1300 Куманово, Македонија <br>
+			Телефон: 031 550 580 <br>
+			<?php echo safe_mailto('info@gradskapekara.mk'); ?>
+		</address>
+		<hr>
+		<h4>Администрација</h4>
+		<address>
+			<strong>Агро-Про ДОО</strong><br>
+			Индустриска Зона Доброшане<br>
+			1300 Куманово, Македонија <br>
+			Телефон: 031 453 905 <br>
+			Телефон: 031 453 906 <br>
+			Факс: 031 412 715 <br>
+			<?php echo safe_mailto('info@kumanovskikori.mk'); ?> <br>
+			<?php echo anchor('http://www.kumanovskikori.mk'); ?>
+		</address>
 	</div>
-	<div class="span6">
-		<img src="img/mapa.jpg">
+	<div class="span6 well">
+		<?php echo form_open('','id="contact-form"');?>
+			<fieldset>
+				<label>Име и Презиме</label>
+				<?php echo form_input('name',set_value('name'),'class="input-xlarge"'); ?>
+				<label>И-Mеил</label>
+				<?php echo form_input('email',set_value('email'),'class="input-xlarge"'); ?>
+				<label>Телефон</label>
+				<?php echo form_input('phone',set_value('phone'),'class="input-xlarge"'); ?>
+				<label>Порака</label>
+				<?php echo form_textarea('message',set_value('message'),'class="input-block-level"'); ?>
+				<hr>
+				<button id="submit-form" class="btn btn-primary span4 pull-right">Испрати</button>
+			</fieldset>
+			<?php echo form_hidden('yolo'); ?>
+		<?php echo form_close(); ?>
 	</div>
 </div>
+
+<script>
+	$(function(){
+		$("#submit-form").on('click',function(e){
+			e.preventDefault();
+			$.ajax({
+				url: "<?=site_url('home/post_contact')?>",
+				type: 'post',
+				dataType: 'json',
+				data: $('#contact-form').serialize(),
+				success : function(data) {
+					alert(data);
+					//document.location.reload(true);
+				},
+				error : function(data) {
+					alert('error');
+				}
+			});
+			return false;
+		});
+		
+	});
+</script>

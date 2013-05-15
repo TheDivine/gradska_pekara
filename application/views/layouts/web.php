@@ -19,6 +19,9 @@
           
     </head>
     <body>
+         <script src="<?php echo base_url('js/modernizr.min.js'); ?>"></script>
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+        <script>window.jQuery || document.write('<script src="<?php echo base_url('js/jquery.min.js'); ?>"><\/script>')</script>
     	<div id="fb-root"></div>
         <script>(function(d, s, id) {
           var js, fjs = d.getElementsByTagName(s)[0];
@@ -37,15 +40,18 @@
                 <?php echo anchor('about_us','За Нас');?></li>
               <li <?=(($this->router->method == 'categories') OR ($this->router->method=='category'))?'class="active"':'';?>>
                 <?php echo anchor('categories','Производи');?></li>
+             <li <?=($this->router->method == 'quality')?'class="active"':'';?>>
+                <?php echo anchor('quality','Квалитет');?></li>
               <li <?=($this->router->method == 'caffe')?'class="active"':'';?>>
                 <?php echo anchor('caffe','Lucaff&eacute');?></li>
               <li <?=($this->router->method == 'catering')?'class="active"':'';?>>
-                <?php echo anchor('catering','Кетеринг');?></li>
+                <?php echo anchor('catering','Нарачки &amp; Кетеринг');?></li>
               <li <?=($this->router->method == 'contact')?'class="active"':'';?>>
                 <?php echo anchor('contact','Контакт');?></li>
             </ul>
 		</header>
 		<div role="main">
+            <hr>
 			<?php echo $content; ?>
 		</div>
     <footer class="row-fluid">
@@ -65,9 +71,6 @@
         </div>
     </footer>
         </div>
-        <script src="<?php echo base_url('js/modernizr.min.js'); ?>"></script>
-        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-        <script>window.jQuery || document.write('<script src="js/jquery.js"><\/script>')</script>
         <script src="<?php echo base_url('js/bootstrap.min.js'); ?>" type="text/javascript"></script> 
         <script src="<?php echo base_url('js/plugins.js'); ?>"></script>
         <script src="<?php echo base_url('js/main.js'); ?>"></script>

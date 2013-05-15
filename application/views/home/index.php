@@ -1,10 +1,6 @@
-<div class="row-fluid">
-	<div class="span12">
-		<div class="page-header">
-			<h1>Нешто Посебно во Куманово!</h1>
-		</div>	
-	</div>
-</div>
+<div class="page-header">
+	<h1>Нешто Посебно во Куманово!</h1>
+</div>	
 <div id="myCarousel" class="carousel slide">
   <ol class="carousel-indicators">
     <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
@@ -15,21 +11,12 @@
   <div class="carousel-inner">
     <div class="active item">
     	<img src="img/jumbo1.jpg" alt="">
-    	<div class="carousel-caption">
-        	<p>Caption text here</p>
-      	</div>
     </div>
     <div class="item">
     	<img src="img/jumbo2.jpg" alt="">
-    	<div class="carousel-caption">
-        	<p>Caption text here</p>
-      	</div>
     </div>
     <div class="item">
     	<img src="img/jumbo3.jpg" alt="">
-    	<div class="carousel-caption">
-        	<p>Caption text here</p>
-      	</div>
     </div>
   </div>
 </div>

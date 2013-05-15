@@ -1,10 +1,6 @@
-<div class="row-fluid">
-	<div class="span12">
-		<div class="page-header">
-			<h1>Свежо и најдобро кафе во секое време!</h1>
-		</div>	
-	</div>
-</div>
+<div class="page-header">
+	<h1>Свежо и најдобро кафе во секое време!</h1>
+</div>	
 <div class="row-fluid">
 	<div class="span6">
 		<h4>Кумановска Градска Пекара и Lucaff&eacute;<small>&reg;</small></h4>

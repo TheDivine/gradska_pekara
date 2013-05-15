@@ -1,10 +1,6 @@
-<div class="row-fluid">
-	<div class="span12">
-		<div class="page-header">
-			<h1>Кетеринг за сите видови на пригоди!</h1>
-		</div>	
-	</div>
-</div>
+<div class="page-header">
+	<h1>Нарачки за сите видови на пригоди!</h1>
+</div>	
 <div class="row-fluid">
 	<div class="span6">
 		<h4>Нарачки и Кетеринг</h4>

@@ -69,6 +69,11 @@ class Home extends MY_Controller {
 		$this->view_data['subt'] = 'Нарачки';
 	}
 
+	public function quality()
+	{
+		$this->view_data['subt'] = 'Квалитет';
+	}
+
 	public function caffe()
 	{
 		$this->view_data['subt'] = 'Кафе';
@@ -76,114 +81,50 @@ class Home extends MY_Controller {
 	
 	public function contact()
 	{
-    	$this->view_data['alert_name_req'] = 'Името е задолжително!';
-    	$this->view_data['alert_email_req'] = 'И-меилот е задолжителен!';
-    	$this->view_data['alert_email_inv'] = 'И-меилот што го внесовте е невалиден!';
-    	$this->view_data['alert_msg_req'] = 'Мора да внесете порака!';
-    	$this->view_data['alert_succ'] = '<p>Вашата порака е успешно испратена!</p>';
-    	$this->view_data['alert_err'] = 'Проблем при испраќање на формата. Обидете се повторно!';
     	$this->view_data['subt'] = 'Контакт';       
 	}
-	
-	public function post_contact_form()
+
+	public function post_contact()
 	{
-		if($_POST)
+		//if(!$_POST) show_404();
+		/*
+		 * Honeypot
+		 */
+		//if($_POST['yolo']!='') exit;
+
+		$ajax = $this->input->is_ajax_request();
+			
+		$this->form_validation->set_rules('name', 'име', 'required|trim');
+		$this->form_validation->set_rules('email', 'И-меил', 'valid_email|required|trim');
+		$this->form_validation->set_rules('phone', 'телефон', 'trim');
+		$this->form_validation->set_rules('message', 'порака', 'required|trim');
+
+		if ($this->form_validation->run())
 		{
-			/*
-			 * Honeypot
-			 */
-			if($_POST['yolo'])
-				/*
-				 * Spam robot has submitted the form,
-				 * ignore it.
-				 */
-				exit;
+			$this->load->library('email');
 
-			/*
-			 * Ajax Test. Checks whether user
-			 * submited the form through AJAX request
-			 * or standard HTTP POST
-			 */
-			(isset($_POST['ajax']) AND strlen($_POST['ajax'])) ? $ajax = true : $ajax = false;
+			$this->email->from($_POST['email'], $_POST['name']);
+			$this->email->to('psybaron@gmail.com');
 				
-				
-			$this->form_validation->set_rules('name', 'име', 'required|trim');
-			$this->form_validation->set_rules('email', 'И-меил', 'valid_email|required|trim');
-			$this->form_validation->set_rules('phone', 'телефон', 'trim');
-			$this->form_validation->set_rules('message', 'порака', 'required|trim');
+			$this->email->subject("GradskaPekara");
+			$this->email->message($_POST['message']);
 
-			if ($this->form_validation->run())
+			if(!$this->news->get_by('email',$_POST['email']))
 			{
-				/*
-				 * If validation successfuly passed,
-				 * sends the email and redirect to the contact page again.
-				 */
-				$this->load->library('email');
-
-				$this->email->from($_POST['email'], $_POST['name']);
-				$this->email->to('info@gradskapekara.mk');
-					
-				$this->email->subject("Информации за {$_POST['name']} - Fortis");
-				$this->email->message($_POST['message']);
-
-				/*
-				 * Checks if the email already exists in the newsletters
-				 * database, if not - inserts it
-				 */
-				if(!$this->news->get_by('email',$_POST['email']))
-					$this->news->insert(array('email'=>$_POST['email']));
-					
-				if($this->email->send())
-				{
-					/*
-					 * Email successfuly sent
-					 */
-					if($ajax)
-					{
-						/*
-						 * If sent through AJAX,
-						 * resond success with 1, and exit
-						 */
-						echo 1;
-						exit;
-					}
-					else
-						/*
-						 * If user's browser has disabled JS,
-						 * redirect to main page
-						 */
-						redirect('home/index');
-				}
-				else
-				{
-					/*
-					 * Email NOT sent!
-					 */
-					if($ajax)
-						/*
-						 * If sent through AJAX,
-						 * exit (report error)
-						 */
-						exit;
-					else
-						/*
-						 * If user's browser has disabled JS,
-						 * redirect to contact page again
-						 */
-						redirect('home/contact');
-				}
+				$this->news->insert(array('email'=>$_POST['email']));
+			}
+				
+			if($this->email->send())
+			{
+				$this->output->set_header(200);
+				echo json_encode('success');
 			}
 			else
 			{
-				/*
-				 * Validation failed
-				 */
-				if($ajax)
-					exit;
-				else 
-					redirect('home/contact');
+				$this->output->set_header(500);
 			}
 		}
+		exit;
 	}
 
 	public function post_newsletter_email()

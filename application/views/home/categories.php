@@ -1,3 +1,6 @@
+<div class="page-header">
+    <h1>Производи</h1>
+</div>
 <ul class="thumbnails">
 <?php foreach($categories as $row): ?>
     <li class="span4">

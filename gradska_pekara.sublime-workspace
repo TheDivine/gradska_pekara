@@ -4,6 +4,10 @@
 		"selected_items":
 		[
 			[
+				"json",
+				"json_encode"
+			],
+			[
 				"margin",
 				"margin"
 			],
@@ -72,34 +76,42 @@
 	"buffers":
 	[
 		{
-			"file": "css/main.css",
+			"file": "application/controllers/home.php",
 			"settings":
 			{
-				"buffer_size": 341,
+				"buffer_size": 4638,
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "application/views/home/category.php",
+			"file": "application/views/home/quality.php",
 			"settings":
 			{
-				"buffer_size": 1872,
+				"buffer_size": 1305,
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "application/views/home/categories.php",
+			"file": "application/views/home/catering.php",
 			"settings":
 			{
-				"buffer_size": 559,
+				"buffer_size": 477,
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "application/views/layouts/web.php",
+			"file": "application/views/home/caffe.php",
 			"settings":
 			{
-				"buffer_size": 4688,
+				"buffer_size": 956,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "application/views/home/contact.php",
+			"settings":
+			{
+				"buffer_size": 1886,
 				"line_ending": "Windows"
 			}
 		}
@@ -107,9 +119,17 @@
 	"build_system": "",
 	"command_palette":
 	{
-		"height": 104.0,
+		"height": 392.0,
 		"selected_items":
 		[
+			[
+				"fet",
+				"Fetch: File"
+			],
+			[
+				"fi",
+				"Snippet: fadeIn"
+			],
 			[
 				"feth",
 				"Fetch: File"
@@ -152,40 +172,50 @@
 	},
 	"file_history":
 	[
-		"/C/wamp/www/gradska_pekara/application/views/home/index.php",
-		"/C/wamp/www/gradska_pekara/application/views/includes/_footer.php",
+		"/C/wamp/www/gradska_pekara/.gitignore",
+		"/C/wamp/www/gradska_pekara/.htaccess",
+		"/C/wamp/www/gradska_pekara/application/config/autoload.php",
+		"/C/Users/marko/.ssh/id_rsa.pub",
+		"/C/Users/marko/.ssh/id_rsa",
+		"/C/wamp/www/gradska_pekara/system/libraries/Email.php",
+		"/C/wamp/www/gradska_pekara/system/helpers/email_helper.php",
 		"/C/wamp/www/gradska_pekara/application/views/layouts/web.php",
+		"/C/wamp/www/gradska_pekara/application/views/home/index.php",
+		"/C/wamp/www/gradska_pekara/application/views/home/categories.php",
+		"/C/wamp/www/gradska_pekara/application/config/routes.php",
+		"/C/wamp/www/gradska_pekara/application/views/index.html",
+		"/C/wamp/www/gradska_pekara/application/views/layouts/admin.php",
+		"/C/wamp/www/gradska_pekara/js/plugins.js",
+		"/C/wamp/www/gradska_pekara/js/jquery.min.js",
+		"/C/wamp/www/gradska_pekara/application/views/includes/_header.php",
+		"/C/wamp/www/gradska_pekara/application/views/home/quality.php",
+		"/C/wamp/www/gradska_pekara/application/views/includes/_navi_mk.php",
+		"/C/wamp/www/diamond_forkrabbit/.htaccess",
+		"/C/Users/marko/Desktop/testapp-credentials.txt",
+		"/C/wamp/www/diamond_forkrabbit/cd-pms/application/config/autoload.php",
 		"/C/wamp/www/gradska_pekara/css/main.css",
+		"/C/wamp/www/gradska_pekara/application/views/home/category.php",
+		"/C/wamp/www/gradska_pekara/application/views/includes/_footer.php",
 		"/C/wamp/www/gradska_pekara/application/helpers/UIF_helper.php",
 		"/C/wamp/www/gradska_pekara/application/views/category/view.php",
-		"/C/wamp/www/gradska_pekara/application/views/layouts/admin.php",
 		"/C/wamp/www/gradska_pekara/application/views/admin/login.php",
 		"/C/wamp/www/gradska_pekara/application/views/category/index.php",
 		"/C/wamp/www/gradska_pekara/css/admin.css",
-		"/C/wamp/www/gradska_pekara/application/views/home/category.php",
 		"/C/wamp/www/gradska_pekara/application/views/admin/index.php",
 		"/C/wamp/www/gradska_pekara/application/views/attribute/index.php",
 		"/C/wamp/www/gradska_pekara/application/views/user/index.php",
 		"/C/wamp/www/gradska_pekara/application/controllers/admin.php",
-		"/C/wamp/www/gradska_pekara/application/config/routes.php",
 		"/C/wamp/www/gradska_pekara/application/views/includes/_admin_header.php",
-		"/C/wamp/www/gradska_pekara/application/views/home/categories.php",
-		"/C/wamp/www/gradska_pekara/application/config/autoload.php",
 		"/C/wamp/www/gradska_pekara/js/modernizr.js",
 		"/C/wamp/www/gradska_pekara/application/views/home/caffe.php",
 		"/C/wamp/www/gradska_pekara/application/views/home/catering.php",
 		"/C/wamp/www/gradska_pekara/application/views/home/contact.php",
 		"/C/wamp/www/gradska_pekara/application/views/includes/_contact_mk.php",
 		"/C/wamp/www/kumanovski_kori/application/views/home/categories.php",
-		"/C/wamp/www/gradska_pekara/application/views/includes/_navi_mk.php",
-		"/C/wamp/www/gradska_pekara/application/views/includes/_header.php",
 		"/C/wamp/www/kumanovski_kori/application/views/includes/_navi_mk.php",
-		"/C/wamp/www/gradska_pekara/js/jquery.min.js",
 		"/C/wamp/www/gradska_pekara/js/vendor/jquery-1.8.0.min.js",
 		"/C/Users/marko/AppData/Roaming/Sublime Text 2/Packages/User/Fetch.sublime-settings",
-		"/C/wamp/www/gradska_pekara/.htaccess",
 		"/C/wamp/www/gradska_pekara/application/config/database.php",
-		"/C/wamp/www/gradska_pekara/.gitignore",
 		"/home/marko/www/gradska_pekara/system/core/Exceptions.php",
 		"/home/marko/www/gradska_pekara/application/errors/error_404.php",
 		"/home/marko/www/gradska_pekara/robots.txt",
@@ -269,17 +299,7 @@
 		"/home/marko/www/FortisPMS/application/controllers/category.php",
 		"/home/marko/www/FortisPMS/application/controllers/product.php",
 		"/home/marko/www/FortisPMS/application/models/newsletter_model.php",
-		"/home/marko/www/FortisPMS/application/models/partner_model.html",
-		"/home/marko/www/FortisPMS/application/views/category/view.php",
-		"/home/marko/www/FortisPMS/application/views/product/edit.php",
-		"/home/marko/www/FortisPMS/application/views/category/index.php",
-		"/home/marko/www/FortisPMS/application/config/database.php",
-		"/home/marko/www/FortisPMS/application/config/config.php",
-		"/home/marko/www/FortisPMS/application/cache/index.html",
-		"/home/marko/.ssh/id_rsa.pub",
-		"/home/marko/.ssh/id_rsa",
-		"/home/marko/www/FortisPMS/fortis-pms.sublime-workspace",
-		"/home/marko/www/FortisPMS/.gitignore"
+		"/home/marko/www/FortisPMS/application/models/partner_model.html"
 	],
 	"find":
 	{
@@ -366,49 +386,23 @@
 	"groups":
 	[
 		{
-			"selected": 3,
+			"selected": 4,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "css/main.css",
+					"file": "application/controllers/home.php",
 					"settings":
 					{
-						"buffer_size": 341,
+						"buffer_size": 4638,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								195,
-								195
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/CSS/CSS.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "application/views/home/category.php",
-					"settings":
-					{
-						"buffer_size": 1872,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1872,
-								1872
+								3297,
+								3297
 							]
 						],
 						"settings":
@@ -417,32 +411,57 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 495.0,
+						"translation.y": 1920.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
 				},
 				{
-					"buffer": 2,
-					"file": "application/views/home/categories.php",
+					"buffer": 1,
+					"file": "application/views/home/quality.php",
 					"settings":
 					{
-						"buffer_size": 559,
+						"buffer_size": 1305,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								20,
-								20
+								63,
+								63
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "application/views/home/catering.php",
+					"settings":
+					{
+						"buffer_size": 477,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
 							]
 						],
 						"settings":
 						{
 							"syntax": "Packages/PHP/PHP.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
+							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
@@ -452,28 +471,54 @@
 				},
 				{
 					"buffer": 3,
-					"file": "application/views/layouts/web.php",
+					"file": "application/views/home/caffe.php",
 					"settings":
 					{
-						"buffer_size": 4688,
+						"buffer_size": 956,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								2866,
-								2866
+								0,
+								0
 							]
 						],
 						"settings":
 						{
 							"syntax": "Packages/PHP/PHP.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
+							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 767.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "application/views/home/contact.php",
+					"settings":
+					{
+						"buffer_size": 1886,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1845,
+								1845
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 809.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -523,6 +568,66 @@
 		"selected_items":
 		[
 			[
+				"email",
+				"system/libraries/Email.php"
+			],
+			[
+				"web",
+				"application/views/layouts/web.php"
+			],
+			[
+				"home",
+				"application/controllers/home.php"
+			],
+			[
+				"categ",
+				"application/views/home/categories.php"
+			],
+			[
+				"viewindex",
+				"application/views/index.html"
+			],
+			[
+				"contact",
+				"application/views/home/contact.php"
+			],
+			[
+				"cater",
+				"application/views/home/catering.php"
+			],
+			[
+				"categories",
+				"application/views/home/categories.php"
+			],
+			[
+				"plug",
+				"js/plugins.js"
+			],
+			[
+				"admn",
+				"application/views/layouts/admin.php"
+			],
+			[
+				"cate",
+				"application/views/home/catering.php"
+			],
+			[
+				"quli",
+				"application/views/home/quality.php"
+			],
+			[
+				"route",
+				"application/config/routes.php"
+			],
+			[
+				"navi",
+				"application/views/includes/_navi_mk.php"
+			],
+			[
+				"categor",
+				"application/views/home/categories.php"
+			],
+			[
 				"main.css",
 				"css/main.css"
 			],
@@ -533,10 +638,6 @@
 			[
 				"main",
 				"css/main.css"
-			],
-			[
-				"web",
-				"application/views/layouts/web.php"
 			],
 			[
 				"foo",
@@ -587,10 +688,6 @@
 				"application/views/includes/_admin_header.php"
 			],
 			[
-				"categories",
-				"application/views/home/categories.php"
-			],
-			[
 				"rout",
 				"application/config/routes.php"
 			],
@@ -619,16 +716,8 @@
 				"application/views/includes/_contact_mk.php"
 			],
 			[
-				"contact",
-				"application/views/home/contact.php"
-			],
-			[
 				"catering",
 				"application/views/home/catering.php"
-			],
-			[
-				"navi",
-				"application/views/includes/_navi_mk.php"
 			],
 			[
 				"head",
@@ -679,14 +768,6 @@
 				"application/views/welcome/index.php"
 			],
 			[
-				"viewindex",
-				"application/views/welcome/index.php"
-			],
-			[
-				"categ",
-				"application/views/welcome/category.php"
-			],
-			[
 				"adminlogin",
 				"application/views/admin/login.php"
 			],
@@ -719,16 +800,8 @@
 				"application/controllers/welcome.php"
 			],
 			[
-				"cate",
-				"application/views/welcome/category.php"
-			],
-			[
 				"contat",
 				"application/views/welcome/contact.php"
-			],
-			[
-				"categor",
-				"application/views/welcome/category.php"
 			],
 			[
 				"attr",
