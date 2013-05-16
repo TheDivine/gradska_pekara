@@ -5,7 +5,7 @@
 <?php endif;?>
 
 <li><?php echo anchor('/','Front Page'); ?></li>
-<li><?php echo anchor('dashboard','Categories'); ?></li>
+<li><?php echo anchor('category','Categories'); ?></li>
 <li><?php echo anchor('attribute','Attributes'); ?></li>
 <li>
 	<?php if($this->session->userdata('is_admin')): ?>

@@ -9,7 +9,7 @@ class Category extends Admin_Controller {
 	
 	public function index()
 	{
-         
+        $this->data['categories'] = $this->category->order_by('order')->get_all();
 	}
 	
 	public function create()

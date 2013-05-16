@@ -2,13 +2,15 @@
 
 class Admin_Controller extends MY_Controller
 {
+	public static $open_methods = array('login','postLogin');
+
 	public function __construct()
 	{
 		parent::__construct();
 
 		$this->layout = 'layouts/admin';
 
-		if((!$this->session->userdata('logged_in')) AND (!in_array($this->router->method,array('login'))))
+		if((!$this->session->userdata('logged_in')) AND (!in_array($this->router->method,static::$open_methods)))
 		{
 			redirect('login');	
 		}

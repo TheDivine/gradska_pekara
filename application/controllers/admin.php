@@ -9,30 +9,27 @@ class Admin extends Admin_Controller {
 	
 	public function index()
 	{
-		/*
-		 * Get all categories
-		 */
-		$this->data['categories'] = $this->category->order_by('order')->get_all();
+
 	}
 	
 	public function login()
 	{
-		/*
-		 * If user is logged in, redirects to
-		 * index page of this controller
-		 */
 		if($this->session->userdata('logged_in'))
 		{
-			redirect('dashboard');	
+			redirect('category/index');	
 		}
-		
-		if($_POST)
+	}
+
+	public function postLogin()
+	{
+		if(!$_POST) show_404();
+
+		if($this->_check_login($_POST['username'],$_POST['password']))
 		{
-			if($this->_check_login($_POST['username'],$_POST['password']))
-				redirect('dashboard');
-			else
-				redirect('login');
+			redirect('category/index');
 		}
+
+		redirect('login');
 	}
 	
 	private function _check_login($username, $password)

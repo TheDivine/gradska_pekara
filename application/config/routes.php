@@ -26,7 +26,6 @@ $route['contact']           = 'home/contact';
  */
 $route['login']     = 'admin/login';
 $route['logout']    = 'admin/logout';
-$route['dashboard'] = 'admin/index';
 
 /* End of file routes.php */
 /* Location: ./application/config/routes.php */
