@@ -21,8 +21,10 @@ class Admin extends Admin_Controller {
 		 * If user is logged in, redirects to
 		 * index page of this controller
 		 */
-		if($this->session->userdata('logged_in') == true)
-			redirect('dashboard');
+		if($this->session->userdata('logged_in'))
+		{
+			redirect('dashboard');	
+		}
 		
 		if($_POST)
 		{

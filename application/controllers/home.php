@@ -12,32 +12,41 @@ class Home extends Front_Controller {
 	    $this->data['subt'] = 'За Нас';  
 	}
 	
-	public function categories()
+	public function categories($permalink = '')
 	{
-            $this->data['subt'] = 'Производи';
+		/**
+		 * If permalink is provided, fetch
+		 * single category by permalink, else
+		 * dispaly all categories
+		 */
+		if($permalink !== '')
+		{
+			$this->data['category'] = $this->category->get_by('permalink',(string) $permalink);
         
-        $this->data['categories'] = $this->category->order_by('order')->get_many_by('status','active');
-	}
-    
-    public function category($permalink = false)
-	{
-		$this->data['category'] = $this->category->get_by('permalink',$permalink);
+	        if(!$this->data['category']) show_404();
+
+	        $this->data['subt'] = $this->data['category']->name_mk;
+	        
+	        $category_id = $this->data['category']->id;
+	        
+			$this->data['categories'] = $this->category->order_by('order')->get_many_by('status','active');
+			
+			$this->data['attributes'] = $this->category->get_attributes($category_id);
+			
+			$this->data['products']   = $this->product->order_by('order')->get_many_by('category_id',$category_id);
+			
+			$this->data['attr_count'] = count($this->data['attributes']);
+
+	        $this->view = 'home/category';
+		}
+		else
+		{
+			$this->data['subt'] = 'Производи';
         
-        if(!$this->data['category'] OR $permalink == false)
-        	show_404();
-        
-        $title = 'name_'.$this->lng;
-        $this->data['subt'] = $this->data['category']->$title;
-        
-        $category_id = $this->data['category']->id;
-        
-        $this->data['categories'] = $this->category->order_by('order')->get_many_by('status','active');
-        
-        $this->data['attributes'] = $this->category->get_attributes($category_id);
-        
-        $this->data['products'] = $this->product->order_by('order')->get_many_by('category_id',$category_id);
-        
-        $this->data['attr_count'] = count($this->data['attributes']);    
+        	$this->data['categories'] = $this->category->order_by('order')->get_many_by('status','active');
+
+        	$this->view = 'home/categories';	
+		}
 	}
 	
 	// public function partners()
@@ -67,7 +76,7 @@ class Home extends Front_Controller {
 
 	public function post_contact()
 	{
-		//if(!$_POST) show_404();
+		if(!$_POST) show_404();
 		/*
 		 * Honeypot
 		 */
@@ -80,7 +89,7 @@ class Home extends Front_Controller {
 		if(!$this->input->is_ajax_request()) redirect('home/contact');
 			
 		$this->form_validation->set_rules('name', 'име', 'required|trim');
-		$this->form_validation->set_rules('email', 'И-меил', 'valid_email|required|trim');
+		$this->form_validation->set_rules('email', 'и-меил', 'valid_email|required|trim');
 		$this->form_validation->set_rules('phone', 'телефон', 'trim');
 		$this->form_validation->set_rules('message', 'порака', 'required|trim');
 

@@ -1,4 +1,5 @@
-<?php
+<?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
+
 class Front_Controller extends MY_Controller
 {
 	public function __construct()
@@ -11,7 +12,7 @@ class Front_Controller extends MY_Controller
 
 		$this->load->model('category_model', 'category');
 		$this->load->model('product_model', 'product');
-		$this->load->model('partner_model', 'partner');
+		//$this->load->model('partner_model', 'partner');
 		$this->load->model('newsletter_model', 'news');
 	}
 }

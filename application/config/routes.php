@@ -12,14 +12,13 @@ $route['404_override'] = '';
 /*
  * Static pages routes
  */
-$route['about_us']   = 'home/index';
-$route['categories'] = 'home/categories';
-$route['quality']    = 'home/quality';
-$route['catering']   = 'home/catering';
-$route['caffe']      = 'home/caffe';
-$route['contact']    = 'home/contact';
-
-$route['categories/(:any)'] = 'home/category/$1';
+$route['about_us']          = 'home/index';
+$route['categories']        = 'home/categories';
+$route['categories/(:any)'] = 'home/categories/$1';
+$route['quality']           = 'home/quality';
+$route['catering']          = 'home/catering';
+$route['caffe']             = 'home/caffe';
+$route['contact']           = 'home/contact';
 
 
 /*
