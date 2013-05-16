@@ -1,19 +1,6 @@
-header {
-    background: url('../img/head_logo.png') 5px 5px;
-    background-repeat: no-repeat;
-    height: 105px;
-}
-.cd-navi {
-    margin-top: 40px;
-}
-footer {
-}
-div[role=main] {
-	margin-top: 10px;
-}
-#jumbo {
-    background-image: url('../img/jumbo.png');
-    background-repeat: no-repeat;
-    padding-top: 80px;
-    padding-bottom: 80px;
-}
+body {padding-top: 15px; padding-bottom: 30px;}
+header {background: url('../img/head_logo.png') 5px 5px;background-repeat: no-repeat;height: 105px;}
+.cd-navi {margin-top: 40px;}
+div[role=main] {margin-top: 10px;}
+.orders-phone .lead {margin: 0;}
+.orders-phone h2 {margin: 0;}

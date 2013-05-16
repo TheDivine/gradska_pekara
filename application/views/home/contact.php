@@ -3,9 +3,8 @@
 </div>
 <div class="row-fluid">
 	<div class="span6">
-		<div class="text-center">
-			<p>информации и нарачки</p>
-			<h3><i class="icon-phone"></i> 031 550 580</h3>
+		<div class="text-center orders-phone">
+			<p class="lead">информации и нарачки</p> <h2><i class="icon-phone"></i> <strong>031 550 580</strong></h2>
 		</div>
 		<hr>
 		<address>
@@ -52,6 +51,8 @@
 <script>
 	$(function(){
 		$("#submit-form").on('click',function(e){
+			$(this).prop('disabled',true).html('<i></i>');
+			$("#submit-form i").attr('class','icon-spinner icon-spin');
 			e.preventDefault();
 			$.ajax({
 				url: "<?=site_url('home/post_contact')?>",
@@ -59,15 +60,16 @@
 				dataType: 'json',
 				data: $('#contact-form').serialize(),
 				success : function(data) {
-					//alert(data);
+					alert('Контакт формата е успешно испратена. Благодариме!');
 					document.location.reload(true);
 				},
 				error : function() {
-					alert('error');
+					alert('Грешка при испраќање на контакт формата. Обидете се повторно!');
+					$("#submit-form").prop('disabled',false).html('Испрати');
+					return false;
 				}
 			});
 			return false;
 		});
-		
 	});
 </script>

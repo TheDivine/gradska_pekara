@@ -5,7 +5,7 @@
 	<div class="span6">
 		<h4>Нарачки и Кетеринг</h4>
 		<p>
-			„Фортис“ е име на високо квалитетна професионална опрема наменета за пекарски и месарски бизнис како и помошна опрема за сите гранки на прехрамбената индустрија.
+			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam, deleniti voluptatem quaerat et numquam quod totam voluptas maiores ut unde! Eos, incidunt tempora omnis iusto voluptas quod dicta iste numquam.
 		</p>
 	</div>
 	<div class="span6">

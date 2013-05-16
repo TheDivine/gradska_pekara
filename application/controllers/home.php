@@ -90,9 +90,13 @@ class Home extends MY_Controller {
 		/*
 		 * Honeypot
 		 */
-		//if($_POST['yolo']!='') exit;
+		if($_POST['yolo'] != '')
+		{
+			$this->output->set_header(200);
+			exit;
+		}
 
-		$ajax = $this->input->is_ajax_request();
+		if(!$this->input->is_ajax_request()) redirect('home/contact');
 			
 		$this->form_validation->set_rules('name', 'име', 'required|trim');
 		$this->form_validation->set_rules('email', 'И-меил', 'valid_email|required|trim');
