@@ -52,7 +52,7 @@
 		</header>
 		<div role="main">
             <hr>
-			<?php echo $content; ?>
+			<?php echo $yield; ?>
 		</div>
         <div class="row-fluid">
             <div class="span12">

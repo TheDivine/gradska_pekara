@@ -1,24 +1,10 @@
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
-class Attribute extends MY_Controller {
+class Attribute extends Admin_Controller {
     
     public function __construct()
 	{
 		parent::__construct();
-
-		$this->layout_view = 'admin';
-		
-		/*
-		 * Checks if user is not logged in, 
-		 * then redirects to login page.
-		 */
-		if(!$this->session->userdata('logged_in'))
-			redirect('login');
-		
-		/*
-		 * Load Models
-		 */
-		$this->load->model('attribute_model','attribute');
 	}
 	
 	public function index()
@@ -26,7 +12,7 @@ class Attribute extends MY_Controller {
          /*
 		 * Get all attributes
 		 */
-		$this->view_data['attributes'] = $this->attribute->get_all();
+		$this->data['attributes'] = $this->attribute->get_all();
 	}
 	
 	public function create()
@@ -53,7 +39,7 @@ class Attribute extends MY_Controller {
 	
 	public function edit($id)
 	{
-		$this->view_data['result'] = $this->attribute->get($id);
+		$this->data['result'] = $this->attribute->get($id);
 	}
 	
 	public function post_update()

@@ -1,24 +1,10 @@
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
-class Partner extends MY_Controller {
+class Partner extends Admin_Controller {
     
     public function __construct()
 	{
 		parent::__construct();
-
-		$this->layout_view = 'admin';
-		
-		/*
-		 * Checks if user is not logged in, 
-		 * then redirects to login page.
-		 */
-		if(!$this->session->userdata('logged_in'))
-			redirect('login');
-		
-		/*
-		 * Load Models
-		 */
-		$this->load->model('partner_model','partner');
 	}
 	
 	public function index()
@@ -26,7 +12,7 @@ class Partner extends MY_Controller {
          /*
 		 * Get all partners
 		 */
-		$this->view_data['partners'] = $this->partner->order_by('city')->get_all();
+		$this->data['partners'] = $this->partner->order_by('city')->get_all();
 	}
 	
 	public function create()
@@ -54,7 +40,7 @@ class Partner extends MY_Controller {
 	
 	public function edit($id)
 	{
-		$this->view_data['result'] = $this->partner->get($id);
+		$this->data['result'] = $this->partner->get($id);
 	}
 
 	public function post_update()

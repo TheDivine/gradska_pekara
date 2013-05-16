@@ -1,27 +1,10 @@
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
-class Category extends MY_Controller {
+class Category extends Admin_Controller {
     
     public function __construct()
 	{
 		parent::__construct();
-
-		$this->layout_view = 'admin';
-		
-		/*
-		 * Checks if user is not logged in, 
-		 * then redirects to login page.
-		 */
-		if(!$this->session->userdata('logged_in'))
-			redirect('login');
-		
-		/*
-		 * Load Models
-		 */
-		$this->load->model('category_model','category');
-		$this->load->model('product_model','product');
-		$this->load->model('attribute_model','attribute');
-		$this->load->model('attribute_category_model','attrcat');
 	}
 	
 	public function index()
@@ -65,7 +48,7 @@ class Category extends MY_Controller {
 	
 	public function edit($id)
 	{
-		$this->view_data['result'] = $this->category->get($id);
+		$this->data['result'] = $this->category->get($id);
 	}
 
 	public function post_update()
@@ -108,15 +91,15 @@ class Category extends MY_Controller {
 	
 	public function view($id)
 	{
-		$this->view_data['result'] = $this->category->get($id);
+		$this->data['result'] = $this->category->get($id);
 			
-		$this->view_data['attributes'] = $this->category->get_attributes($id);
+		$this->data['attributes'] = $this->category->get_attributes($id);
 		
-		$this->view_data['dd_attr'] = $this->attribute->order_by('name_mk')->dropdown('id','name_mk');
+		$this->data['dd_attr'] = $this->attribute->order_by('name_mk')->dropdown('id','name_mk');
 		
-		$this->view_data['products'] = $this->product->order_by('order')->get_many_by('category_id',$id);
+		$this->data['products'] = $this->product->order_by('order')->get_many_by('category_id',$id);
 
-		$this->view_data['attr_count'] = count($this->view_data['attributes']);
+		$this->data['attr_count'] = count($this->data['attributes']);
 	}
 	
 	public function activate($id)

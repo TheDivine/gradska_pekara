@@ -36,7 +36,7 @@
         </header>
         <?php endif; ?>
         <div id="content">
-            <?php echo $content; ?>
+            <?php echo $yield; ?>
         </div>
     </div>  
     <script src="<?php echo base_url('js/plugins.js');?>"></script>

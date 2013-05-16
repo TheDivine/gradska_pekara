@@ -1,25 +1,10 @@
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
-class User extends MY_Controller {
+class User extends Admin_Controller {
     
     public function __construct()
 	{
 		parent::__construct();
-
-		$this->layout_view = 'admin';
-		
-		/*
-		 * Checks if user is not logged in, 
-		 * then redirects to login page.
-		 */
-		if((!$this->session->userdata('logged_in')) OR
-			($this->session->userdata('is_admin') == 0))
-			redirect('login');	
-		
-		/*
-		 * Load Models
-		 */
-		$this->load->model('users_model','user');
 	}
 	
 	public function index()
@@ -27,7 +12,7 @@ class User extends MY_Controller {
         /*
 		 * Get all recipes
 		 */
-		$this->view_data['users'] = $this->user->get_all();
+		$this->data['users'] = $this->user->get_all();
 	}
 
 	public function create()
@@ -55,7 +40,7 @@ class User extends MY_Controller {
 
 	public function edit($id)
 	{
-		$this->view_data['user'] = $this->user->get($id);
+		$this->data['user'] = $this->user->get($id);
 	}
 
 	public function post_update()
@@ -90,7 +75,7 @@ class User extends MY_Controller {
 	public function delete($id)
 	{
 		$this->user->delete($id);
-			redirect($_SERVER['HTTP_REFERER']);
+		redirect($_SERVER['HTTP_REFERER']);
 	}
 }
 

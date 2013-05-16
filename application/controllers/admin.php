@@ -1,32 +1,10 @@
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
-class Admin extends MY_Controller {
-	
-	protected $open_methods = array('login');
+class Admin extends Admin_Controller {
 	
     public function __construct()
 	{
 		parent::__construct();
-
-		$this->layout_view = 'admin';
-
-		/*
-		 * Checks if user is not logged in, and trying
-		 * to access authenticated area, if so, redirects
-		 * to login page.
-		 */
-		if((!$this->session->userdata('logged_in')) AND 
-			(!in_array($this->router->method,$this->open_methods)))
-			redirect('login');
-		
-		/*
-		 * Load Models
-		 */
-		$this->load->model('users_model','user');
-		$this->load->model('attribute_model','attribute');
-		$this->load->model('category_model', 'category');
-        $this->load->model('product_model', 'product');
-        $this->load->model('partner_model', 'partner');
 	}
 	
 	public function index()
@@ -34,7 +12,7 @@ class Admin extends MY_Controller {
 		/*
 		 * Get all categories
 		 */
-		$this->view_data['categories'] = $this->category->order_by('order')->get_all();
+		$this->data['categories'] = $this->category->order_by('order')->get_all();
 	}
 	
 	public function login()

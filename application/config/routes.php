@@ -19,7 +19,7 @@ $route['catering']   = 'home/catering';
 $route['caffe']      = 'home/caffe';
 $route['contact']    = 'home/contact';
 
-$route['kategorija/(:any)'] = 'home/category/$1';
+$route['categories/(:any)'] = 'home/category/$1';
 
 
 /*

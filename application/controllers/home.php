@@ -1,87 +1,68 @@
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
-class Home extends MY_Controller {
-    
-    protected $lng;
+class Home extends Front_Controller {
     
     public function __construct()
 	{
-		parent::__construct();
-        
-        /*
-         * Get current language from SESSION,
-         * if its not set, defaults to 'mk'
-         */
-         //if(!$this->session->userdata('lng'))
-         $this->session->set_userdata('lng','mk');
-            
-         $this->lng = $this->session->userdata('lng');
-         
-         /*
-          * Load Models
-          */
-         $this->load->model('category_model', 'category');
-         $this->load->model('product_model', 'product');
-         $this->load->model('partner_model', 'partner');
-         $this->load->model('newsletter_model', 'news');
+		parent::__construct();    
 	}
 	
 	public function index()
 	{
-	    $this->view_data['subt'] = 'За Нас';  
+	    $this->data['subt'] = 'За Нас';  
 	}
 	
 	public function categories()
 	{
-            $this->view_data['subt'] = 'Производи';
+            $this->data['subt'] = 'Производи';
         
-        $this->view_data['categories'] = $this->category->order_by('order')->get_many_by('status','active');
+        $this->data['categories'] = $this->category->order_by('order')->get_many_by('status','active');
 	}
     
     public function category($permalink = false)
 	{
-		$this->view_data['category'] = $this->category->get_by('permalink',$permalink);
+		$this->data['category'] = $this->category->get_by('permalink',$permalink);
         
-        if(!$this->view_data['category'] OR $permalink == false)
+        if(!$this->data['category'] OR $permalink == false)
         	show_404();
         
         $title = 'name_'.$this->lng;
-        $this->view_data['subt'] = $this->view_data['category']->$title;
+        $this->data['subt'] = $this->data['category']->$title;
         
-        $category_id = $this->view_data['category']->id;
+        $category_id = $this->data['category']->id;
         
-        $this->view_data['categories'] = $this->category->order_by('order')->get_many_by('status','active');
+        $this->data['categories'] = $this->category->order_by('order')->get_many_by('status','active');
         
-        $this->view_data['attributes'] = $this->category->get_attributes($category_id);
+        $this->data['attributes'] = $this->category->get_attributes($category_id);
         
-        $this->view_data['products'] = $this->product->order_by('order')->get_many_by('category_id',$category_id);
+        $this->data['products'] = $this->product->order_by('order')->get_many_by('category_id',$category_id);
         
-        $this->view_data['attr_count'] = count($this->view_data['attributes']);    
+        $this->data['attr_count'] = count($this->data['attributes']);    
 	}
 	
 	// public function partners()
 	// {
- 	// 		$this->view_data['subt'] = 'Партнери';
+ 	// 		$this->data['subt'] = 'Партнери';
 	// }
 
 	public function catering()
 	{
-		$this->view_data['subt'] = 'Нарачки';
+		$this->data['subt'] = 'Нарачки';
 	}
 
 	public function quality()
 	{
-		$this->view_data['subt'] = 'Квалитет';
+		$this->data['subt'] = 'Квалитет';
 	}
 
 	public function caffe()
 	{
-		$this->view_data['subt'] = 'Кафе';
+		$this->data['subt'] = 'Кафе';
 	}
 	
 	public function contact()
 	{
-    	$this->view_data['subt'] = 'Контакт';       
+    	$this->data['subt'] = 'Контакт';       
 	}
 
 	public function post_contact()
