@@ -13,7 +13,7 @@ class Users_model extends MY_Model {
 
 	public function check_login($username, $password)
 	{	
-		$user = $this->db->select('id,hashed_password,admin')
+		$user = $this->db->select('id,hashed_password,admin, username')
 	                ->where('username',$username)
 	                ->limit(1)
 	                ->get($this->_table)->row();

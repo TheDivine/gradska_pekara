@@ -3,24 +3,31 @@
 </div>
 <div class="row-fluid">
 	<div class="span6">
+		<div class="text-center">
+			<p>информации и нарачки</p>
+			<h3><i class="icon-phone"></i> 031 550 580</h3>
+		</div>
+		<hr>
 		<address>
 			<strong>Кумановска Градска Пекара</strong><br>
-			Октомвриска Револуција 32 - Пораншен Ресторант Табакана<br>
+			<i class="icon-map-marker"></i> Октомвриска Револуција 32 - Пораншен Ресторант Табакана<br>
 			1300 Куманово, Македонија <br>
-			Телефон: 031 550 580 <br>
-			<?php echo safe_mailto('info@gradskapekara.mk'); ?>
+			<i class="icon-phone"></i> 031 550 580 <br>
+			<i class="icon-envelope"></i> <?php echo safe_mailto('info@gradskapekara.mk'); ?> <br>
+			<i class="icon-globe"></i> <?php echo anchor('http://www.gradskapekara.mk'); ?> <br>
+			<i class="icon-facebook-sign"> </i> <?php echo anchor('http://www.facebook.com/Kumanovska.Gradska.Pekara','facebook/Kumanovska.Gradska.Pekara'); ?>
 		</address>
 		<hr>
 		<h4>Администрација</h4>
 		<address>
 			<strong>Агро-Про ДОО</strong><br>
-			Индустриска Зона Доброшане<br>
+			<i class="icon-map-marker"></i> Индустриска Зона Доброшане<br>
 			1300 Куманово, Македонија <br>
-			Телефон: 031 453 905 <br>
-			Телефон: 031 453 906 <br>
-			Факс: 031 412 715 <br>
-			<?php echo safe_mailto('info@kumanovskikori.mk'); ?> <br>
-			<?php echo anchor('http://www.kumanovskikori.mk'); ?>
+			<i class="icon-phone"></i> 031 453 905 <br>
+			<i class="icon-phone"></i> 031 453 906 <br>
+			<i class="icon-print"></i> 031 412 715 <br>
+			<i class="icon-envelope"></i> <?php echo safe_mailto('info@kumanovskikori.mk'); ?> <br>
+			<i class="icon-globe"></i> <?php echo anchor('http://www.kumanovskikori.mk'); ?>
 		</address>
 	</div>
 	<div class="span6 well">
@@ -52,10 +59,10 @@
 				dataType: 'json',
 				data: $('#contact-form').serialize(),
 				success : function(data) {
-					alert(data);
-					//document.location.reload(true);
+					//alert(data);
+					document.location.reload(true);
 				},
-				error : function(data) {
+				error : function() {
 					alert('error');
 				}
 			});

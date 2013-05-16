@@ -87,7 +87,8 @@ class Admin extends MY_Controller {
 		 * to index page of this controller
 		 */
 		$this->session->sess_destroy();
-			redirect('login');
+		
+		redirect('login');
 	}
 }
 
