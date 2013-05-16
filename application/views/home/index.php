@@ -22,23 +22,27 @@
 </div>
 <hr>
 <div class="row-fluid">
-	<div class="span4">
-		<h4>За Нас</h4>
-			<strong>Кумановска Градска Пекара</strong> е име на високо квалитетна професионална опрема наменета за пекарски и 
-			месарски бизнис како и помошна опрема за сите гранки на прехрамбената индустрија.
+	<div class="span8">
+		<h2>За Нас</h2>
+			<strong>Кумановска Градска Пекара</strong> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas, quia, ducimus, labore obcaecati officiis ratione tenetur provident nemo nisi aspernatur suscipit exercitationem veniam ipsa modi perferendis est delectus earum architecto!
 	</div>
 	<div class="span4">
+		<h4>Наште Вредности</h4>
+		Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam, numquam excepturi temporibus repudiandae aliquid iure incidunt vitae fuga amet tenetur mollitia laborum non error unde labore! Vitae, culpa sit consequatur.
+	</div>
+</div>
+<hr>
+<div class="row-fluid">
+	<div class="span6">
 		<div class="alert alert-success">
 			<h4>Нашата Мисија</h4>
-		<i class="icon-info-sign"></i> Да понудиме најквалитетна и најсовремена 
-		професионална опрема за прехрамбената индустрија, по најпристапни цени во регионот!
+		<i class="icon-info-sign"></i> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos, est, accusantium, earum magni adipisci sunt magnam cupiditate impedit suscipit ut ratione quae tempore nisi blanditiis ducimus maiores nulla incidunt dicta.
 		</div>
 	</div>
-	<div class="span4">
+	<div class="span6">
 		<div class="alert alert-info">
-			<h4>Нашата Визија</h4>
-		<i class="icon-info-sign"></i> Да понудиме најквалитетна и најсовремена 
-		професионална опрема за прехрамбената индустрија, по најпристапни цени во регионот!
+			<h4>Нашата Визија</h4> 
+			<i class="icon-info-sign"></i> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum, dicta, enim, accusamus quisquam facere necessitatibus aut inventore assumenda facilis ut ratione eaque dolor nihil sed repudiandae voluptate perferendis cumque sit!
 		</div>
 	</div>
 </div>
