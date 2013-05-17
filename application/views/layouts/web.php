@@ -34,36 +34,13 @@
             <p class="chromeframe">You are using an outdated browser. <a href="http://browsehappy.com/">Upgrade your browser today</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to better experience this site.</p>
         <![endif]-->
         <div class="container">
-        	<header class="row-fluid">
-                <ul class="nav nav-pills pull-right cd-navi">
-                  <li <?=($this->router->method == 'index')?'class="active"':'';?>>
-                    <?php echo anchor('about_us','За Нас');?></li>
-                  <li <?=(($this->router->method == 'categories') OR ($this->router->method=='category'))?'class="active"':'';?>>
-                    <?php echo anchor('categories','Производи');?></li>
-                 <li <?=($this->router->method == 'quality')?'class="active"':'';?>>
-                    <?php echo anchor('quality','Квалитет');?></li>
-                  <li <?=($this->router->method == 'caffe')?'class="active"':'';?>>
-                    <?php echo anchor('caffe','Lucaff&eacute');?></li>
-                  <li <?=($this->router->method == 'catering')?'class="active"':'';?>>
-                    <?php echo anchor('catering','Нарачки &amp; Кетеринг');?></li>
-                  <li <?=($this->router->method == 'contact')?'class="active"':'';?>>
-                    <?php echo anchor('contact','Контакт');?></li>
-                </ul>
-        	</header>
+        	<?php echo uif::load('_header');?>
     		<div role="main">
                 <hr>
     			<?php echo $yield; ?>
     		</div>
             <hr>  
-            <footer class="row-fluid">
-                <div class="span6">
-                    <p class="lead"><i class="icon-phone"></i> <strong>031 550 580</strong></p>     
-                </div>
-                <div class="span6 text-right">
-                    &copy; 2012 Кумановска Градска Пекара. Сите права задржани.<br/>
-                    Published by <?php echo anchor('http://www.carniadesign.com','Carnia Design'); ?>
-                </div>
-            </footer>
+            <?php echo uif::load('_footer');?>
         </div>
         <script src="<?php echo base_url('js/bootstrap.min.js'); ?>" type="text/javascript"></script> 
         <script src="<?php echo base_url('js/plugins.js'); ?>"></script>
