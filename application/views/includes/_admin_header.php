@@ -8,7 +8,7 @@
 		  </button>
 		  <a class="brand" href="#">Carnia PMS</a>
 			<div class="nav-collapse collapse">
-			<p class="navbar-text pull-right sign-out-btn"><?php echo uif::linkButton('logout','icon-signout'); ?></p>
+			<p class="navbar-text pull-right sign-out-btn"><?php echo uif::linkButton('logout','icon-signout','info'); ?></p>
 			<ul class="nav">
 				<li><?php echo anchor('/','Front Page'); ?></li>
 				<li><?php echo anchor('category','Categories'); ?></li>

@@ -57,7 +57,7 @@ class UIF {
 
 	public static function linkInsertButton($uri = '')
 	{
-		return self::linkButton($uri, 'icon-file');
+		return self::linkButton($uri, 'icon-plus');
 	}
 
 	public static function button($icon = '', $type = '', $attributes = '')
