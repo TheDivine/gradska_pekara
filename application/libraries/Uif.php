@@ -172,6 +172,9 @@ class UIF {
 			case 'text':
 				$out .= form_input($name,set_value($name,($value) ? $value->$name : ''),$attributes);
 				break;
+			case 'file':
+				$out .= form_upload($name,set_value($name,($value) ? $value->$name : ''),$attributes);
+				break;
 			case 'password':
 				$out .= form_password($name,set_value($name,($value) ? $value->$name : ''),$attributes);
 				break;

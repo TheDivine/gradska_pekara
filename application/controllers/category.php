@@ -30,18 +30,17 @@ class Category extends Admin_Controller {
 				
 			if($this->form_validation->run())
 			{
-				/*
-				 * Validation Passed
-				*/
-				$image = $this->_upload_image($_POST['permalink']);
+				$image = img::upload();
 				
-				$_POST['image'] = $image['image'];
+				$_POST['image']     = $image['image'];
 				$_POST['img_thumb'] = $image['img_thumb'];
 				
 				if($this->category->insert($_POST))
+				{
 					$this->session->set_flashdata('message','Category successfuly created!');
+				}
 				
-				redirect('dashboard');
+				redirect('category');
 			}
 		}
 	}
@@ -74,32 +73,40 @@ class Category extends Admin_Controller {
 				 */
 				if($_FILES['userfile']['name'])
 				{
-					//print_r('has file'); die;
-					$image = $this->_upload_image($_POST['permalink']);
+					$image = img::upload();
 			
-					$_POST['image'] = $image['image'];
+					$_POST['image']     = $image['image'];
 					$_POST['img_thumb'] = $image['img_thumb'];	
 				}
 
 				if($this->category->update($_POST['id'],$_POST))
+				{
 					$this->session->set_flashdata('message','Category successfuly updated!');
+				}
 				
-				redirect('dashboard');
+				redirect('category');
 			}	
 		}
 	}
 	
 	public function view($id)
 	{
-		$this->data['result'] = $this->category->get($id);
-			
+		$this->data['result']     = $this->category->get($id);
+		
 		$this->data['attributes'] = $this->category->get_attributes($id);
 		
-		$this->data['dd_attr'] = $this->attribute->order_by('name_mk')->dropdown('id','name_mk');
+		$this->data['dd_attr']    = $this->attribute->order_by('name_mk')->dropdown('id','name_mk');
 		
-		$this->data['products'] = $this->product->order_by('order')->get_many_by('category_id',$id);
-
+		$this->data['products']   = $this->product->order_by('order')->get_many_by('category_id',$id);
+		
 		$this->data['attr_count'] = count($this->data['attributes']);
+	}
+
+	public function delete($id)
+	{
+		$this->category->delete($id);
+		
+		redirect('category');
 	}
 	
 	public function activate($id)
@@ -107,7 +114,7 @@ class Category extends Admin_Controller {
 		$this->category->update($id,array('status'=>'active'));
 			$this->session->set_flashdata('message','Category activated!');
 	
-		redirect('dashboard');
+		redirect('category');
 	}
 	
 	public function deactivate($id)
@@ -115,7 +122,7 @@ class Category extends Admin_Controller {
 		$this->category->update($id,array('status'=>'inactive'));
 			$this->session->set_flashdata('message','Category deactivated!');
 		
-		redirect('dashboard');
+		redirect('category');
 	}
 	
 
@@ -159,47 +166,47 @@ class Category extends Admin_Controller {
 		exit;
 	}
 	
-	private function _upload_image($file_name)
-	{
-		$this->load->library('upload');
+	// private function _upload_image($file_name)
+	// {
+	// 	$this->load->library('upload');
 			
-		$config['upload_path'] = './uploads/';
-		$config['allowed_types'] = 'gif|jpg|png';
-		$config['file_name'] = $file_name;
+	// 	$config['upload_path'] = './uploads/';
+	// 	$config['allowed_types'] = 'gif|jpg|png';
+	// 	$config['file_name'] = $file_name;
 			
-		$this->upload->initialize($config);
+	// 	$this->upload->initialize($config);
 		
 		
-		if($this->upload->do_upload())
-		{
-			$results = $this->upload->data();
+	// 	if($this->upload->do_upload())
+	// 	{
+	// 		$results = $this->upload->data();
 		
-			$this->_create_thumbnail($results['file_name']);
+	// 		$this->_create_thumbnail($results['file_name']);
 		
-			$data['image'] = '/uploads/'.$results['file_name'];
-			$data['img_thumb'] = '/uploads/'.$results['raw_name'].'_thumb'.$results['file_ext'];
-		}
+	// 		$data['image'] = '/uploads/'.$results['file_name'];
+	// 		$data['img_thumb'] = '/uploads/'.$results['raw_name'].'_thumb'.$results['file_ext'];
+	// 	}
 		
-		return $data;
-	}
+	// 	return $data;
+	// }
 	
-	private function _create_thumbnail($image)
-	{
-		$this->load->library('image_lib');
+	// private function _create_thumbnail($image)
+	// {
+	// 	$this->load->library('image_lib');
 	
-		$config['image_library'] = 'gd2';
-		$config['source_image'] = './uploads/' . $image;
-		$config['create_thumb'] = TRUE;
-		$config['maintain_ratio'] = TRUE;
-		$config['width'] = 150;
-		$config['height'] = 150;
-		$config['new_image'] = './uploads/'.$image;
+	// 	$config['image_library'] = 'gd2';
+	// 	$config['source_image'] = './uploads/' . $image;
+	// 	$config['create_thumb'] = TRUE;
+	// 	$config['maintain_ratio'] = TRUE;
+	// 	$config['width'] = 150;
+	// 	$config['height'] = 150;
+	// 	$config['new_image'] = './uploads/'.$image;
 	
-		$this->image_lib->initialize($config);
+	// 	$this->image_lib->initialize($config);
 		 
-		if(!$this->image_lib->resize())
-			echo $this->image_lib->display_errors();
-	}
+	// 	if(!$this->image_lib->resize())
+	// 		echo $this->image_lib->display_errors();
+	// }
 	
 	public function make_permalink($string)
 	{

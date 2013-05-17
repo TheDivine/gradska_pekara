@@ -22,20 +22,11 @@
 </head>
 <body>
     <!--[if lt IE 7]><p class=chromeframe>Your browser is <em>ancient!</em> <a href="http://browsehappy.com/">Upgrade to a different browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to experience this site.</p><![endif]-->
-    <div class="container-fluid" role="wrapper">
-        <?php if($this->session->userdata('logged_in')): ?>
-        <header class="row-fluid">
-            <div class="masthead">
-            <ul class="nav nav-pills pull-right cd-navi">
-                <?php echo $this->load->view('includes/_admin_header'); ?>
-            </ul>
-            <h2>CarniaDesign PMS</h2>
-            </div>
-        </header>
-        <?php endif; ?>
-        <div id="content">
-            <?php echo $yield; ?>
-        </div>
+    <?php if($this->session->userdata('logged_in')): ?>
+        <?php echo uif::load('_admin_header'); ?>
+    <?php endif; ?>
+    <div class="container-fluid">
+        <?php echo $yield; ?>
     </div>  
     <script src="<?php echo base_url('js/plugins.js');?>"></script>
     <script src="<?php echo base_url('js/main.js');?>"></script>

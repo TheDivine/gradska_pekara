@@ -2,7 +2,7 @@
 
 class Globals {
 	
-	function __construct($config = array())
+	public function __construct($config = array())
 	{
 		foreach($config as $key => $value)
 		{

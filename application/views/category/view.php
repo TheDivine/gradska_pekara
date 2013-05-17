@@ -2,7 +2,7 @@
 	<div class="span4">
 		<dl class="dl-horizontal well well-small">
 			<dt>Live View</dt>
-			<dd><?php echo anchor("product/{$result->permalink}",'Link'); ?></dd>
+			<dd><?php echo anchor("categories/{$result->permalink}",'Link'); ?></dd>
 			<dt>Permalink</dt>
 			<dd><?php echo $result->permalink; ?></dd>
 			<dt>Name EN</dt>
