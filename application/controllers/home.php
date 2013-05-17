@@ -21,7 +21,7 @@ class Home extends Front_Controller {
 		 */
 		if($permalink !== '')
 		{
-			$this->data['category'] = $this->category->get_by('permalink',(string) $permalink);
+			$this->data['category'] = $this->category->get_by('permalink',(string)$permalink);
         
 	        if(!$this->data['category']) show_404();
 

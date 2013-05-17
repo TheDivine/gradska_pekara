@@ -4,9 +4,9 @@
 <ul class="thumbnails">
 <?php foreach($categories as $row): ?>
     <li class="span4">
+        <a href=<?php echo site_url("categories/{$row->permalink}")?>>
         <div class="thumbnail">
-        <a href=<?php echo base_url("categories/{$row->permalink}")?>>
-            <img src=<?php echo base_url($row->image);?> alt="<?php echo $row->permalink;?>"/>
+            <img src=<?php echo $row->image;?> alt="<?php echo $row->permalink;?>"/>
             <div class="caption">
                 <h5><?php echo $row->name_mk; ?></h5>
         </a>
