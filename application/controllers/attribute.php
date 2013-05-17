@@ -9,9 +9,6 @@ class Attribute extends Admin_Controller {
 	
 	public function index()
 	{
-         /*
-		 * Get all attributes
-		 */
 		$this->data['attributes'] = $this->attribute->get_all();
 	}
 	

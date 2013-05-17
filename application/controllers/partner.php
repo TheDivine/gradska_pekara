@@ -9,9 +9,6 @@ class Partner extends Admin_Controller {
 	
 	public function index()
 	{
-         /*
-		 * Get all partners
-		 */
 		$this->data['partners'] = $this->partner->order_by('city')->get_all();
 	}
 	
@@ -19,10 +16,6 @@ class Partner extends Admin_Controller {
 	{
 		if($_POST)
 		{
-			$this->load->library('form_validation');
-			/*
-			 * Validation rules
-			*/
 			$this->form_validation->set_rules('company', 'company', 'required|trim');
 			$this->form_validation->set_rules('city', 'city', 'required|trim');
 			$this->form_validation->set_rules('web', 'web', 'trim');
@@ -31,7 +24,9 @@ class Partner extends Admin_Controller {
 			if($this->form_validation->run())
 			{
 				if($this->partner->insert($_POST))
+				{
 					$this->session->set_flashdata('message','Partner successfuly created!');
+				}
 				
 				redirect('partner');
 			}
@@ -41,16 +36,9 @@ class Partner extends Admin_Controller {
 	public function edit($id)
 	{
 		$this->data['result'] = $this->partner->get($id);
-	}
 
-	public function post_update()
-	{
 		if($_POST)
 		{
-			$this->load->library('form_validation');
-			/*
-			 * Validation rules
-			*/
 			$this->form_validation->set_rules('company', 'company', 'required|trim');
 			$this->form_validation->set_rules('city', 'city', 'required|trim');
 			$this->form_validation->set_rules('web', 'web', 'trim');
@@ -59,7 +47,9 @@ class Partner extends Admin_Controller {
 			if($this->form_validation->run())
 			{
 				if($this->partner->update($_POST['id'],$_POST))
+				{
 					$this->session->set_flashdata('message','Partner successfuly updated!');
+				}
 				
 				redirect('partner');
 			}	
@@ -69,7 +59,8 @@ class Partner extends Admin_Controller {
 	public function activate($id)
 	{
 		$this->partner->update($id,array('status'=>'active'));
-			$this->session->set_flashdata('message','Parnter activated!');
+
+		$this->session->set_flashdata('message','Parnter activated!');
 	
 		redirect('partner');
 	}
@@ -77,7 +68,8 @@ class Partner extends Admin_Controller {
 	public function deactivate($id)
 	{
 		$this->partner->update($id,array('status'=>'inactive'));
-			$this->session->set_flashdata('message','Parnter deactivated!');
+
+		$this->session->set_flashdata('message','Parnter deactivated!');
 		
 		redirect('partner');
 	}
@@ -85,7 +77,8 @@ class Partner extends Admin_Controller {
 	public function delete($id)
 	{
 		$this->partner->delete($id);
-			$this->session->set_flashdata('message','Partner successfuly deleted!');
+
+		$this->session->set_flashdata('message','Partner successfuly deleted!');
 		
 		redirect('partner');
 	}

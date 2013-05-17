@@ -50,8 +50,6 @@ class User extends Admin_Controller {
 
 			if($this->form_validation->run())
 			{
-				if(!strlen($_POST['password']))
-					unset($_POST['password']);
 
 				if($this->user->update($_POST['id'],$_POST))
 				{
@@ -66,6 +64,8 @@ class User extends Admin_Controller {
 	public function delete($id)
 	{
 		$this->user->delete($id);
+
+		$this->session->set_flashdata('message','User successfuly deleted!');
 
 		redirect('user');
 	}

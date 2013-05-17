@@ -40,9 +40,12 @@ class Users_model extends MY_Model {
 	protected function hash_password($user)
     {
     	if(strlen($user['password']))
+    	{
 	        $user['hashed_password'] = self::hash($user['password']);
+    	}
 
     	unset($user['password']);
+    	
     	return $user;
     }
 

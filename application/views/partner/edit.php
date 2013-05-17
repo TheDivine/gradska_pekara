@@ -1,23 +1,18 @@
-<div class="formCategory">
-	<?php echo form_open('partner/post_update'); ?>			
-			<dl>
-				<dt><?php echo form_label('Company'); ?></dt>
-				<dd><?php echo form_input('company',set_value('company',$result->company)); ?></dd>
-
-			
-				<dt><?php echo form_label('City'); ?></dt>
-				<dd><?php echo form_input('city',set_value('city',$result->city)); ?></dd>
-
-				
-				<dt><?php echo form_label('WWW'); ?></dt>
-				<dd><?php echo form_input('web',set_value('web',$result->web)); ?></dd>
-
-				
-				<dt><?php echo form_label('Phone'); ?></dt>
-				<dd><?php echo form_input('phone',set_value('phone',$result->phone)); ?></dd>
-			</dl>
-		<?php echo form_hidden('id',set_value('id',$result->id)); ?>
-		<?php echo form_submit('','Submit');?>
-	<?php echo form_close(); ?>
-	<?php echo validation_errors(); ?>
+<div class="page-header">
+	<h4>Edit Partner</h4>
+</div>
+	<?php echo form_open('','class="form-horizontal"'); ?>			
+		<?php echo uif::submitButton()?>
+	<hr>
+<div class="row-fluid">
+	<div class="span4">
+			<?php echo uif::load('_validation'); ?>
+			<?php echo uif::controlGroup('text','Company','company',$result)?>
+			<?php echo uif::controlGroup('text','City','city',$result)?>
+			<?php echo uif::controlGroup('text','WWW','web',$result)?>
+			<?php echo uif::controlGroup('text','Phone','phone',$result)?>
+			<?php echo form_hidden('id',$result->id); ?>
+		<?php echo form_close(); ?>
+	</div>
+</div>
 </div>
