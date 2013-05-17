@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<title>404 Страницата Не е Пронајдена</title>
+<title>404 Страницата не е пронајдена</title>
 <style type="text/css">
 	body {
 		background-color: #fff;
@@ -39,8 +39,8 @@
 </head>
 <body>
 	<div id="container">
-		<h1>Страницата Не е Пронајдена</h1>
-		<p>Ea debitis ex at aliquid blanditiis facilis dolores amet libero?</p>
+		<h1>Страницата не е пронајдена</h1>
+		<p>Бараната страница не постои или е избришана.</p>
 	</div>
 </body>
 </html>
