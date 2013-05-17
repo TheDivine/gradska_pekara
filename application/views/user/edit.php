@@ -1,5 +1,5 @@
 <div class="formCategory">
-	<?php echo form_open('user/post_update'); ?>			
+	<?php echo form_open(''); ?>			
 			<dl>
 				<dt><?php echo form_label('Username'); ?></dt>
 				<dd><?php echo form_input('username',set_value('username',$user->username)); ?></dd>

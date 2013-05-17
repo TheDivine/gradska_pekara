@@ -15,6 +15,8 @@ class Admin_Controller extends MY_Controller
 			redirect('login');	
 		}
 
+		$this->load->library('form_validation');
+
 		$this->load->model('users_model','user');
 		$this->load->model('attribute_model','attribute');
 		$this->load->model('category_model', 'category');

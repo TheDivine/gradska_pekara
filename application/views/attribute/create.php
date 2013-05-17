@@ -1,16 +1,15 @@
-<div class="formCategory">
-	<?php echo form_open(); ?>			
-			<dl>
-				<dt><?php echo form_label('Name MK'); ?></dt>
-				<dd><?php echo form_input('name_mk'); ?></dd>
-				
-				<dt><?php echo form_label('Name SR'); ?></dt>
-				<dd><?php echo form_input('name_sr'); ?></dd>
-				
-				<dt><?php echo form_label('Name EN'); ?></dt>
-				<dd><?php echo form_input('name_en'); ?></dd>
-			</dl>
-		<?php echo form_submit('','Submit');?>
-	<?php echo form_close(); ?>
-	<?php echo validation_errors(); ?>
+<div class="page-header">
+  <h4>New Attribute</h4>
+</div>
+	<?php echo form_open('','class="form-horizontal"');?>			
+		<?php echo uif::submitButton()?>
+	<hr>
+<div class="row-fluid">
+	<div class="span4">
+		<?php echo uif::load('_validation'); ?>
+		<?php echo uif::controlGroup('text','Name MK', 'name_mk'); ?>			
+		<?php echo uif::controlGroup('text','Name SR', 'name_sr'); ?>			
+		<?php echo uif::controlGroup('text','Name EN', 'name_en'); ?>
+		<?php echo form_close(); ?>
+	</div>
 </div>

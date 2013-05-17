@@ -9,9 +9,6 @@ class User extends Admin_Controller {
 	
 	public function index()
 	{
-        /*
-		 * Get all recipes
-		 */
 		$this->data['users'] = $this->user->get_all();
 	}
 
@@ -19,10 +16,6 @@ class User extends Admin_Controller {
 	{
 		if($_POST)
 		{
-			$this->load->library('form_validation');
-			/*
-			 * Validation rules
-			*/
 			$this->form_validation->set_rules('password', 'password', 'requiredd');
 			$this->form_validation->set_rules('username', 'username', 'required|trim');
 			$this->form_validation->set_rules('email', 'email', 'required|trim');
@@ -31,7 +24,9 @@ class User extends Admin_Controller {
 			if($this->form_validation->run())
 			{
 				if($this->user->insert($_POST))
+				{
 					$this->session->set_flashdata('message','User successfuly created!');
+				}
 				
 				redirect('user');
 			}
@@ -41,19 +36,13 @@ class User extends Admin_Controller {
 	public function edit($id)
 	{
 		$this->data['user'] = $this->user->get($id);
-	}
 
-	public function post_update()
-	{
+		if(!$this->data['user']) show_404();
+
 		if($_POST)
 		{
-			if(!isset($_POST['admin']))
-				$_POST['admin'] = 0;
+			if(!isset($_POST['admin'])) $_POST['admin'] = 0;
 
-			$this->load->library('form_validation');
-			/*
-			 * Validation rules
-			*/
 			$this->form_validation->set_rules('password', 'password', 'requiredd');
 			$this->form_validation->set_rules('username', 'username', 'required|trim');
 			$this->form_validation->set_rules('email', 'email', 'required|trim');
@@ -65,17 +54,20 @@ class User extends Admin_Controller {
 					unset($_POST['password']);
 
 				if($this->user->update($_POST['id'],$_POST))
+				{
 					$this->session->set_flashdata('message','User successfuly updated!');
+				}
 		
 				redirect('user');
 			}
-		}		
+		}	
 	}
 	
 	public function delete($id)
 	{
 		$this->user->delete($id);
-		redirect($_SERVER['HTTP_REFERER']);
+
+		redirect('user');
 	}
 }
 

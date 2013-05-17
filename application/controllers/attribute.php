@@ -40,20 +40,32 @@ class Attribute extends Admin_Controller {
 	public function edit($id)
 	{
 		$this->data['result'] = $this->attribute->get($id);
-	}
-	
-	public function post_update()
-	{
-		if($this->attribute->update($_POST['id'],$_POST))
-			$this->session->set_flashdata('message','Attribute successfuly updated!');
-		
-		redirect('attribute');
+
+		if(!$this->data['result']) show_404();
+
+		if($_POST)
+		{
+			$this->form_validation->set_rules('name_mk', 'name mk', 'required|trim');
+			$this->form_validation->set_rules('name_sr', 'name sr', 'trim');
+			$this->form_validation->set_rules('name_en', 'name en', 'trim');
+			
+			if($this->form_validation->run())
+			{
+				if($this->attribute->update($_POST['id'],$_POST))
+				{
+					$this->session->set_flashdata('message','Attribute successfuly updated!');
+					redirect('attribute');
+				}
+			}
+		}
 	}
 	
 	public function delete($id)
 	{
 		$this->attribute->delete($id);
+		{
 			$this->session->set_flashdata('message','Attribute successfuly deleted!');
+		}
 		
 		redirect('attribute');
 	}

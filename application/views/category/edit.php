@@ -1,7 +1,7 @@
 <div class="page-header">
   <h4>Edit Category</h4>
 </div>
-	<?php echo form_open_multipart('category/post_update','class="form-horizontal"'); ?>			
+	<?php echo form_open_multipart('','class="form-horizontal"'); ?>			
 		<?php echo uif::submitButton()?>
 	<hr>
 <div class="row-fluid">

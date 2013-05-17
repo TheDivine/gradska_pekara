@@ -22,7 +22,7 @@ class Category extends Admin_Controller {
 			*/
 			$this->form_validation->set_rules('permalink', 'permalink', 'required|callback_make_permalink');
 			$this->form_validation->set_rules('name_mk', 'name mk', 'required|trim');
-			$this->form_validation->set_rules('desc_mk', 'desc mk', 'required|trim');
+			$this->form_validation->set_rules('desc_mk', 'desc mk', 'trim');
 			$this->form_validation->set_rules('name_sr', 'name sr', 'trim');
 			$this->form_validation->set_rules('desc_sr', 'desc sr', 'trim');
 			$this->form_validation->set_rules('name_en', 'name en', 'trim');
@@ -48,10 +48,9 @@ class Category extends Admin_Controller {
 	public function edit($id)
 	{
 		$this->data['result'] = $this->category->get($id);
-	}
 
-	public function post_update()
-	{
+		if(!$this->data['result']) show_404();
+
 		if($_POST)
 		{
 			$this->load->library('form_validation');
@@ -60,7 +59,7 @@ class Category extends Admin_Controller {
 			*/
 			$this->form_validation->set_rules('permalink', 'permalink', 'required|callback_make_permalink');
 			$this->form_validation->set_rules('name_mk', 'name mk', 'required|trim');
-			$this->form_validation->set_rules('desc_mk', 'desc mk', 'required|trim');
+			$this->form_validation->set_rules('desc_mk', 'desc mk', 'trim');
 			$this->form_validation->set_rules('name_sr', 'name sr', 'trim');
 			$this->form_validation->set_rules('desc_sr', 'desc sr', 'trim');
 			$this->form_validation->set_rules('name_en', 'name en', 'trim');
@@ -68,9 +67,7 @@ class Category extends Admin_Controller {
 
 			if($this->form_validation->run())
 			{
-				/*
-				 * Validation Passed
-				 */
+				//If new image is set, upload and create thumb
 				if($_FILES['userfile']['name'])
 				{
 					$image = img::upload();
@@ -105,10 +102,12 @@ class Category extends Admin_Controller {
 	public function delete($id)
 	{
 		$this->category->delete($id);
-		
+
 		redirect('category');
 	}
-	
+	/////////////////////
+	// AJAX FUNCTIONS //
+	/////////////////////
 	public function activate($id)
 	{
 		$this->category->update($id,array('status'=>'active'));
