@@ -37,6 +37,8 @@ class Partner extends Admin_Controller {
 	{
 		$this->data['result'] = $this->partner->get($id);
 
+		if(!$this->data['result']) show_404();
+
 		if($_POST)
 		{
 			$this->form_validation->set_rules('company', 'company', 'required|trim');

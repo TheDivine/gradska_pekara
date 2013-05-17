@@ -16,10 +16,6 @@ class Category extends Admin_Controller {
 	{
 		if($_POST)
 		{
-			$this->load->library('form_validation');
-			/*
-			 * Validation rules
-			*/
 			$this->form_validation->set_rules('permalink', 'permalink', 'required|callback_make_permalink');
 			$this->form_validation->set_rules('name_mk', 'name mk', 'required|trim');
 			$this->form_validation->set_rules('desc_mk', 'desc mk', 'trim');
@@ -53,10 +49,6 @@ class Category extends Admin_Controller {
 
 		if($_POST)
 		{
-			$this->load->library('form_validation');
-			/*
-			 * Validation rules
-			*/
 			$this->form_validation->set_rules('permalink', 'permalink', 'required|callback_make_permalink');
 			$this->form_validation->set_rules('name_mk', 'name mk', 'required|trim');
 			$this->form_validation->set_rules('desc_mk', 'desc mk', 'trim');
@@ -89,6 +81,8 @@ class Category extends Admin_Controller {
 	public function view($id)
 	{
 		$this->data['result']     = $this->category->get($id);
+
+		if(!$this->data['result']) show_404();
 		
 		$this->data['attributes'] = $this->category->get_attributes($id);
 		
@@ -111,7 +105,8 @@ class Category extends Admin_Controller {
 	public function activate($id)
 	{
 		$this->category->update($id,array('status'=>'active'));
-			$this->session->set_flashdata('message','Category activated!');
+
+		$this->session->set_flashdata('message','Category activated!');
 	
 		redirect('category');
 	}
@@ -119,7 +114,8 @@ class Category extends Admin_Controller {
 	public function deactivate($id)
 	{
 		$this->category->update($id,array('status'=>'inactive'));
-			$this->session->set_flashdata('message','Category deactivated!');
+		
+		$this->session->set_flashdata('message','Category deactivated!');
 		
 		redirect('category');
 	}
@@ -128,9 +124,13 @@ class Category extends Admin_Controller {
 	public function post_bind_attribute()
 	{
 		if($this->category->bind_attr_cat($_POST['attribute_id'],$_POST['category_id']))
+		{
 			$this->session->set_flashdata('message','Attribute successfuly added!');
+		}
 		else
+		{
 			$this->session->set_flashdata('message','Attribute already exists!');
+		}
 	
 		redirect($_SERVER['HTTP_REFERER']);
 	}
@@ -138,7 +138,9 @@ class Category extends Admin_Controller {
 	public function delete_attribute($id)
 	{
 		if($this->attrcat->delete($id))
+		{
 			$this->session->set_flashdata('message','Attribute successfuly deleted!');
+		}
 		
 		redirect($_SERVER['HTTP_REFERER']);
 	}
@@ -150,7 +152,10 @@ class Category extends Admin_Controller {
 		 * (order = order - 1)
 		 */
 		if($this->category->change_attr_order($_POST['id'],'up'))
+		{
 			echo 1;
+		}
+
 		exit;
 	}
 	
@@ -161,7 +166,10 @@ class Category extends Admin_Controller {
 		 * (order = order + 1)
 		 */
 		if($this->category->change_attr_order($_POST['id'],'down'))
+		{
 			echo 1;
+		}
+			
 		exit;
 	}
 	

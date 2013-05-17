@@ -16,10 +16,6 @@ class Attribute extends Admin_Controller {
 	{
 		if($_POST)
 		{
-			$this->load->library('form_validation');
-			/*
-			 * Validation rules
-			*/
 			$this->form_validation->set_rules('name_mk', 'name mk', 'required|trim');
 			$this->form_validation->set_rules('name_sr', 'name sr', 'trim');
 			$this->form_validation->set_rules('name_en', 'name en', 'trim');

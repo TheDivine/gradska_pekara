@@ -21,11 +21,12 @@ class Product extends Admin_Controller {
 	{
 		if($_POST)
 		{
-			if(!isset($_POST['stock']))
-				$_POST['stock'] = 0;
+			if(!isset($_POST['stock'])) $_POST['stock'] = 0;
 
 			if($this->product->update($_POST['id'],$_POST))
-			$this->session->set_flashdata('message','Product successfuly updated!');
+			{
+				$this->session->set_flashdata('message','Product successfuly updated!');
+			}
 		
 			redirect('dashboard');
 		}		
@@ -35,23 +36,22 @@ class Product extends Admin_Controller {
 	{
 		if($_POST)
 		{
-			$this->load->library('form_validation');
 			$this->form_validation->set_rules('val1', 'value 1', 'required|trim');
 
 			if($this->form_validation->run())
 			{
 				$this->product->insert($_POST);	
-					redirect($_SERVER['HTTP_REFERER']);
 			}
-			else
-				redirect($_SERVER['HTTP_REFERER']);
+
+			redirect($_SERVER['HTTP_REFERER']);
 		}
 	}
 	
 	public function post_delete($id)
 	{
 		$this->product->delete($id);
-			redirect($_SERVER['HTTP_REFERER']);
+		
+		redirect($_SERVER['HTTP_REFERER']);
 	}
 }
 
