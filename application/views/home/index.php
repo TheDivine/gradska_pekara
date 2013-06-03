@@ -22,13 +22,14 @@
 </div>
 <hr>
 <div class="row-fluid">
-	<div class="span8">
-		<h2>За Нас</h2>
+	<div class="span6">
+		<h3>За Нас</h3>
 			<strong>Кумановска Градска Пекара</strong> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas, quia, ducimus, labore obcaecati officiis ratione tenetur provident nemo nisi aspernatur suscipit exercitationem veniam ipsa modi perferendis est delectus earum architecto!
 	</div>
-	<div class="span4">
-		<h4>Наште Вредности</h4>
+	<div class="span6">
+		<h3>Нашите Вредности</h3>
 		Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam, numquam excepturi temporibus repudiandae aliquid iure incidunt vitae fuga amet tenetur mollitia laborum non error unde labore! Vitae, culpa sit consequatur.
+		<a href="#">zapoznaj se...</a>
 	</div>
 </div>
 <hr>
@@ -49,7 +50,7 @@
 <script>
 	$(function(){
 
-		 $('.carousel').carousel();
+		$('.carousel').carousel();
 
 		var submit_button = $("#submit_button");
 		

@@ -19,6 +19,6 @@
 		</ul>
 	</div>
 	<div class="span6">
-		<img src="<?php echo base_url('img/lucaffe.jpg'); ?>" style="padding:2px; border:1px solid #ccc;">
+		<img src="img/lucaffe.jpg" style="padding:2px; border:1px solid #ccc;">
 	</div>
 </div>

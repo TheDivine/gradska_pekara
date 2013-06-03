@@ -9,6 +9,6 @@
 		</p>
 	</div>
 	<div class="span6">
-		<img src="<?php echo base_url('img/catering.jpg'); ?>" style="padding:2px; border:1px solid #ccc;">
+		<img src="img/catering.jpg" style="padding:2px; border:1px solid #ccc;">
 	</div>
 </div>
