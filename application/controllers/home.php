@@ -101,7 +101,7 @@ class Home extends Front_Controller {
 
 			$this->email->to('info@gradskapekara.mk');
 				
-			$this->email->subject("Contact form - gradskapekara.mk");
+			$this->email->subject("Информации за {$_POST['name']} - gradskapekara.mk");
 
 			$this->email->message($_POST['message']);
 
