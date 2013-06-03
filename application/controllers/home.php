@@ -88,19 +88,21 @@ class Home extends Front_Controller {
 
 		if(!$this->input->is_ajax_request()) redirect('home/contact');
 			
-		$this->form_validation->set_rules('name', 'име', 'required|trim');
+		$this->form_validation->set_rules('name', 'име', 'required|trim|min_lenght[3]|max_lenght[30]');
 		$this->form_validation->set_rules('email', 'и-меил', 'valid_email|required|trim');
-		$this->form_validation->set_rules('phone', 'телефон', 'trim');
-		$this->form_validation->set_rules('message', 'порака', 'required|trim');
+		$this->form_validation->set_rules('phone', 'телефон', 'trim|min_lenght[5]|max_lenght[30]');
+		$this->form_validation->set_rules('message', 'порака', 'required|trim|min_lenght[10]');
 
 		if ($this->form_validation->run())
 		{
 			$this->load->library('email');
 
 			$this->email->from($_POST['email'], $_POST['name']);
-			$this->email->to('psybaron@gmail.com');
+
+			$this->email->to('info@gradskapekara.mk');
 				
-			$this->email->subject("GradskaPekara");
+			$this->email->subject("Contact form - gradskapekara.mk");
+
 			$this->email->message($_POST['message']);
 
 			if(!$this->news->get_by('email',$_POST['email']))

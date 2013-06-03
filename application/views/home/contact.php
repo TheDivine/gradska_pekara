@@ -9,12 +9,12 @@
 		<hr>
 		<address>
 			<strong>Кумановска Градска Пекара</strong><br>
-			<i class="icon-map-marker"></i> Октомвриска Револуција 32 - Пораншен Ресторант Табакана<br>
+			<i class="icon-map-marker"></i> Октомвриска Револуција 32 - Поранешен Ресторант Табакана<br>
 			1300 Куманово, Македонија <br>
 			<i class="icon-phone"></i> 031 550 580 <br>
 			<i class="icon-envelope"></i> <?php echo safe_mailto('info@gradskapekara.mk'); ?> <br>
-			<i class="icon-globe"></i> <?php echo anchor('http://www.gradskapekara.mk'); ?> <br>
-			<i class="icon-facebook-sign"> </i> <?php echo anchor('http://www.facebook.com/Kumanovska.Gradska.Pekara','facebook/Kumanovska.Gradska.Pekara'); ?>
+			<i class="icon-facebook-sign"> </i> <?php echo anchor('http://www.facebook.com/Kumanovska.Gradska.Pekara','facebook/Kumanovska.Gradska.Pekara'); ?><br>
+			<i class="icon-globe"></i> <?php echo anchor('http://www.gradskapekara.mk'); ?>
 		</address>
 		<hr>
 		<h4>Администрација</h4>
