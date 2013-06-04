@@ -12,9 +12,9 @@ $route['404_override'] = '';
 /*
  * Static pages routes
  */
-$route['about_us']          = 'home/index';
-$route['categories']        = 'home/categories';
 $route['categories/(:any)'] = 'home/categories/$1';
+$route['categories']        = 'home/categories';
+$route['about_us']          = 'home/index';
 $route['quality']           = 'home/quality';
 $route['catering']          = 'home/catering';
 $route['caffe']             = 'home/caffe';
