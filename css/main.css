@@ -1,7 +1,12 @@
-body {padding-top: 15px; padding-bottom: 15px;}
-header {background: url('../img/head_logo.png') 5px 5px;background-repeat: no-repeat;height: 105px;}
+body {
+	background-image: url(../img/grid-18px-masked.png);
+	background-repeat: repeat-x;
+	padding-bottom: 20px;
+	padding-top: 20px;
+}
+header { background: url('../img/head_logo.png') 5px 5px; background-repeat: no-repeat; height: 105px; padding-bottom: 20px;}
 .cd-navi {margin-top: 37px;}
-div[role=main] {margin-top: 10px;}
+.container [role=main] {max-width: 920px; background-color: #fff; padding: 30px; margin-top: 20px;}
 .orders-phone .lead {margin: 0;}
 .orders-phone h2 {margin: 0;}
 footer {padding-bottom: 30px; padding-top: 30px;}

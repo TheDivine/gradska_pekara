@@ -34,15 +34,16 @@
             <p class="chromeframe">You are using an outdated browser. <a href="http://browsehappy.com/">Upgrade your browser today</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to better experience this site.</p>
         <![endif]-->
         <!-- start of container -->
-        <div class="container">
+        <header class="container">
         	<?php echo uif::load('_header');?>
-            <hr>
-            <div role="main">
-    			<?php echo $yield; ?>
-    		</div>
+        </header>
+        <div class="container shadow" role="main">
+    		<?php echo $yield; ?>
+    	</div>
+        <footer class="container">
             <hr>  
             <?php echo uif::load('_footer');?>
-        </div>
+        </footer>
         <!-- end of container -->
         <script src="<?php echo base_url('js/bootstrap.min.js'); ?>" type="text/javascript"></script> 
         <script src="<?php echo base_url('js/plugins.js'); ?>"></script>

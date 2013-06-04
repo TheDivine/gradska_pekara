@@ -1,4 +1,4 @@
-<header class="row-fluid">
+<div class="row-fluid">
     <ul class="nav nav-pills pull-right cd-navi">
         <li <?=($this->router->method == 'index')?'class="active"':'';?>>
         <?php echo anchor('about_us','За Нас');?></li>
@@ -13,4 +13,4 @@
         <li <?=($this->router->method == 'contact')?'class="active"':'';?>>
         <?php echo anchor('contact','Контакт');?></li>
     </ul>
-</header>
+</div>
