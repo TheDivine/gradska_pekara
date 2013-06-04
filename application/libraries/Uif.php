@@ -6,7 +6,7 @@
  * Modified for PHP Version <= 5.3
  * @author Marko Aleksic <psybaron@gmail.com>
  */
-class UIF {
+class Uif {
 
 	public static function contentHeader($mainTitle = '', $meta = '')
 	{
