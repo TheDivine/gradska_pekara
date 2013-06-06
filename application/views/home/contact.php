@@ -29,7 +29,9 @@
 			<i class="icon-globe"></i> <?php echo anchor('http://www.kumanovskikori.mk'); ?>
 		</address>
 	</div>
-	<div class="span6 well">
+	<div class="span6">
+		<div id="contact-alert"></div>
+		<div class="well">
 		<?php echo form_open('','id="contact-form"');?>
 			<fieldset>
 				<label>Име и Презиме</label>
@@ -45,31 +47,16 @@
 			</fieldset>
 			<?php echo form_hidden('yolo'); ?>
 		<?php echo form_close(); ?>
+		</div>
 	</div>
 </div>
 
 <script>
 	$(function(){
+		$('#contact-alert').hide();
 		$("#submit-form").on('click',function(e){
-			$(this).prop('disabled',true).html('<i></i>');
-			$("#submit-form i").attr('class','icon-spinner icon-spin');
+			submitContactForm();
 			e.preventDefault();
-			$.ajax({
-				url: "<?=site_url('home/post_contact')?>",
-				type: 'post',
-				dataType: 'json',
-				data: $('#contact-form').serialize(),
-				success : function(data) {
-					alert('Контакт формата е успешно испратена. Благодариме!');
-					document.location.reload(true);
-				},
-				error : function() {
-					alert('Грешка при испраќање на контакт формата. Обидете се повторно!');
-					$("#submit-form").prop('disabled',false).html('Испрати');
-					return false;
-				}
-			});
-			return false;
 		});
 	});
 </script>

@@ -99,7 +99,7 @@ class Home extends Front_Controller {
 
 			$this->email->from($_POST['email'], $_POST['name']);
 
-			$this->email->to('info@gradskapekara.mk');
+			$this->email->to('psybaron@gmail.com');
 				
 			$this->email->subject("Информации за {$_POST['name']} - gradskapekara.mk");
 
@@ -113,7 +113,6 @@ class Home extends Front_Controller {
 			if($this->email->send())
 			{
 				$this->output->set_header(200);
-				echo json_encode('success');
 			}
 			else
 			{
