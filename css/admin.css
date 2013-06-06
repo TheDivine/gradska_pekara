@@ -2,3 +2,4 @@ body {padding-top: 50px;}
 .sign-out-btn {line-height: 0}
 hr{margin-top: 5px; margin-bottom: 5px;}
 .page-header {margin-bottom: 5px; margin-top: 5px;}
+.action-group a {text-decoration: none; color: #222;}

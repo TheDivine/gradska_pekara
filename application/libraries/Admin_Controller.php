@@ -19,6 +19,7 @@ class Admin_Controller extends MY_Controller
 
 		$this->load->model('users_model','user');
 		$this->load->model('attribute_model','attribute');
+		$this->load->model('attribute_category_model','attrcat');
 		$this->load->model('category_model', 'category');
         $this->load->model('product_model', 'product');
         $this->load->model('partner_model', 'partner');
