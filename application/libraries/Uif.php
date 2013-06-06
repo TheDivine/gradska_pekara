@@ -370,7 +370,7 @@ class Uif {
 	 * @param  Array $array
 	 * @return Array
 	 */
-	private static function _ev($array = [])
+	private static function _ev($array = array())
 	{
 		return array(''=>'') + $array;
 	}

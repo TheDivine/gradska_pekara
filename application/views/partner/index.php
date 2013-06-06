@@ -1,14 +1,17 @@
 <div class="page-header">
   <h4>Partners</h4>
 </div>
-<?php echo uif::linkInsertButton('partner/create'); ?>
-<hr/>
+<div class="row-fluid">
+    <?php echo uif::linkInsertButton('partner/create'); ?>
+    <?php echo uif::load('_flash'); ?>
+</div>
+<hr>
 <table class="table table-hover table-bordered">
     <thead>
         <tr>
             <th>Company</th>
             <th>City</th>
-            <th>WWW</th>
+            <th>Web Site</th>
             <th>Phone</th>
             <th>&nbsp;</th>
         </tr>

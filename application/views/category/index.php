@@ -1,8 +1,11 @@
 <div class="page-header">
-  <h4>Categories</h4>
+    <h4>Categories</h4>
 </div>
-<?php echo uif::linkInsertButton('category/create'); ?>
-<hr/>
+<div class="row-fluid">
+    <?php echo uif::linkInsertButton('category/create'); ?>
+    <?php echo uif::load('_flash'); ?>
+</div>
+<hr>
 <table class="table table-hover table-bordered">
     <thead>
         <tr>

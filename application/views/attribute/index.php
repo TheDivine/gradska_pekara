@@ -1,7 +1,10 @@
 <div class="page-header">
   <h4>Attributes</h4>
 </div>
-<?php echo uif::linkInsertButton('attribute/create'); ?>
+<div class="row-fluid">
+    <?php echo uif::linkInsertButton('attribute/create'); ?>
+    <?php echo uif::load('_flash'); ?>
+</div>
 <hr>
 <table class="table table-hover table-bordered">
     <thead>
