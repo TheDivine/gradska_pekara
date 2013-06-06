@@ -9,7 +9,12 @@ class Admin extends Admin_Controller {
 	
 	public function index()
 	{
-
+		if($this->session->userdata('logged_in'))
+		{
+			redirect('category/index');	
+		}
+		
+		$this->login();
 	}
 	
 	public function login()
@@ -26,12 +31,42 @@ class Admin extends Admin_Controller {
 
 		if($this->_check_login($_POST['username'],$_POST['password']))
 		{
-			redirect('category/index');
+			if($this->input->is_ajax_request())
+			{
+				$this->output->set_status_header(200);
+				echo site_url('category/index');
+				exit;
+			}
+			else
+			{
+				redirect('category/index');
+			}
 		}
-
-		redirect('login');
+		if($this->input->is_ajax_request())
+		{
+			$this->output->set_status_header(401);
+			exit;
+		}
+		else
+		{
+			redirect('admin/login');
+		}
 	}
 	
+	public function logout()
+	{
+		/*
+		 * Destroy session and redirects
+		 * to index page of this controller
+		 */
+		$this->session->sess_destroy();
+		
+		redirect('login');
+	}
+
+	////////////////////////
+	// PRIVATE FUNCTION  //
+	////////////////////////
 	private function _check_login($username, $password)
 	{
 		/*
@@ -55,17 +90,6 @@ class Admin extends Admin_Controller {
 		}
 		
 		return false;
-	}
-	
-	public function logout()
-	{
-		/*
-		 * Destroy session and redirects
-		 * to index page of this controller
-		 */
-		$this->session->sess_destroy();
-		
-		redirect('login');
 	}
 }
 
