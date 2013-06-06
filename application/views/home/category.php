@@ -1,7 +1,11 @@
 <div class="row-fluid">
 	<div class="span4">
 		<div class="thumbnail">
-			<img src="<?php echo base_url($category->image);?>" alt="">
+			<?php if (strpos($category->image, 'http') === 0) : ?>
+    			<img src="<?php echo $category->image;?>" alt="">
+			<?php else:?>
+				<img src="<?php echo base_url($category->image);?>" alt="">
+			<?php endif;?>
 		</div>
 	</div>
 	<div class="span8">

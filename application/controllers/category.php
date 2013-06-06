@@ -26,10 +26,19 @@ class Category extends Admin_Controller {
 				
 			if($this->form_validation->run())
 			{
-				$image = img::upload();
+				if(!empty($_FILES['userfile']['name']))
+				{
+					$image = img::upload();
 				
-				$_POST['image']     = $image['image'];
-				$_POST['img_thumb'] = $image['img_thumb'];
+					$_POST['image']     = $image['image'];
+					$_POST['img_thumb'] = $image['img_thumb'];
+
+				}
+				else
+				{
+					$_POST['image'] = 'http://placehold.it/300x300';
+					$_POST['img_thumb'] = 'http://placehold.it/150x150';
+				}
 				
 				if($this->category->insert($_POST))
 				{

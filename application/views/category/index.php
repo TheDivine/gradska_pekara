@@ -22,7 +22,7 @@
             <tr>
                 <td><?php echo uif::viewIcon('category',$row->id); ?></td>
                 <td><?php echo $row->name_mk;?></td>
-                <td><?php echo $row->status; ?></td>
+                <td><?php echo ucfirst($row->status); ?></td>
                 <td><?php echo $row->order; ?></td>
                 <td><?php echo uif::actionGroup('category',$row->id); ?></td>
                 <?php if($row->status == 'active'):?>
