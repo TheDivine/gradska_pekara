@@ -8,8 +8,9 @@
 	<div class="span4">
 		<?php echo uif::load('_validation'); ?>
 		<?php echo uif::controlGroup('text','Username', 'username',$user); ?>			
-		<?php echo uif::controlGroup('password','Password', 'password'); ?>			
 		<?php echo uif::controlGroup('text','E-Mail', 'email',$user); ?>
+		<?php echo uif::controlGroup('password','New Password', 'password'); ?>	
+		<?php echo uif::controlGroup('password','Confirm New Password', 'passconf'); ?>					
 		<?php echo uif::controlGroup('checkbox','Admin', 'admin',[1,$user]); ?>
 		<?php echo form_hidden('id',$user->id); ?>
 		<?php echo form_close(); ?>

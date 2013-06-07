@@ -14,15 +14,15 @@
             <th>Admin</th>
             <th>&nbsp;</th>
         </tr>
-        </thead>
-        <tbody>
-            <?php foreach($users as $row):?>
-                <tr>
-                    <td><?php echo $row->username;?></td>
-                    <td><?php echo $row->email;?></td>
-                    <td><?php echo $row->admin;?></td>
-                    <td><?php echo uif::actionGroup('user',$row->id); ?></td>
-                </tr>
-            <?php endforeach; ?>
+    </thead>
+    <tbody>
+        <?php foreach($users as $row):?>
+            <tr>
+                <td><?php echo $row->username;?></td>
+                <td><?php echo $row->email;?></td>
+                <td><?php echo ($row->admin) ? '<i class="icon-ok"></i>' : '-' ;?></td>
+                <td><?php echo uif::actionGroup('user',$row->id); ?></td>
+            </tr>
+        <?php endforeach; ?>
     </tbody>
 </table>

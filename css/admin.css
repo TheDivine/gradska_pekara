@@ -3,4 +3,4 @@ body {padding-top: 50px;}
 hr{margin-top: 5px; margin-bottom: 5px;}
 .page-header {margin-bottom: 5px; margin-top: 5px;}
 .action-group a {text-decoration: none; color: #222;}
-#cpms-alert {margin-bottom: 0; width: 250px; float: right; padding: 4px 35px 4px 10px}
+#cpms-alert {margin-bottom: 0; float: right; padding: 4px 35px 4px 10px}

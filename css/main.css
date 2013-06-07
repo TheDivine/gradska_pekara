@@ -1,9 +1,4 @@
-body {
-	background-image: url(../img/grid-18px-masked.png);
-	background-repeat: repeat-x;
-	padding-bottom: 20px;
-	padding-top: 20px;
-}
+body {background-image: url(../img/pattern.gif);background-repeat: repeat-x;-bottom: 20px;padding-top: 20px;}
 header { background: url('../img/head_logo.png') 5px 5px; background-repeat: no-repeat; height: 105px; padding-bottom: 20px;}
 .cd-navi {margin-top: 37px;}
 .container [role=main] {max-width: 920px; background-color: #fff; padding: 30px; margin-top: 20px;}

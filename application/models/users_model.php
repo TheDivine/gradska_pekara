@@ -37,6 +37,16 @@ class Users_model extends MY_Model {
 		return crypt($password,self::$algo .self::$cost .'$'.self::unique_salt());
 	}
 
+    public static function check_password($hash, $password) 
+    {
+        $full_salt = substr($hash, 0, 29);
+        $new_hash = crypt($password, $full_salt);
+        return ($hash == $new_hash);
+    }
+
+    ///////////////
+    // OBSERVERS //
+    ///////////////
 	protected function hash_password($user)
     {
     	if(strlen($user['password']))
@@ -44,15 +54,9 @@ class Users_model extends MY_Model {
 	        $user['hashed_password'] = self::hash($user['password']);
     	}
 
-    	unset($user['password']);
+        unset($user['password']);
+    	unset($user['passconf']);
     	
     	return $user;
     }
-
-	public static function check_password($hash, $password) 
-	{
-		$full_salt = substr($hash, 0, 29);
-		$new_hash = crypt($password, $full_salt);
-		return ($hash == $new_hash);
-	}
 }
