@@ -35,25 +35,15 @@
 <hr>
 <div class="row-fluid">
     <div class="span6">
-        <h3>КГП Билтен</h3>
-        <div id="newsletter-alert"></div>
-        <p>Запишете се во нашиот електронски билтен, за први да бидете известени за промоции, понуди и попусти!</p>
-        <form class="form-inline">
-        <fieldset>
-            <input id="email-newsletters" placeholder="И-Меил" type="text" class="input-xlarge">
-            <button id="subscribe" class="btn btn-success">Запиши ме</button>
-        </fieldset>
-        <?php echo form_input('yolo'); ?>
-        </form>
-        <small><i class="icon-info-sign"></i> Вашата приватност е наш приоритет. Вашите и-меил адреси не ги продаваме или споделуваме со надворешни трети лица</small>
+        <?php uif::load('_newsletter');?>
     </div>
     <div class="span6">
-        <div class="alert alert-success">
             <h4>Нашата Мисија</h4>
+        <div class="alert alert-success">
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos, est, accusantium, earum magni adipisci sunt magnam cupiditate impedit suscipit ut ratione quae tempore nisi blanditiis ducimus maiores nulla incidunt dicta.
         </div>
-        <div class="alert alert-info">
             <h4>Нашата Визија</h4> 
+        <div class="alert alert-info">
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum, dicta, enim, accusamus quisquam facere necessitatibus aut inventore assumenda facilis ut ratione eaque dolor nihil sed repudiandae voluptate perferendis cumque sit!
         </div>
     </div>
@@ -61,9 +51,5 @@
 <script>
     $(function(){
         $('.carousel').carousel(); 
-        $("#subscribe").on('click',function(e){
-            addToNewsletters();
-            e.preventDefault();
-        });
     });
 </script>
