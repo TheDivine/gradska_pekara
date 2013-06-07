@@ -97,17 +97,23 @@ class Home extends Front_Controller {
 		{
 			$this->load->library('email');
 
-			$this->email->from($_POST['email'], $_POST['name']);
+			$this->email->from($this->input->post('email'), $this->input->post('name'));
 
 			$this->email->to('psybaron@gmail.com');
 				
-			$this->email->subject("Информации за {$_POST['name']} - gradskapekara.mk");
+			$this->email->subject("Порака од {$this->input->post('name')} - gradskapekara.mk");
 
-			$this->email->message($_POST['message']);
+			$message = $this->input->post('message') . "\r\n";
+			$message .= "--------------------------------------------------------------------\r\n";
+			$message .= 'Remote Address: ' . $_SERVER['REMOTE_ADDR'] . "\r\n";
+			$message .= 'User Agent: ' . $_SERVER['HTTP_USER_AGENT']. "\r\n";
+			$message .= 'Request Time: ' . date("Y-m-d H:i:s", $_SERVER['REQUEST_TIME']);
 
-			if(!$this->news->get_by('email',$_POST['email']))
+			$this->email->message($message);
+
+			if(!$this->news->get_by('email',$this->input->post('email')))
 			{
-				$this->news->insert(array('email'=>$_POST['email']));
+				$this->news->insert(array('email' => $this->input->post('email')));
 			}
 				
 			if($this->email->send())

@@ -43,7 +43,7 @@
 				<label>Порака</label>
 				<?php echo form_textarea('message',set_value('message'),'class="input-block-level"'); ?>
 				<hr>
-				<button id="submit-form" class="btn btn-primary span4 pull-right">Испрати</button>
+				<button id="submit-form-btn" class="btn btn-primary span4 pull-right">Испрати</button>
 			</fieldset>
 			<?php echo form_hidden('yolo'); ?>
 		<?php echo form_close(); ?>
@@ -54,7 +54,7 @@
 <script>
 	$(function(){
 		$('#contact-alert').hide();
-		$("#submit-form").on('click',function(e){
+		$("#submit-form-btn").on('click',function(e){
 			submitContactForm();
 			e.preventDefault();
 		});

@@ -26,7 +26,7 @@ function submitContactForm()
     var contactAlert = $('#contact-alert');
 
     var contactForm = $('#contact-form');
-    var submitFormBtn = $("#submit-form");
+    var submitFormBtn = $("#submit-form-btn");
 
     var name = $('input[name=name]');
     var email = $('input[name=email]');
@@ -55,17 +55,16 @@ function submitContactForm()
         return false;
     }
 
-    contactAlert.removeClass();
+    contactAlert.hide().removeClass();
 
-    $(this).prop('disabled',true).html('<i></i>');
+    submitFormBtn.prop('disabled',true).html('<i></i>');
 
-    $("#submit-form i").attr('class','icon-spinner icon-spin');
+    submitFormBtn.find('i').attr('class','icon-spinner icon-spin');
 
     $.ajax({
         url: 'home/post_contact',
         type: 'post',
-        dataType: 'json',
-        data: $('#contact-form').serialize(),
+        data: contactForm.serialize(),
         success : function() {
             contactAlert.addClass('alert alert-success').show().html('<i class="icon-info-sign"></i> Вашата порака е успешно испратена. Благодариме!');
             contactForm[0].reset();
