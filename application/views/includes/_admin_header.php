@@ -13,6 +13,7 @@
 				<li><?php echo anchor('/','Front Page'); ?></li>
 				<li><?php echo anchor('category','Categories'); ?></li>
 				<li><?php echo anchor('attribute','Attributes'); ?></li>
+				<li><?php echo anchor('recipe','Recipes'); ?></li>
 				<li><?php echo anchor('partner','Partners'); ?></li>
 				<?php if($this->session->userdata('is_admin')): ?>
 					<li><?php echo anchor('user','Users'); ?></li>
