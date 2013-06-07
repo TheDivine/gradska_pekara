@@ -10,3 +10,4 @@ header { background: url('../img/head_logo.png') 5px 5px; background-repeat: no-
 .orders-phone .lead {margin: 0;}
 .orders-phone h2 {margin: 0;}
 footer {padding-bottom: 30px; padding-top: 30px;}
+input[name=yolo] {display:none;visiblity: hidden;}

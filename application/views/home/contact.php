@@ -46,7 +46,7 @@
 				<hr>
 				<button id="submit-form-btn" class="btn btn-primary span4 pull-right">Испрати</button>
 			</fieldset>
-			<?php echo form_input('yolo','','style="display:none;visiblity: hidden;"'); ?>
+			<?php echo form_input('yolo'); ?>
 		<?php echo form_close(); ?>
 		</div>
 	</div>
