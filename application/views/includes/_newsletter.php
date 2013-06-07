@@ -1,5 +1,4 @@
 <h3>КГП Билтен</h3>
-<div id="newsletter-alert"></div>
 <p>Запишете се во нашиот електронски билтен, за први да бидете известени за промоции, понуди и попусти!</p>
 <form class="form-inline">
     <fieldset>
@@ -8,7 +7,8 @@
     </fieldset>
     <input name="yolo" id="">
 </form>
-<small><i class="icon-info-sign"></i> Вашата приватност е наш приоритет. Вашите и-меил адреси не ги продаваме или споделуваме со надворешни трети лица</small>
+<div id="newsletter-alert"></div>
+<small class="muted"><i class="icon-info-sign"></i> Вашата приватност е наш приоритет. Вашите и-меил адреси не ги продаваме или споделуваме со надворешни трети лица.</small>
 <script>
     $(function(){
         $("#subscribe").on('click',function(e){
