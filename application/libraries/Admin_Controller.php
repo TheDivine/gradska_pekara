@@ -16,6 +16,7 @@ class Admin_Controller extends MY_Controller
 		}
 
 		$this->load->library('form_validation');
+		$this->load->library('img');
 
 		$this->load->model('users_model','user');
 		$this->load->model('attribute_model','attribute');

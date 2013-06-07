@@ -1,8 +1,8 @@
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 class Recipe_model extends MY_Model {
-	
-	public $_table = 'recipes';
-	public $before_create = array('timestamps');
+    
+    public $_table = 'recipes';
+    public $before_create = array('timestamps');
 
     public $validate = array(
         array( 'field' => 'permalink', 
@@ -34,7 +34,7 @@ class Recipe_model extends MY_Model {
                'rules' => 'required|trim' ),
     );
 
-	protected function timestamps($recipe)
+    protected function timestamps($recipe)
     {
         $recipe['created_at'] = $recipe['updated_at'] = date('Y-m-d H:i:s');
         return $recipe;
@@ -83,7 +83,7 @@ class Recipe_model extends MY_Model {
         $data['num_rows'] = $temp->count;
 
         return $data;
-    }	
+    }   
 
     public function get_recipe($permalink)
     {

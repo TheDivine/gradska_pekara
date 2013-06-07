@@ -23,7 +23,7 @@
             <td><?php echo $row->desc;?></td>
             <td><?php echo ucfirst($row->type);?></td>
             <td><?php echo ($row->published) ? '<i class="icon-ok"></i>' : '-' ;?></td>
-            <td><?php echo uif::actionGroup('category',$row->id); ?></td>
+            <td><?php echo uif::actionGroup('recipe',$row->id); ?></td>
         </tr>
         <?php endforeach; ?>
     </tbody>

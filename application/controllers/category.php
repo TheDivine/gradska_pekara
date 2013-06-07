@@ -44,7 +44,6 @@ class Category extends Admin_Controller {
 				{
 					$this->session->set_flashdata('message','Category successfuly created!');
 				}
-				
 				redirect('category');
 			}
 		}

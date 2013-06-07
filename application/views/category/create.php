@@ -1,3 +1,4 @@
+<?php echo $this->load->view('includes/_tiny_mce', base_url(), true); ?>
 <div class="page-header">
   <h4>New Category</h4>
 </div>

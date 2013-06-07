@@ -9,8 +9,8 @@
 		  <a class="brand" href="#">Carnia PMS</a>
 			<div class="nav-collapse collapse">
 			<p class="navbar-text pull-right sign-out-btn"><?php echo uif::linkButton('logout','icon-signout','info'); ?></p>
+			<p class="navbar-text pull-right sign-out-btn"><?php echo uif::linkButton('/','icon-globe','success'); ?></p>
 			<ul class="nav">
-				<li><?php echo anchor('/','Front Page'); ?></li>
 				<li><?php echo anchor('category','Categories'); ?></li>
 				<li><?php echo anchor('attribute','Attributes'); ?></li>
 				<li><?php echo anchor('recipe','Recipes'); ?></li>
