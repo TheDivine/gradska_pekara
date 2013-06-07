@@ -6,7 +6,7 @@
 <div class="row-fluid shadow" id="login">
 	<div class="span12">
 		<?php echo form_open('admin/postLogin'); ?>
-			<legend class="text-center"><strong>CarniaDesign PMS</strong></legend>
+			<legend class="text-center"><strong>Carnia PMS</strong></legend>
 			<div class="alert alert-error" id="alert-box">
 				<i class="icon-warning-sign"></i> Login failed. Wrong username or password!
 			</div>

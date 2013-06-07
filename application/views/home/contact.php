@@ -4,17 +4,16 @@
 <div class="row-fluid">
 	<div class="span6">
 		<div class="text-center orders-phone">
-			<p class="lead">информации и нарачки</p> <h2><i class="icon-phone"></i> <strong>031 550 580</strong></h2>
+			<p class="lead">информации и нарачки</p> <h2><i class="icon-phone"></i> <strong><?php echo $glCompanyPhone; ?></strong></h2>
 		</div>
 		<hr>
 		<address>
-			<strong>Кумановска Градска Пекара</strong><br>
-			<i class="icon-map-marker"></i> Октомвриска Револуција 32 - Поранешен Ресторант Табакана<br>
-			1300 Куманово, Македонија <br>
-			<i class="icon-phone"></i> 031 550 580 <br>
-			<i class="icon-envelope"></i> <?php echo safe_mailto('info@gradskapekara.mk'); ?> <br>
-			<i class="icon-facebook-sign"> </i> <?php echo anchor('http://www.facebook.com/kumanovska.gradska.pekara','facebook/kumanovska.gradska.pekara'); ?><br>
-			<i class="icon-globe"></i> <?php echo anchor('http://www.gradskapekara.mk'); ?>
+			<strong><?php echo $glTitle; ?></strong><br>
+			<i class="icon-map-marker"></i> <?php echo $glCompanyAddress; ?><br>
+			<i class="icon-phone"></i> <?php echo $glCompanyPhone; ?><br>
+			<i class="icon-envelope"></i> <?php echo safe_mailto($glEmail); ?><br>
+			<i class="icon-facebook-sign"> </i> <?php echo anchor($glFacebookUrl,$glFacebookDisplay); ?><br>
+			<i class="icon-globe"></i> <?php echo anchor($glUrl); ?>
 		</address>
 		<hr>
 		<h4>Администрација</h4>

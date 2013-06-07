@@ -21,8 +21,53 @@ $(function(){
     });
 });
 
-function submitContactForm()
-{
+function addToNewsletters(){
+
+    var email = $("input#email-newsletters");
+    var yolo = $("input[name=yolo]");
+    var subscribeButton = $("#subscribe");
+    var newsletterAlert = $('#newsletter-alert');
+
+    newsletterAlert.removeClass();
+    
+    if(!email.val()){
+        newsletterAlert.addClass('alert alert-error').show().html('<i class="icon-info-sign"></i> Полето И-Меил е задолжително!');
+        email.focus();
+        return false;
+    }
+    if(!isEmail(email.val())){
+         newsletterAlert.addClass('alert alert-error').show().html('<i class="icon-info-sign"></i> Невалиден И-Меил!');
+         email.focus();
+         return false;
+    }
+
+    newsletterAlert.removeClass();
+
+    subscribeButton.prop('disabled',true).html('<i></i>');
+
+    subscribeButton.find('i').attr('class','icon-spinner icon-spin');
+
+    $.ajax({
+        url: 'home/post_newsletter_email',
+        type: 'post',
+        data: {email:email.val(),yolo:yolo.val()},
+        success : function() {
+            newsletterAlert.addClass('alert alert-success').show().html('<i class="icon-ok-sign"></i> Вашата И-меил адреса е успешно внесена. Благодариме!');
+            subscribeButton.prop('disabled',false).html('Запиши ме');
+        },
+        error : function() {
+            newsletterAlert.addClass('alert alert-error').show().html('<i class="icon-warning-sign"></i> Грешка при внесување. Обидете се повторно!');
+            subscribeButton.prop('disabled',false).html('Запиши ме');
+        }
+    });
+
+    email.val('');
+
+    return false;       
+}
+
+function submitContactForm(){
+
     var contactAlert = $('#contact-alert');
 
     var contactForm = $('#contact-form');
@@ -32,7 +77,7 @@ function submitContactForm()
     var email = $('input[name=email]');
     var message = $('textarea[name=message]');
 
-     contactAlert.removeClass();
+    contactAlert.removeClass();
 
     if(!name.val()){
         contactAlert.addClass('alert alert-error').show().html('<i class="icon-info-sign"></i> Полето Име и Презиме е задолжително!');
@@ -66,12 +111,12 @@ function submitContactForm()
         type: 'post',
         data: contactForm.serialize(),
         success : function() {
-            contactAlert.addClass('alert alert-success').show().html('<i class="icon-info-sign"></i> Вашата порака е успешно испратена. Благодариме!');
+            contactAlert.addClass('alert alert-success').show().html('<i class="icon-ok-sign"></i> Вашата порака е успешно испратена. Благодариме!');
             contactForm[0].reset();
             submitFormBtn.prop('disabled',false).html('Испрати');
         },
         error : function() {
-            $('#contact-alert').addClass('alert alert-error').show().html('<i class="icon-info-sign"></i> Грешка при испраќањe. Обидете се повторно!');
+            contactAlert.addClass('alert alert-error').show().html('<i class="icon-warning-sign"></i> Грешка при испраќањe. Обидете се повторно!');
             submitFormBtn.prop('disabled',false).html('Испрати');
             return false;
         }
