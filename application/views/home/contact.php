@@ -4,14 +4,14 @@
 <div class="row-fluid">
 	<div class="span6">
 		<div class="text-center orders-phone">
-			<p class="lead">информации и нарачки</p> <h2><i class="icon-phone"></i> <strong><?php echo $glCompanyPhone; ?></strong></h2>
+			<p class="lead">информации и нарачки</p> <h2><i class="icon-phone-sign"></i> <strong><?php echo $glCompanyPhone; ?></strong></h2>
 		</div>
 		<hr>
 		<address>
 			<strong><?php echo $glTitle; ?></strong><br>
 			<i class="icon-map-marker"></i> <?php echo $glCompanyAddress; ?><br>
-			<i class="icon-phone"></i> <?php echo $glCompanyPhone; ?><br>
-			<i class="icon-envelope"></i> <?php echo safe_mailto($glEmail); ?><br>
+			<i class="icon-phone-sign"></i> <?php echo $glCompanyPhone; ?><br>
+			<i class="icon-envelope-alt"></i> <?php echo safe_mailto($glEmail); ?><br>
 			<i class="icon-facebook-sign"> </i> <?php echo anchor($glFacebookUrl,$glFacebookDisplay); ?><br>
 			<i class="icon-globe"></i> <?php echo anchor($glUrl); ?>
 		</address>
@@ -19,12 +19,11 @@
 		<h4>Администрација</h4>
 		<address>
 			<strong>Агро-Про ДОО</strong><br>
-			<i class="icon-map-marker"></i> Индустриска Зона Доброшане<br>
-			1300 Куманово, Македонија <br>
-			<i class="icon-phone"></i> 031 453 905 <br>
-			<i class="icon-phone"></i> 031 453 906 <br>
+			<i class="icon-map-marker"></i> Индустриска Зона Доброшане 1300 Куманово, Македонија <br>
+			<i class="icon-phone-sign"></i> 031 453 905 <br>
+			<i class="icon-phone-sign"></i> 031 453 906 <br>
 			<i class="icon-print"></i> 031 412 715 <br>
-			<i class="icon-envelope"></i> <?php echo safe_mailto('info@kumanovskikori.mk'); ?> <br>
+			<i class="icon-envelope-alt"></i> <?php echo safe_mailto('info@kumanovskikori.mk'); ?> <br>
 			<i class="icon-facebook-sign"> </i> <?php echo anchor('http://www.facebook.com/KumanovskiKori','facebook/kumanovskikori'); ?><br>
 			<i class="icon-globe"></i> <?php echo anchor('http://www.kumanovskikori.mk'); ?>
 		</address>

@@ -23,11 +23,11 @@
 <hr>
 <div class="row-fluid">
     <div class="span6">
-        <h3>За Нас</h3>
+        <h3><i class="icon-chevron-sign-right"></i> За Нас</h3>
             <strong>Кумановска Градска Пекара</strong> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas, quia, ducimus, labore obcaecati officiis ratione tenetur provident nemo nisi aspernatur suscipit exercitationem veniam ipsa modi perferendis est delectus earum architecto!
     </div>
     <div class="span6">
-        <h3>Нашите Вредности</h3>
+        <h3><i class="icon-chevron-sign-right"></i> Нашите Вредности</h3>
         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam, numquam excepturi temporibus repudiandae aliquid iure incidunt vitae fuga amet tenetur mollitia laborum non error unde labore! Vitae, culpa sit consequatur.
         <a href="#">zapoznaj se...</a>
     </div>
@@ -35,6 +35,7 @@
 <hr>
 <div class="row-fluid">
     <div class="span6">
+        <h3><i class="icon-chevron-sign-right"></i> КГП Билтен</h3>
         <?php uif::load('_newsletter');?>
     </div>
     <div class="span6">
