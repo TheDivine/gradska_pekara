@@ -13,7 +13,7 @@
 			1300 Куманово, Македонија <br>
 			<i class="icon-phone"></i> 031 550 580 <br>
 			<i class="icon-envelope"></i> <?php echo safe_mailto('info@gradskapekara.mk'); ?> <br>
-			<i class="icon-facebook-sign"> </i> <?php echo anchor('http://www.facebook.com/Kumanovska.Gradska.Pekara','facebook/Kumanovska.Gradska.Pekara'); ?><br>
+			<i class="icon-facebook-sign"> </i> <?php echo anchor('http://www.facebook.com/kumanovska.gradska.pekara','facebook/kumanovska.gradska.pekara'); ?><br>
 			<i class="icon-globe"></i> <?php echo anchor('http://www.gradskapekara.mk'); ?>
 		</address>
 		<hr>
@@ -26,6 +26,7 @@
 			<i class="icon-phone"></i> 031 453 906 <br>
 			<i class="icon-print"></i> 031 412 715 <br>
 			<i class="icon-envelope"></i> <?php echo safe_mailto('info@kumanovskikori.mk'); ?> <br>
+			<i class="icon-facebook-sign"> </i> <?php echo anchor('http://www.facebook.com/KumanovskiKori','facebook/kumanovskikori'); ?><br>
 			<i class="icon-globe"></i> <?php echo anchor('http://www.kumanovskikori.mk'); ?>
 		</address>
 	</div>
