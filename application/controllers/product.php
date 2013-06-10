@@ -14,6 +14,10 @@ class Product extends Admin_Controller {
 
 	public function edit($id)
 	{
+		$this->data['result'] = $this->product->get($id);
+
+		if(!$this->data['result']) show_404();
+
 		if($_POST)
 		{
 			if(!isset($_POST['stock'])) $_POST['stock'] = 0;
@@ -23,10 +27,8 @@ class Product extends Admin_Controller {
 				$this->session->set_flashdata('message','Product successfuly updated!');
 			}
 
-			redirect($_SERVER['HTTP_REFERER']);
+			redirect("category/view/{$this->data['result']->category_id}");
 		}
-
-		$this->data['result'] = $this->product->get($id);
 	}
 	
 	public function post_create()

@@ -6,16 +6,15 @@
 		<?php echo uif::submitButton()?>
 	<hr>
 <div class="row-fluid">
-	<div class="span4">
-			<?php echo uif::load('_validation'); ?>
-			<?php echo uif::controlGroup('text','Permalink','permalink')?>
-			<?php echo uif::controlGroup('file','Image','userfile')?>
-			<?php echo uif::controlGroup('text','Name MK','name_mk')?>
-			<?php echo uif::controlGroup('textarea','Description MK','desc_mk')?>
-			<?php echo uif::controlGroup('text','Name SR','name_sr')?>
-			<?php echo uif::controlGroup('textarea','Description SR','desc_sr')?>
-			<?php echo uif::controlGroup('text','Name EN','name_en')?>
-			<?php echo uif::controlGroup('textarea','Description EN','desc_en')?>
-		<?php echo form_close(); ?>
-	</div>
+	<div class="span6">
+		<?php echo uif::load('_validation'); ?>
+		<?php echo uif::controlGroup('text','Permalink','permalink')?>
+		<?php echo uif::controlGroup('file','Image','userfile')?>
+		<?php echo uif::controlGroup('text','Name MK','name_mk')?>
+		<?php echo uif::controlGroup('textarea','Description MK','desc_mk')?>
+		<?php echo uif::controlGroup('text','Name SR','name_sr')?>
+		<?php echo uif::controlGroup('textarea','Description SR','desc_sr')?>
+		<?php echo uif::controlGroup('text','Name EN','name_en')?>
+		<?php echo uif::controlGroup('textarea','Description EN','desc_en')?>
+	<?php echo form_close(); ?>
 </div>

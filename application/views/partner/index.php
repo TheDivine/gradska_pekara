@@ -7,7 +7,7 @@
 </div>
 <hr>
 <?php if(isset($partners) AND count($partners)): ?>
-<table class="table table-hover table-bordered">
+<table class="table table-hover table-striped">
     <thead>
         <tr>
             <th>Company</th>

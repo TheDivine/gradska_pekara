@@ -1,5 +1,5 @@
 <div class="page-header">
-  <h4>New Category</h4>
+  <h4>Edit Product</h4>
 </div>
 	<?php echo form_open('','class="form-horizontal"'); ?>			
 		<?php echo uif::submitButton()?>

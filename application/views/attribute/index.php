@@ -7,7 +7,7 @@
 </div>
 <hr>
 <?php if(isset($attributes) AND count($attributes)): ?>
-<table class="table table-hover table-bordered">
+<table class="table table-hover table-striped">
     <thead>
       <tr>
         <th>NameMK</th>

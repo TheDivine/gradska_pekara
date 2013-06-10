@@ -7,7 +7,7 @@
 </div>
 <hr>
 <?php if(isset($categories) AND count($categories)): ?>
-<table class="table table-hover table-bordered">
+<table class="table table-hover table-striped">
     <thead>
         <tr>
             <th>&nbsp;</th>

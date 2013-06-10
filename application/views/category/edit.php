@@ -15,7 +15,7 @@
             <?php endif;?>
         </div>
     </div>
-    <div class="span4">
+    <div class="span6">
         <?php echo uif::load('_validation'); ?>
         <?php echo uif::controlGroup('text','Permalink','permalink',$result)?>
         <?php echo uif::controlGroup('file','Image','userfile')?>

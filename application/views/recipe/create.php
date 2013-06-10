@@ -6,7 +6,7 @@
         <?php echo uif::submitButton()?>
     <hr>
 <div class="row-fluid">
-    <div class="span4">
+    <div class="span6">
         <?php echo uif::load('_validation'); ?>
         <?php echo uif::controlGroup('text','Permalink','permalink')?>
         <?php echo uif::controlGroup('file','Image','userfile')?>

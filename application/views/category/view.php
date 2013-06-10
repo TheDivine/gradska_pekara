@@ -21,77 +21,64 @@
                 </dl>
             </div>
         </div>
+        <h3>Attributes</h3>
         <hr>
         <?php echo form_open('category/post_bind_attribute'); ?>
-        <table class="table table-bordered">
+            <dl class="dl-horizontal">
+                <dt>Attribute</dt>
+                <dd><?php echo uif::formElement('dropdown','','attribute_id',[$dd_attr],'class="input-xlarge"') ?></dd>
+                <dt>&nbsp;</dt>
+                <dd><?php echo uif::submitButton(); ?></dd>
+            </dl>
+            <?php echo form_hidden('category_id',$result->id); ?>
+        <?php echo form_close(); ?> 
+            
+        <table class="table table-striped table-hover">
             <thead>
                 <tr>
-                    <th>Attribute</th>
+                    <th>Name</th>
+                    <th>Order</th>
+                    <th>Move</th>
                     <th>&nbsp;</th>
                 </tr>
             </thead>
             <tbody>
-                <tr>
-                    <td><?php echo uif::formElement('dropdown','','attribute_id',[$dd_attr],'class="input-xlarge"') ?></td>
-                    <td><?php echo uif::submitButton(); ?></td>
-                </tr>
-            </tbody>
-        </table>
-        <?php echo form_hidden('category_id',$result->id); ?>
-        <?php echo form_close(); ?> 
-            
-        <table class="table table-bordered table-hover">
-            <thead>
-            <tr>
-                <th>Name</th>
-                <th>Order</th>
-                <th>Move</th>
-                <th>&nbsp;</th>
-            </tr>
-            </thead>
-            <tbody>
             <?php foreach($attributes as $row):?>
-            <tr>
-                <td><?php echo $row->name_mk; ?></td>
-                <td><?php echo ($row->order) ? $row->order : '-' ; ?></td>
-                <td>
-                    <button class="btn btn-info" onClick=moveUp(<?php echo $row->acid; ?>)><i class="icon-chevron-sign-up"></i></button>
-                    <button class="btn btn-info" onClick=moveDown(<?php echo $row->acid; ?>)><i class="icon-chevron-sign-down"></i></button>
-                </td>
-                <td>
-                    <?php echo uif::linkButton("category/delete_attribute/{$row->acid}",'icon-trash','danger'); ?>
-                </td>
-            </tr>
+                <tr>
+                    <td><?php echo $row->name_mk; ?></td>
+                    <td><?php echo ($row->order) ? $row->order : '-' ; ?></td>
+                    <td>
+                        <button class="btn btn-info" onClick=moveUp(<?php echo $row->acid; ?>)><i class="icon-chevron-sign-up"></i></button>
+                        <button class="btn btn-info" onClick=moveDown(<?php echo $row->acid; ?>)><i class="icon-chevron-sign-down"></i></button>
+                    </td>
+                    <td>
+                        <?php echo uif::linkButton("category/delete_attribute/{$row->acid}",'icon-trash','danger confirm-delete'); ?>
+                    </td>
+                </tr>
             <?php endforeach;?>
             </tbody>
         </table>
     </div>
 
     <div class="span8">
-        <table class="table table-bordered">
-            <thead>
-                    <tr>
-                    <?php foreach($attributes as $row):?>
-                        <th><?php echo $row->name_mk; ?></th>
-                    <?php endforeach;?>
-                        <th>&nbsp;</th>
-                    </tr>
-            </thead>
-            <tbody> 
-                <tr>
-                    <?php echo form_open('product/post_create'); ?>
-                    <?php for($i = 1; $i <= $attr_count; $i++):?>
-                        <?php $value = 'val'.$i;?>    
-                        <td><?php echo form_input($value); ?></td>
-                    <?php endfor;?>
-                        <td><?php echo uif::submitButton();?></td>
-                        <?php echo form_hidden('category_id',$result->id); ?>
-                    <?php echo form_close(); ?>
-                </tr>
-            </tbody>
-        </table>
-                        
-        <table class="table table-bordered table-hover">
+        <h3>New Products</h3>
+        <hr>
+        <?php echo form_open('product/post_create'); ?>
+        <dl class="dl-horizontal">
+            <?php $i = 1; ?>
+             <?php foreach($attributes as $row):?>
+                <dt><?php echo $row->name_mk; ?></dt>
+                <dd><?php echo form_input('val'.$i); ?></dd>
+                <?php $i++; ?>
+            <?php endforeach;?>
+            <dt>&nbsp;</dt>
+            <dd><?php echo uif::submitButton();?></dd>
+        </dl>
+            <?php echo form_hidden('category_id',$result->id); ?>
+        <?php echo form_close(); ?>
+        <h3>Products</h3>
+        <hr>
+        <table class="table table-striped table-hover">
             <thead>
                 <tr>
                 <?php foreach($attributes as $row):?>
@@ -113,7 +100,7 @@
                         <td><?php echo $row->order; ?></td>
                         <td>
                             <?php echo uif::linkButton("product/edit/{$row->id}",'icon-pencil','warning'); ?>
-                            <?php echo uif::linkButton("product/post_delete/{$row->id}",'icon-trash','danger'); ?>
+                            <?php echo uif::linkButton("product/post_delete/{$row->id}",'icon-trash','danger confirm-delete'); ?>
                         </td>
                     </tr>
                 <?php endforeach;?> 

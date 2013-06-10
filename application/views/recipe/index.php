@@ -7,7 +7,7 @@
 </div>
 <hr>
 <?php if(isset($recipes) AND count($recipes)): ?>
-<table class="table table-hover table-bordered">
+<table class="table table-hover table-striped">
     <thead>
         <tr>
             <th>Title</th>

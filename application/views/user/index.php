@@ -7,7 +7,7 @@
 </div>
 <hr>
 <?php if(isset($users) AND count($users)): ?>
-<table class="table table-hover table-bordered">
+<table class="table table-hover table-striped">
     <thead>
         <tr>
             <th>Username</th>
