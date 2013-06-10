@@ -6,9 +6,13 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    
     <title><?php echo  'Carnia PMS'. ' &raquo; ' .'Administration';?></title>
 
     <meta name="viewport" content="width=device-width">
+
+    <link rel="icon" type="image/png" href="<?php echo base_url('img/favicon_cpms.ico');?>">
+
     <link rel="stylesheet" href="<?php echo base_url('css/bootstrap.min.css'); ?>">
     <link rel="stylesheet" href="<?php echo base_url('css/font-awesome.min.css'); ?>">
     <link rel="stylesheet" href="<?php echo base_url('css/admin.css');?>">
