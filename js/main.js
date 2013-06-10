@@ -124,17 +124,17 @@ function submitContactForm(){
     return false;
 }
 
-function moveUp(id,url){
+function moveUp(id){
 	
-	$.post(url,{id:id},function(data) {
+	$.post('../ajx_moveUp',{id:id},function(data) {
 		location.reload(true);
 	});
 	return false;
 }
 
-function moveDown(id,url){
+function moveDown(id){
 	
-	$.post(url,{id:id},function(data) {
+	$.post('../ajx_moveDown',{id:id},function(data) {
     	location.reload(true);
 	});
 	
