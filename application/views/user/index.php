@@ -6,6 +6,7 @@
     <?php echo uif::load('_flash'); ?>
 </div>
 <hr>
+<?php if(isset($users) AND count($users)): ?>
 <table class="table table-hover table-bordered">
     <thead>
         <tr>
@@ -26,3 +27,6 @@
         <?php endforeach; ?>
     </tbody>
 </table>
+<?php else: ?>
+    <?php uif::load('_no_records'); ?>
+<?php endif; ?>

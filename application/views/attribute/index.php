@@ -6,6 +6,7 @@
     <?php echo uif::load('_flash'); ?>
 </div>
 <hr>
+<?php if(isset($attributes) AND count($attributes)): ?>
 <table class="table table-hover table-bordered">
     <thead>
       <tr>
@@ -17,12 +18,15 @@
     </thead>
     <tbody>
       <?php foreach($attributes as $row):?>
-    	  <tr>
-    	    <td><?php echo $row->name_mk;?></td>
-    	    <td><?php echo $row->name_sr;?></td>
-    	    <td><?php echo $row->name_en;?></td>
+          <tr>
+            <td><?php echo $row->name_mk;?></td>
+            <td><?php echo $row->name_sr;?></td>
+            <td><?php echo $row->name_en;?></td>
           <td><?php echo uif::actionGroup('attribute',$row->id); ?></td>
-    	  </tr>
+          </tr>
       <?php endforeach; ?>
     </tbody>
 </table>
+<?php else: ?>
+    <?php uif::load('_no_records'); ?>
+<?php endif; ?>
