@@ -10,10 +10,12 @@ $route['404_override'] = '';
  */
 
 /*
- * Static pages routes
+ * Front Routes
  */
 $route['categories/(:any)'] = 'home/categories/$1';
+$route['recipes/(:any)']    = 'home/recipes/$1';
 $route['categories']        = 'home/categories';
+$route['recipes']           = 'home/recipes';
 $route['about_us']          = 'home/index';
 $route['quality']           = 'home/quality';
 $route['catering']          = 'home/catering';

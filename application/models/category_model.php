@@ -2,6 +2,7 @@
 class Category_model extends MY_Model {
 	
 	public $_table = 'categories';
+	
 	public $has_many = array( 'products');
 	
 	public function get_attributes($category_id)

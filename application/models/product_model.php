@@ -2,6 +2,7 @@
 class Product_model extends MY_Model {
 	
 	public $_table = 'products';
+    
 	public $belongs_to = array('category');
 	
 }

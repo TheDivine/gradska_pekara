@@ -18,7 +18,6 @@ class Recipe extends Admin_Controller {
         {
             if(!empty($_FILES['userfile']['name']))
             {
-                var_dump($_FILES); die;
                 $image = img::upload();
             
                 $_POST['image']     = $image['image'];
@@ -42,8 +41,7 @@ class Recipe extends Admin_Controller {
 
     public function edit($id)
     {
-        if(!$this->data['result'] = $this->recipe->get($id))
-            show_404();
+        if(!$this->data['result'] = $this->recipe->get($id)) show_404();
 
         if($_POST)
         {
@@ -74,52 +72,6 @@ class Recipe extends Admin_Controller {
         $this->data['r_categories'] = $this->rc->order_by('name')->dropdown('id','name');
     }
 
-    // public function post_update()
-    // {
-    //  if($_POST)
-    //  {
-    //      if(!isset($_POST['vegeterian']))
-    //          $_POST['vegeterian'] = 0;
-    //      if(!isset($_POST['fasting']))
-    //          $_POST['fasting'] = 0;
-    //      if(!isset($_POST['published']))
-    //          $_POST['published'] = 0;
-
-    //      if($_FILES['userfile']['name'])
-    //      {
-    //          $image = $this->_upload_image($_POST['permalink']);
-        
-    //          $_POST['image'] = $image['image'];
-    //          $_POST['img_thumb'] = $image['img_thumb'];  
-    //      }
-
-    //      if($this->recipe->update($_POST['id'],$_POST))
-    //      {
-    //          $this->session->set_flashdata('message','Recipe successfuly updated!');
-    //          redirect('recipe');
-    //      }
-    //      else
-    //      {
-    //          $this->session->set_flashdata('errors',validation_errors());
-    //          redirect($_SERVER['HTTP_REFERER']);
-    //      }
-    //  }       
-    // }
-    
-    // public function post_create()
-    // {
-    //  if($_POST)
-    //  {
-            
-    //      if($this->recipe->insert($_POST))
-    //          redirect($_SERVER['HTTP_REFERER']);         
-    //  }
-    // }
-    /**
-     * Public (open) function, accessible by users.
-     * Displays recipe.
-     * @param  string $permalink Permalink
-     */
     public function view($permalink)
     {
         $this->layout_view = 'web';
@@ -138,16 +90,15 @@ class Recipe extends Admin_Controller {
          * Only administrators can delete recipes
          */
         if($this->session->userdata('is_admin') == 1)
+        {
             $this->recipe->delete($id);
+        }
         else
+        {
             $this->session->set_flashdata('message','Only admins can delete recipes!');
+        }
 
-            redirect($_SERVER['HTTP_REFERER']);
-    }
-
-    public function make_permalink($string)
-    {
-        return url_title($string,'_',true);
+        redirect($_SERVER['HTTP_REFERER']);
     }
 }
 

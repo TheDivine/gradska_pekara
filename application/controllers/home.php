@@ -16,7 +16,7 @@ class Home extends Front_Controller {
     {
         if($permalink !== '')
         {
-            $this->data['category'] = $this->category->get_by('permalink',(string)$permalink);
+            $this->data['category'] = $this->category->get_by('permalink',(string) $permalink);
         
             if(!$this->data['category']) show_404();
 
@@ -41,6 +41,28 @@ class Home extends Front_Controller {
             $this->data['categories'] = $this->category->order_by('order')->get_many_by('status','active');
 
             $this->view = 'home/categories';    
+        }
+    }
+
+    public function recipes($permalink = '')
+    {
+        if($permalink !== '')
+        {
+            $this->data['recipe'] = $this->recipe->with('r_category')->get_by('permalink',(string) $permalink);
+        
+            if(!$this->data['recipe']) show_404();
+
+            $this->data['subt'] = $this->data['recipe']->name;
+
+            $this->view = 'home/recipe';
+        }
+        else
+        {
+            $this->data['subt'] = 'Рецепти';
+        
+            $this->data['recipes'] = $this->recipe->getAllRecipes();
+
+            $this->view = 'home/recipes';    
         }
     }
     
@@ -155,19 +177,18 @@ class Home extends Front_Controller {
     
     // public function lang($lang)
     // {
-    //  //$languages = array('mk','sr','en');
-    //  /*
-    //      Only Macedonian is currently enabled
-    //   */
-    //  $languages = array('mk');
+    //     $languages = array('mk','sr','en');
 
-    //  if(!in_array($lang,$languages))
-    //      $lang = 'mk';
-        
-    //  $this->session->set_userdata('lng',$lang);
-    //      redirect($_SERVER['HTTP_REFERER']);
+    //     if(!in_array($lang,$languages))
+    //     {
+    //         $this->lng = 'mk';
+    //     }
+
+    //     $this->session->set_userdata('lng', $this->lng);
+
+    //     redirect($_SERVER['HTTP_REFERER']);
     // }
 }
 
-/* End of file welcome.php */
-/* Location: ./application/controllers/welcome.php */
+/* End of file home.php */
+/* Location: ./application/controllers/home.php */

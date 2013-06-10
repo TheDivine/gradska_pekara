@@ -7,7 +7,7 @@ class MY_Exceptions extends CI_Exceptions {
         parent::__construct();
     }
 
-    public function show_404()
+    public function show_404($page = '', $log_error = true)
     { 
         header("HTTP/1.1 404 Not Found"); 
 

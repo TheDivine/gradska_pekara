@@ -341,7 +341,7 @@ class Uif {
 	 * @param  Array  $arr
 	 * @return boolean
 	 */
-	private static function _isAssoc($arr)
+	public static function _isAssoc($arr)
 	{
 	    return (array_keys($arr) !== range(0, count($arr) - 1));
 	}

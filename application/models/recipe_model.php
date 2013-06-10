@@ -2,7 +2,12 @@
 class Recipe_model extends MY_Model {
     
     public $_table = 'recipes';
-    public $before_create = array('timestamps');
+
+    public $before_create = array('timestamps','make_permalink');
+
+    public $before_update = array('make_permalink');
+
+    public $belongs_to = array('r_category','r_category');
 
     public $validate = array(
         array( 'field' => 'permalink', 
@@ -34,26 +39,24 @@ class Recipe_model extends MY_Model {
                'rules' => 'required|trim' ),
     );
 
-    protected function timestamps($recipe)
-    {
-        $recipe['created_at'] = $recipe['updated_at'] = date('Y-m-d H:i:s');
-        return $recipe;
-    }
 
-    public function get_recipes_by($criteria,$option,$limit=null, $offset=null)
+    public function getAllRecipes($filter = '', $limit = 25, $offset = 0)
     {
-        $this->db->select("r.name,r.desc,r.permalink,r.type,rc.name AS rcname")
-                ->from('recipes AS r');
+        $this->db->select("r.name,r.desc,r.permalink,r.type,rc.name AS rcname")->from('recipes AS r');
 
-        if($criteria!='all' AND $option!='all')
+        if('' !== $filter)
         {
-            if($criteria == 'category')
-                $criteria = 'r_category_id';
-
-            if($criteria == 'vegeterian' OR $criteria == 'fasting' )
-                 $option = 1;
-             
-            $this->db->where('r.'.$criteria, $option);
+            if(uif::_isAssoc($filter))
+            {
+                foreach($filter as $key => $value) 
+                {
+                    $this->_set_where(array($key,$value));
+                }
+            }
+            else
+            {
+                $this->_set_where($filter);
+            }
         }
 
         $this->db->where('r.published',1);
@@ -68,36 +71,43 @@ class Recipe_model extends MY_Model {
 
         $this->db->select('COUNT(*) AS count',false);
 
-        if($criteria!='all' AND $option!='all')
+        if('' !== $filter)
         {
-            if($criteria == 'category')
-                $criteria = 'r_category_id';
-
-            if($criteria == 'vegeterian' OR $criteria == 'fasting' )
-                 $option = 1;
-
-            $this->db->where($criteria, $option);
+            if(uif::_isAssoc($filter))
+            {
+                foreach($filter as $key => $value) 
+                {
+                    $this->_set_where(array($key,$value));
+                }
+            }
+            else
+            {
+                $this->_set_where($filter);
+            }
         }
+        
         $this->db->where('published',1);
+
         $temp = $this->db->get($this->_table)->row();
+        
         $data['num_rows'] = $temp->count;
 
         return $data;
-    }   
-
-    public function get_recipe($permalink)
-    {
-        $this->db->select("r.*,DATE_FORMAT(r.created_at,'%d.%m.%Y') AS created,rc.name AS rcname",false)
-                ->from('recipes AS r')
-                ->where('r.permalink',$permalink)
-                ->where('r.published',1)
-                ->join('r_categories AS rc','rc.id = r.r_category_id','LEFT');    
-        return $this->db->get()->row();
     }
 
-    public function make_permalink($string)
+    ///////////////
+    // OBSERVERS //
+    ///////////////
+    protected function make_permalink($recipe)
     {
-        return url_title($string,'_',true);
+        $recipe['permalink'] =  url_title($recipe['permalink'],'_',true);
+
+        return $recipe;
     }
 
+    protected function timestamps($recipe)
+    {
+        $recipe['created_at'] = $recipe['updated_at'] = date('Y-m-d H:i:s');
+        return $recipe;
+    }
 }
