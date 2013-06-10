@@ -54,4 +54,14 @@ class Img {
         // Return arary containing image full path and thumb full path
         return $data;
     }
+
+    public static function deleteImg($handle = '')
+    {
+        if('' !== $handle)
+        {
+            @unlink(realpath($handle->image));
+
+            @unlink(realpath($handle->img_thumb));
+        }
+    }
 }

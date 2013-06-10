@@ -1,17 +1,27 @@
 <div class="row-fluid">
 	<div class="span4">
-		<dl class="dl-horizontal well well-small">
-			<dt>Live View</dt>
-			<dd><?php echo anchor("categories/{$result->permalink}",'Link'); ?></dd>
-			<dt>Permalink</dt>
-			<dd><?php echo $result->permalink; ?></dd>
-			<dt>Name EN</dt>
-			<dd><?php echo $result->name_mk; ?></dd>
-			<dt>Status</dt>
-			<dd><?php echo $result->status; ?></dd>
-			<dt>Edit</dt>
-			<dd><?php echo anchor("category/edit/{$result->id}",'Edit'); ?></dd>
-		</dl>
+		<div class="row-fluid">
+			<div class="span4">
+				<div class="thumbnail">
+					<img src="<?php echo base_url($result->image); ?>" alt="">
+				</div>
+			</div>
+			<div class="span8 well well-small">
+				<dl class="dl-horizontal ">
+					<dt>Live View</dt>
+					<dd><?php echo anchor("categories/{$result->permalink}",'Link'); ?></dd>
+					<dt>Permalink</dt>
+					<dd><?php echo $result->permalink; ?></dd>
+					<dt>Name EN</dt>
+					<dd><?php echo $result->name_mk; ?></dd>
+					<dt>Status</dt>
+					<dd><?php echo $result->status; ?></dd>
+					<dt>Edit</dt>
+					<dd><?php echo anchor("category/edit/{$result->id}",'Edit'); ?></dd>
+				</dl>
+			</div>
+		</div>
+		<hr>
 		<?php echo form_open('category/post_bind_attribute'); ?>
 		<table class="table table-bordered">
 			<thead>

@@ -4,6 +4,10 @@ class Category_model extends MY_Model {
 	public $_table = 'categories';
 	
 	public $has_many = array( 'products');
+
+	public $before_create = array('make_permalink');
+
+    public $before_update = array('make_permalink');
 	
 	public function get_attributes($category_id)
 	{
@@ -67,4 +71,14 @@ class Category_model extends MY_Model {
 			->get('attributes_categories')->row();
 		return $order->order;
 	}
+
+	///////////////
+    // OBSERVERS //
+    ///////////////
+    protected function make_permalink($category)
+    {
+        $category['permalink'] =  url_title($category['permalink'],'_',true);
+
+        return $category;
+    }
 }
