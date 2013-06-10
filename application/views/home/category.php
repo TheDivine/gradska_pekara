@@ -7,6 +7,27 @@
 				<img src="<?php echo base_url($category->image);?>" alt="">
 			<?php endif;?>
 		</div>
+		<hr>
+		<ul id="cat-thumbs">
+		<?php foreach ($categories as $cat): ?>
+			<?php 
+				$active = ''; 
+
+				if($cat->permalink == $category->permalink)
+				{
+				 	$active = 'active'; 
+				}
+			?>
+			<li class="span4 text-center <?php echo $active; ?>">
+				<?php if (strpos($cat->img_thumb, 'http') === 0) : ?>
+	    			<a class="thumbnail <?php echo $active; ?>" href="<?php echo $cat->permalink;?>"><img src="<?php echo $cat->img_thumb;?>" alt="">
+				<?php else:?>
+					<a class="thumbnail <?php echo $active; ?>" href="<?php echo $cat->permalink;?>"><img src="<?php echo base_url($cat->img_thumb);?>" alt=""></a>
+				<?php endif;?>
+				<small class="muted"><?php echo $cat->name_mk;?></small>
+			</li>
+		<?php endforeach ?>
+		</ul>
 	</div>
 	<div class="span8">
 		<h3><?php echo $category->name_mk; ?></h3>
@@ -33,5 +54,5 @@
 			</tbody>
 			</table>
 		<?php endif ?>
-		</div>
+	</div>
 </div>

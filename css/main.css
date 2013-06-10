@@ -1,8 +1,12 @@
-body {background-image: url(../img/pattern.gif);background-repeat: repeat-x;-bottom: 20px;padding-top: 20px;}
-header { background: url('../img/head_logo.png') 5px 5px; background-repeat: no-repeat; height: 105px; padding-bottom: 20px;}
+body {background-image: url("../img/pattern.gif");background-repeat: repeat-x;-bottom: 20px;padding-top: 20px;}
+header { background: url("../img/head_logo.png") 5px 5px; background-repeat: no-repeat; height: 105px; padding-bottom: 20px;}
 .cd-navi {margin-top: 37px;}
 .container [role=main] {max-width: 920px; background-color: #fff; padding: 30px; margin-top: 20px;}
 .orders-phone .lead {margin: 0;}
 .orders-phone h2 {margin: 0;}
 footer {padding-bottom: 30px; padding-top: 30px;}
 input[name=yolo] {display:none;visiblity: hidden;}
+ul#cat-thumbs { margin: 0;}
+ul#cat-thumbs li {margin: 2px;}
+ul#cat-thumbs li.active { opacity: 0.5; filter:alpha(opacity=50);}
+ul#cat-thumbs a.active { pointer-events: none; cursor: default;}
